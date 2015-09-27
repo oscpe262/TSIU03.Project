@@ -1,2 +1,9 @@
+# dropbox crap
 .dropbox
 .fuse_hidden*
+
+# LaTeX processed files
+*.aux
+*.out
+*.log
+*.toc

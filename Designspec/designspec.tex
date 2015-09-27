@@ -1,0 +1,83 @@
+% Document props and library inclusions
+\documentclass[10pt,a4paper]{report} 
+\usepackage[utf8]{inputenc} 
+\usepackage[english]{babel}
+\usepackage{mathtools,tikz,textcomp,fixltx2e,color,fullpage,graphicx,afterpage,float,parskip,xfrac,gensymb,titlesec,etoolbox,pdfpages,hyperref}
+\usetikzlibrary{calc,matrix,positioning,arrows,shapes,trees,plotmarks,decorations.markings}
+\usepackage[font={small,it}]{caption}
+\usepackage[europeancurrents,europeanvoltages,europeanresistors,europeaninductors,smartlabels]{circuitikz}
+\usepackage[font={small,it}]{caption} %% Italics in captions
+
+\setcounter{secnumdepth}{0} % Levels enumerated
+
+% PDF props
+\hypersetup{
+  bookmarks=true,              % show bookmarks bar?
+  bookmarkstype=toc,
+  bookmarksopenlevel=\maxdimen
+  unicode=true,                % non-Latin characters in Acrobat’s bookmarks
+  pdftoolbar=true,             % show Acrobat’s toolbar?
+  pdfmenubar=true,             % show Acrobat’s menu?
+  pdffitwindow=false,          % window fit to page when opened
+  pdfstartview={FitH},         % fits the width of the page to the window
+  pdftitle={Design Specification},         % title
+  pdfauthor={Petersson, Oscar}, % author
+  pdfsubject={TSIU03},          % subject of the document
+  pdfkeywords={TSIU03}          % list of keywords
+  pdfnewwindow=true,           % links in new window
+  hidelinks,                   % hide links (removing color and border)
+  linktocpage=true,
+  linktoc=all,                 % parts of TOC made into links
+  pdfdisplaydoctitle=true      %display document title instead of file name in title bar
+}
+\urlstyle{same}
+
+%% First Page Information
+\author{Niklas Blomqvist, Philip Johansson, Matteus Laurent, Johan Levinsson, Oscar Petersson, Erik Peyronsson}
+\title{MatLabb - Design Specification}
+\date{\today}
+\newcommand{\course}{System Design - Project, HT15}
+\newcommand{\coursenumber}{TSIU03, Linköpings universitet}
+\newcommand{\programme}{Högskoleingenjörsutbildning i datateknik, 180 hp}
+\newcommand{\examiner}{Petter Källström}
+\newcommand{\institution}{Department of Electrical Engineering (ISY)}
+\newcommand{\reptype}{Design Specification}
+
+%\newcommand{\includelogo}{\includegraphics[width=48 mm]{LiTH_sigill_sv.pdf}\makeatletter\begin{center}\vskip 4.5cm}
+\newcommand{\excludelogo}{\makeatletter\begin{center}~\vfill}
+
+\begin{document}
+
+\pagestyle{empty}
+%\includelogo
+ \excludelogo
+  \Large{\@author}\vskip .3cm
+  \textbf{\LARGE{\@title}}\vskip .2cm
+  \large{\programme}
+  \vfill
+\end{center}
+\reptype{} - \@date\hfill Supervisor:\\
+\textbf{\course}\hfill\examiner\\
+\coursenumber\hfill\institution
+\makeatother
+\newpage
+
+%% Table of Contents
+%\addtocontents{toc}{\protect\hypertarget{toc}{}}
+%\tableofcontents\label{sec:toc}
+%\addtocontents{toc}{\protect\thispagestyle{empty}}
+%\cleardoublepage
+
+\section{Introduction}
+\input{./tex/intro.tex}
+
+\section{System Level Description}
+\input{./tex/description.tex}
+
+\section{Challanges in the Design and Proposed Approach}
+\input{./tex/challenges.tex}
+
+\section{User Interface}
+\input{./tex/UI.tex}
+
+\end{document}
