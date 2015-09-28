@@ -1,4 +1,30 @@
-System Level Description (Block diagram + description of 1 to 2 pages).
+\emph{System Level Description (Block diagram + description of 1 to 2 pages).}
 
+\emph{(Make sure that your description justifies how the Requirements of your system are met, especially those which are not obvious.)}
 
-(Make sure that your description justifies how the Requirements of your system are met, especially those that are not obvious.)
+%% Remove the text above
+
+This chapter will describe the system main blocks, the functionality of each of them, and the interaction between each block. Presented below (Figure \ref{fig:overview}) is a graphical overview over the system and its first layer of modules. A high resolution version is also included in \emph{Appendix \ref{app:overview}: System Overview}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=.18]{overview}
+  \caption{A graphical overview of the system's first module layer.}
+  \label{fig:overview}
+\end{figure}
+
+\section{Keyboard}\label{sec:keyboard}
+\input{./tex/keyboard.tex}
+
+\section{Snd\_Driver}\label{sec:snddriver}
+\input{./tex/snddriver.tex}
+
+\section{Vol\_Bal}\label{sec:volbal}
+\input{./tex/volbal.tex}
+
+\section{Analysis}\label{sec:analysis}
+\input{./tex/analysis.tex}
+
+\section{VGA\_driver}\label{sec:vgadriver}
+\input{./tex/vgadriver.tex}
+

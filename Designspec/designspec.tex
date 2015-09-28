@@ -1,3 +1,10 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Denna fil kompileras (pdflatex designspec.tex)
+% Inga ändringar bör behöva göras
+% Saknar din installation bibliotek? Installera dem eller skrik på dokumentansvarig.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 % Document props and library inclusions
 \documentclass[10pt,a4paper]{report} 
 \usepackage[utf8]{inputenc} 
@@ -8,7 +15,7 @@
 \usepackage[europeancurrents,europeanvoltages,europeanresistors,europeaninductors,smartlabels]{circuitikz}
 \usepackage[font={small,it}]{caption} %% Italics in captions
 
-\setcounter{secnumdepth}{0} % Levels enumerated
+\setcounter{secnumdepth}{2} % Levels enumerated
 
 % PDF props
 \hypersetup{
@@ -32,6 +39,8 @@
 }
 \urlstyle{same}
 
+\graphicspath{{./fig/}} % including pictures from here
+
 %% First Page Information
 \author{Niklas Blomqvist, Philip Johansson, Matteus Laurent, Johan Levinsson, Oscar Petersson, Erik Peyronsson}
 \title{Group 41 - Design Specification}
@@ -45,6 +54,18 @@
 
 %\newcommand{\includelogo}{\includegraphics[width=48 mm]{LiTH_sigill_sv.pdf}\makeatletter\begin{center}\vskip 4.5cm}
 \newcommand{\excludelogo}{\makeatletter\begin{center}~\vfill}
+
+%% Proper Chapter Head
+\makeatletter
+\renewcommand{\@makechapterhead}[1]{%
+  \vspace*{50 pt}%
+          {\setlength{\parindent}{0pt} \raggedright \normalfont
+            \bfseries\Huge
+            \ifnum \value{secnumdepth}>1
+            \if@mainmatter\thechapter.\ \fi%
+            \fi
+            #1\par\nobreak\vspace{40 pt}}}
+\makeatother
 
 \begin{document}
 
@@ -63,21 +84,11 @@
 \newpage
 
 %% Table of Contents
-%\addtocontents{toc}{\protect\hypertarget{toc}{}}
-%\tableofcontents\label{sec:toc}
-%\addtocontents{toc}{\protect\thispagestyle{empty}}
-%\cleardoublepage
+\addtocontents{toc}{\protect\hypertarget{toc}{}}
+\tableofcontents\label{sec:toc}
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\cleardoublepage
 
-\section{Introduction}
-\input{./tex/intro.tex}
-
-\section{System Level Description}
-\input{./tex/description.tex}
-
-\section{Challanges in the Design and Proposed Approach}
-\input{./tex/challenges.tex}
-
-\section{User Interface}
-\input{./tex/UI.tex}
+\input{./tex/main.tex}
 
 \end{document}

@@ -5,7 +5,7 @@ Följande kommer dock inte att ändras utan gäller tills vidare:
 report.* - grundfiler till rapporten. Kommer inte att behöva ändras om allt vill sig väl.
 latexmk.pl - script för att automatiskt uppdatera dokumentet. Ska ej ändras.
 	   Körs från linuxterminal enligt: "./latexmk.pl -pvc -pdf report.tex"
-fig/ - Här i läggs alla bilder, företrädesvis i .png- eller vektorformat (svg).
+fig/ - Här i läggs alla bilder, företrädesvis i .png-format.
 tex/ - Här ligger alla textfiler (se nedan).
 
 
