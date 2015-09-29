@@ -1,0 +1,347 @@
+m255
+K3
+13
+cModel Technology
+dC:\modeltech64_10.1b\examples
+T_opt
+V38EZW[af`eU9n^3Z1UY`50
+04 8 3 work tb_audio sim 1
+=1-2c27d728e271-5608293f-ee-1760
+o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+OL;O;10.1b;51
+Eapplication
+Z0 w1442503439
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dH:\TSIU03\Lab4 - Audio\MSim
+Z5 8H:/TSIU03/Lab4 - Audio/Application.vhd
+Z6 FH:/TSIU03/Lab4 - Audio/Application.vhd
+l0
+L9
+VNT4_g4<2l>@SKl`:6gX5B1
+Z7 OL;C;10.1b;51
+32
+Z8 !s108 1443375400.150000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|H:/TSIU03/Lab4 - Audio/Application.vhd|
+Z10 !s107 H:/TSIU03/Lab4 - Audio/Application.vhd|
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1
+!s100 <0dIbWInFM2oVoC1;:PMP0
+!i10b 1
+Artl
+R1
+R2
+R3
+DEx4 work 11 application 0 22 NT4_g4<2l>@SKl`:6gX5B1
+l43
+L20
+Vi1YE;bSQVH9:<>nBIJPE>1
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 X5IOGWd]OFRVYF?L`Mm7P1
+!i10b 1
+Echannel_mod
+Z13 w1443368560
+R1
+R2
+R3
+R4
+Z14 8H:/TSIU03/Lab4 - Audio/Channel_Mod.vhd
+Z15 FH:/TSIU03/Lab4 - Audio/Channel_Mod.vhd
+l0
+L5
+VT_XYmXXb1^539kKCQHX=a1
+R7
+32
+Z16 !s108 1443375402.546000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|H:/TSIU03/Lab4 - Audio/Channel_Mod.vhd|
+Z18 !s107 H:/TSIU03/Lab4 - Audio/Channel_Mod.vhd|
+R11
+R12
+!s100 7OQK7ljJe37[UM>QJbUb21
+!i10b 1
+Artl
+R1
+R2
+R3
+DEx4 work 11 channel_mod 0 22 T_XYmXXb1^539kKCQHX=a1
+l18
+L16
+V>G[<>Nd7YBaL]Rbj^5[zf0
+R7
+32
+R16
+R17
+R18
+R11
+R12
+!s100 ;FV;7zT@_0CT<=S`gS2D]3
+!i10b 1
+Ectrl
+Z19 w1443365036
+R1
+R2
+R3
+R4
+Z20 8H:/TSIU03/Lab4 - Audio/Ctrl.vhd
+Z21 FH:/TSIU03/Lab4 - Audio/Ctrl.vhd
+l0
+L5
+VI3DEH^De2fRIQKTRe_9[H1
+R7
+32
+Z22 !s108 1443375404.006000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|H:/TSIU03/Lab4 - Audio/Ctrl.vhd|
+Z24 !s107 H:/TSIU03/Lab4 - Audio/Ctrl.vhd|
+R11
+R12
+!s100 1l0b]zK6E5DLEhgRCIJSn0
+!i10b 1
+Artl
+R1
+R2
+R3
+DEx4 work 4 ctrl 0 22 I3DEH^De2fRIQKTRe_9[H1
+l16
+L14
+VN]@RGR5AKcjOoJhfl`AFQ0
+R7
+32
+R22
+R23
+R24
+R11
+R12
+!s100 HU0KdbCWJ7Qnda5lDD>?L2
+!i10b 1
+Egroup_no
+Z25 w1442503439
+R2
+R3
+R4
+Z26 8H:/TSIU03/Lab4 - Audio/group_no.vhd
+Z27 FH:/TSIU03/Lab4 - Audio/group_no.vhd
+l0
+L7
+V`8kKI3`WTeQbzbm56fQFA3
+R7
+32
+Z28 !s108 1443375405.276000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|H:/TSIU03/Lab4 - Audio/group_no.vhd|
+Z30 !s107 H:/TSIU03/Lab4 - Audio/group_no.vhd|
+R11
+R12
+!s100 UJXobCL?NB3?5oGOWTR8e0
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 8 group_no 0 22 `8kKI3`WTeQbzbm56fQFA3
+l14
+L12
+VJJ3GKMkWKmHJ[F=l1HQYM1
+R7
+32
+R28
+R29
+R30
+R11
+R12
+!s100 8joCFL7oAXeJ;zWkoc1o^0
+!i10b 1
+Epoly_rom
+R25
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L173
+VkCSmUe^I^EK@JY?:`MTe:1
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 `Ye5X6Pa1TWL^LK5]DW^[2
+!i10b 1
+Artl
+R1
+R2
+R3
+DEx4 work 8 poly_rom 0 22 kCSmUe^I^EK@JY?:`MTe:1
+l185
+L181
+Vl^9jZO@6lhZW=<_5hXGJO0
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 g>;:i2:oKR]1WZPDPX:OV0
+!i10b 1
+Epsac
+R25
+R1
+R2
+R3
+R4
+R5
+R6
+l0
+L110
+VF;z^O?HoRV60ZN2NG3f5_0
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 M3c_`>oGN_><QY4?F^nWc3
+!i10b 1
+Artl
+Z31 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+R1
+R2
+R3
+DEx4 work 4 psac 0 22 F;z^O?HoRV60ZN2NG3f5_0
+l139
+L117
+Vc8i109GD`zPB<S@>`G=k<2
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 C0>6G`CT]8S:nmL<T2kng2
+!i10b 1
+Esnddriver
+Z32 w1443375389
+R1
+R2
+R3
+R4
+Z33 8H:/TSIU03/Lab4 - Audio/SndDriver.vhd
+Z34 FH:/TSIU03/Lab4 - Audio/SndDriver.vhd
+l0
+L25
+V;DNlK7To1MBhOd:7>URm>0
+R7
+32
+Z35 !s108 1443375407.886000
+Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|H:/TSIU03/Lab4 - Audio/SndDriver.vhd|
+Z37 !s107 H:/TSIU03/Lab4 - Audio/SndDriver.vhd|
+R11
+R12
+!s100 WR6IUKH22963@@:adQQ^m1
+!i10b 1
+Abdf_type
+R1
+R2
+R3
+DEx4 work 9 snddriver 0 22 ;DNlK7To1MBhOd:7>URm>0
+l87
+L44
+V:ZAmdeeUSY`8>Vm=iQJXg3
+R7
+32
+R35
+R36
+R37
+R11
+R12
+!s100 :RTE:<@Y>5RlMQ>_bE<=g3
+!i10b 1
+Esound
+R25
+R1
+R2
+R3
+R4
+Z38 8H:/TSIU03/Lab4 - Audio/Sound.vhd
+Z39 FH:/TSIU03/Lab4 - Audio/Sound.vhd
+l0
+L25
+VZzFbl2gaL4?id7T_Q0dSa3
+R7
+32
+Z40 !s108 1443375406.526000
+Z41 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|H:/TSIU03/Lab4 - Audio/Sound.vhd|
+Z42 !s107 H:/TSIU03/Lab4 - Audio/Sound.vhd|
+R11
+R12
+!s100 PfG[21jT@gjoB8PCnPOKT0
+!i10b 1
+Abdf_type
+R1
+R2
+R3
+DEx4 work 5 sound 0 22 ZzFbl2gaL4?id7T_Q0dSa3
+l87
+L43
+V1enZD?g^`h1kjXhPcgWie1
+R7
+32
+R40
+R41
+R42
+R11
+R12
+!s100 m66T?<`8OgJY?CZQ`Gk7C1
+!i10b 1
+Etb_audio
+Z43 w1443373995
+Z44 DPx4 ieee 9 math_real 0 22 :iME`dTX54_U49lJNF5JI3
+R1
+R2
+R3
+R4
+Z45 8H:/TSIU03/Lab4 - Audio/MSim/TB_Audio.vhd
+Z46 FH:/TSIU03/Lab4 - Audio/MSim/TB_Audio.vhd
+l0
+L8
+Vi<H]V7oJ<0LONe@chCDO;1
+R7
+32
+Z47 !s108 1443375398.682000
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|H:/TSIU03/Lab4 - Audio/MSim/TB_Audio.vhd|
+Z49 !s107 H:/TSIU03/Lab4 - Audio/MSim/TB_Audio.vhd|
+R11
+R12
+!s100 Oo7TOW7ESzG]>;JD^MCbO1
+!i10b 1
+Asim
+R44
+R1
+R2
+R3
+DEx4 work 8 tb_audio 0 22 i<H]V7oJ<0LONe@chCDO;1
+l61
+L11
+Vjz:2Mm;kH]AR_I8VJM7O[1
+R7
+32
+R47
+R48
+R49
+R11
+R12
+!s100 L0bb0VV5>o@ji_66590[[0
+!i10b 1
