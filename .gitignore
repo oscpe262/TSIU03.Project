@@ -1,5 +1,5 @@
 # dropbox crap
-.dropbox
+.dropbox*
 .fuse_hidden*
 *conflicted*
 *Konflikt*
@@ -11,3 +11,6 @@
 *.toc
 *.fdb_latexmk
 *.fls
+
+*~
+\#*
