@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1443515260 "designspec.tex" "designspec.pdf" "designspec" 1443515261
-  "./designspec.out" 1443515260 950 0df191bdc5700e67dba442b77830b4c6 ""
+["pdflatex"] 1443515923 "designspec.tex" "designspec.pdf" "designspec" 1443515923
+  "./designspec.out" 1443515923 950 0df191bdc5700e67dba442b77830b4c6 ""
   "./fig/overview.png" 1443474441 90224 ff7e708171c1840ff25f0fa3de3e7b7b ""
   "./tex/UI.tex" 1443462222 110 a80c939f83c9970f77aa2b9a911e5377 ""
   "./tex/about.tex" 1443467270 3348 f8d217b9be698f40ef2dc31a35eec259 ""
@@ -12,7 +12,7 @@
   "./tex/keyboard.tex" 1443514684 638 714f653e872be874fe164c6e4cb70e4c ""
   "./tex/main.tex" 1443464380 592 6441ab9ec0f16053bda55a9796250ff8 ""
   "./tex/snddriver.tex" 1443461937 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "./tex/vgadriver.tex" 1443515258 105 65af92619425b8cc237cc967f7c06fd7 ""
+  "./tex/vgadriver.tex" 1443515916 524 0a17d7291e5552a692a3deec8d7e06a6 ""
   "./tex/volbal.tex" 1443462002 40 74834548af218dc6b8f64f1e81221621 ""
   "/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1441055620 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1441055618 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -215,10 +215,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1441055625 31669 df537245012f3e5f05bdc55644b7a3df ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1442648881 1634688 431e3db3d0eb4c92c879d276686b5169 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1442648849 7209435 9e811b4e9311faceb688c1b183be1344 ""
-  "designspec.aux" 1443515260 4065 0736f8961d8f24c8a2888d9f503ab5f0 ""
-  "designspec.out" 1443515260 950 0df191bdc5700e67dba442b77830b4c6 ""
+  "designspec.aux" 1443515923 4065 0736f8961d8f24c8a2888d9f503ab5f0 ""
+  "designspec.out" 1443515923 950 0df191bdc5700e67dba442b77830b4c6 ""
   "designspec.tex" 1443513570 3587 a929758a2d553310f2144240a6d145d9 ""
-  "designspec.toc" 1443515260 1252 bd6161bb6be5fccc746044bd90a3e1de ""
+  "designspec.toc" 1443515923 1252 bd6161bb6be5fccc746044bd90a3e1de ""
   "fig/overview.png" 1443474441 90224 ff7e708171c1840ff25f0fa3de3e7b7b ""
   "tex/UI.tex" 1443462222 110 a80c939f83c9970f77aa2b9a911e5377 ""
   "tex/about.tex" 1443467270 3348 f8d217b9be698f40ef2dc31a35eec259 ""
@@ -230,7 +230,7 @@
   "tex/keyboard.tex" 1443514684 638 714f653e872be874fe164c6e4cb70e4c ""
   "tex/main.tex" 1443464380 592 6441ab9ec0f16053bda55a9796250ff8 ""
   "tex/snddriver.tex" 1443461937 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "tex/vgadriver.tex" 1443515258 105 65af92619425b8cc237cc967f7c06fd7 ""
+  "tex/vgadriver.tex" 1443515916 524 0a17d7291e5552a692a3deec8d7e06a6 ""
   "tex/volbal.tex" 1443462002 40 74834548af218dc6b8f64f1e81221621 ""
   (generated)
   "designspec.aux"
