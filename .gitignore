@@ -1,6 +1,8 @@
 # dropbox crap
 .dropbox
 .fuse_hidden*
+*conflicted*
+*Konflikt*
 
 # LaTeX processed files
 *.aux
