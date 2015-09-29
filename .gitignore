@@ -9,3 +9,5 @@
 *.out
 *.log
 *.toc
+*.fdb_latexmk
+*.fls
