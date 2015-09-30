@@ -14,52 +14,52 @@ in \ref{tab:output} and consists of 11 sub modules which can be overviewed in \r
 
 
 \begin{figure}[H]
+        \centering
         \includegraphics[scale=0.35]{vgadrive.png}
         \caption{Block diagram of vga\_drive}
         \label{fig:vgadrive}
 \end{figure}
 
 
-\begin{figure}[h]
+\begin{figure}[H]
+        \centering
         \caption{List of input signals}
         \label{tab:input}
-\begin{tabular}{|r|l|}
+\begin{tabular}{|l|l|}
         \hline
-        \multicolumn{2}{|c|}{Input signals}\\
+        \multicolumn{1}{|c|}{Name} & \multicolumn{1}{|c|}{Description} \\
+        
         \hline
-        \multicolumn{1}{|c}{Name} & \multicolumn{1}{c|}{Description} \\
-        \hline
-        volume\_input & a 4 bit input containing volume information\\
+        \verb+volume_input+ & a 4 bit input containing volume information\\
         \cline{1-2}
         \hline
-        balance\_input & a 4 bit input containing balance information\\
+        \verb+balance_input+ & a 4 bit input containing balance information\\
         \cline{1-2}    
         \hline
-        bar & a n bit input containing signal sound input signal level\\
+        \verb+bar+ & a n bit input containing signal sound input signal level\\
         \cline{1-2}    
         \hline
-        new\_bar & a n bit input containing manipulated input signal level\\
+        \verb+new_bar+ & a n bit input containing manipulated input signal level\\
         \cline{1-2}    
         \hline
 \end{tabular}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[H]
+        \centering              
         \caption{List of output signals}
         \label{tab:output}
-\begin{tabular}{|r|l|}     
+\begin{tabular}{|l|l|}
         \hline
-        \multicolumn{2}{|c|}{output signals}\\
+        \multicolumn{1}{|c|}{Name} & \multicolumn{1}{|c|}{Description} \\
         \hline
-        \multicolumn{1}{|c}{Name} & \multicolumn{1}{c|}{Description} \\
-        \hline
-        vga\_clk & clock signal needed for scanning\\
+        \verb+vga_clk+ & clock signal needed for scanning\\
         \cline{1-2}
         \hline
-        vga\_blank & a blanking signal for blanking when resetting scan\\
+        \verb+vga_blank+ & a blanking signal for blanking when resetting scan\\
         \cline{1-2}    
         \hline
-        vga\_(r,g,b) & three signals containing color information\\
+        \verb+vga_(r,g,b)+ & three signals containing color information\\
         \cline{1-2}    
         \hline
 \end{tabular}
@@ -81,7 +81,7 @@ incremented with one every time hcount resets and resets after reaching 525. Thi
 coordinates to each pixel on the screen during the scanning.
 
 \subsection{VGA\_driver:clock\_divider}
-\verb+Clock\_divider+ is just as it's name suggests a clock divider which divides the system clock of 50 MHz
+\verb+clock_divider+ is just as it's name suggests a clock divider which divides the system clock of 50 MHz
 to 25 MHz. This is needed because the timings in the vga-interface for the resolution used 
 requires a clock of 25 MHz 
 
@@ -118,14 +118,14 @@ on the SRAM-bus and the module simply needs to read the correct byte (using up\_
 register.
 
 \subsection{VGA\_driver:vga\_gen}
-\verb+vga\_gen+ will take the pix\_reg register and supply it to the three color channel outputs 
+\verb+vga_gen+ will take the pix\_reg register and supply it to the three color channel outputs 
 vga\_r, vga\_g and vga\_b. Due to the fact that the AVD7123 chip expects 10 bit values and the stored image
 containing 3bit color values the values need to be scaled up before provided to \verb+bar\_mixer+ 
 
 \subsection{VGA\_driver:bartender and barmixer}\label{bartender}
-\verb+bar\_tender+ is the submodule responsible for rendering the bar-graphs displaying volume, balance and
+\verb+bar_tender+ is the submodule responsible for rendering the bar-graphs displaying volume, balance and
 signal strength before and after signal manipulation. The background image already has the bars drawed filled
 and to give the apperence of them beeing filled to different levels pixels will be blanked out from the top down. Using the volume, balance, bar, new\_bar and pixelindex \verb+bar\_tender+ will calculate which pixels should
 be blanked and set the signal render\_bar high.
 
-\verb+bar\_mixer+ works as a multiplexer blanking out the bars. The color information is passed through if render\_bar signal is low and blanks out the pixel if high which gives the effect of bargraphs beeing filled.
+\verb+bar_mixer+ works as a multiplexer blanking out the bars. The color information is passed through if render\_bar signal is low and blanks out the pixel if high which gives the effect of bargraphs beeing filled.
