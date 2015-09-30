@@ -19,4 +19,4 @@ END		& E0,69 & E0,F0,69 & 10000\\ \hline
 \label{fig:scancodes}
 \end{figure}
 
-The scan codes are shifted into a 26-bit shift register which is reset to all ones, and once the start bit (0) is shifted out, the third byte (bit 23\ldots16) is NAND:ed with FF$_{16}$. A result of "1" then compared to the expected third byte of a released control key which on success sends a \verb+kb_input+ to \verb+Vol_Bal+.
+The scan codes are shifted into a 26-bit shift register which is reset to all ones, and once the start bit (0) is shifted out, the third byte (bit 23 \ldots 16) is NAND:ed with FF$_{16}$. A result of "1" then compared to the expected third byte of a released control key which on success sends a \verb+kb_input+ to \verb+Vol_Bal+.

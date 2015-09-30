@@ -16,6 +16,7 @@
 \usepackage[font={small,it}]{caption} %% Italics in captions
 
 \setcounter{secnumdepth}{2} % Levels enumerated
+\setcounter{tocdepth}{3} % ToC levels enumerated
 
 % PDF props
 \hypersetup{
@@ -82,6 +83,8 @@
 \coursenumber\hfill\institution
 \makeatother
 \newpage
+\afterpage{\null\newpage}
+\thispagestyle{empty}
 
 %% Table of Contents
 \addtocontents{toc}{\protect\hypertarget{toc}{}}

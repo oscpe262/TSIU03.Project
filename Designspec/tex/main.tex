@@ -1,7 +1,9 @@
-\chapter{Vad dokumentet ska innehålla:} % Detta ska bort innan inskick
-\input{./tex/about.tex}                 % och likaså denna rad
+
+%\chapter{Vad dokumentet ska innehålla:} % Detta ska bort innan inskick
+%\input{./tex/about.tex}                 % och likaså denna rad
 
 \chapter{Introduction}\label{ch:introduction}
+\setcounter{page}{1}
 \input{./tex/intro.tex}
 
 \chapter{System Level Description}\label{ch:description}
@@ -14,7 +16,6 @@
 \input{./tex/UI.tex}
 
 \appendix
-\newpage
-\pagenumbering{Roman}
 \chapter{Appendix: System Overview}\label{app:overview}
+\pagenumbering{Roman}
 \input{./tex/app.overview.tex}
