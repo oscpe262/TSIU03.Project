@@ -21,19 +21,19 @@ The module \verb+VGA_drive+ has four input signals and five output signals descr
       \hline
       Name & Type & Description \\
       \hline
-      \verb+volume_input+ & Input & a A bit input containing volume information\\
+      \verb+volume_input+ & Input & A 4-bit input containing volume information\\
       \hline
-      \verb+balance_input+ & Input & A 4 bit input containing balance information\\
+      \verb+balance_input+ & Input & A 4-bit input containing balance information\\
       \hline
-      \verb+bar+ & Input & A $n$ bit input containing signal sound input signal level\\
+      \verb+{L,R}bar+ & Input & An 8-bit input containing signal sound input signal level\\
       \hline
-      \verb+new_bar+ & Input & A $n$ bit input containing manipulated input signal level\\
+      \verb+{L,R}new_bar+ & Input & An 8-bit input containing manipulated input signal level\\
       \hline
       \verb+VGA_clk+ & Output & Clock signal needed for scanning\\
       \hline
       \verb+VGA_blank+ & Output & A blanking signal for blanking when resetting scan\\
       \hline
-      \verb+VGA_(r,g,b)+ & Output & Three signals containing color information\\
+      \verb+vga_{r,g,b}+ & Output & Three signals containing color information\\
       \hline
     \end{tabular}
 \end{figure}
