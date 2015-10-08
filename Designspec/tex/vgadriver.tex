@@ -9,16 +9,7 @@ To render an image on the VGA screen, five main signals is needed. Three analog 
 
 \verb+BarMixer+ works as a multiplexer blanking out the bars. The color information is passed through if \verb=render_bar= signal is low and blanks out the pixel if high, which gives the effect of bar graphs being filled.
 
-
-\begin{figure}[h]
-        \centering
-        \includegraphics[width=15cm]{vgadrive.png} 
-        \caption{Block diagram of \texttt{VGA\_Driver}}
-        \label{fig:VGAdrive}
-\end{figure}
-
-
-\begin{figure}[h]
+\begin{figure}[H]
   \centering
   \caption{List of input and output signals (\texttt{VGA\_Driver})}
   \label{tab:vgaio}
@@ -41,6 +32,12 @@ To render an image on the VGA screen, five main signals is needed. Three analog 
       %\verb+vga_{r,g,b}+ & Output & Three signals containing color information\\
       \hline
     \end{tabular}
+\end{figure}
+\begin{figure}[H]
+        \centering
+        \includegraphics[width=15cm]{vgadrive.png} 
+        \caption{Block diagram of \texttt{VGA\_Driver}}
+        \label{fig:VGAdrive}
 \end{figure}
 
 %\subsection{VGA\_Driver:Pipelining}
