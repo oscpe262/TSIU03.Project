@@ -1,14 +1,13 @@
 \begin{figure}[h]
   \centering
   \caption{List of input and output signals (\texttt{Analysis})}
-  \begin{tabular}{|l|c|l}
+  \begin{tabular}{|l|c|l|}
     \hline
-    \verb+lrsel+ & input & Channel select \\    \hline
+    Name & Type & Function \\    \hline
+    \texttt{\{new\_,$\emptyset$\}lrsel} & input & Channel select \\    \hline
     \verb+{L,R}ADC+ & input & Left/Right audio input channel \\    \hline
-    \verb+kb_input+ & input & Information about specific buttons released \\    \hline
-    \verb+volume_level+ & output & Current volume level \\    \hline
-    \verb+balance_level+ & output & Current balance bias \\    \hline
-    \verb+{L,R}DAC+ & output & Left/Right audio output channel \\    \hline
-    \verb+mute_enable+ & output & System output muted (ON/OFF) \\    \hline
+    \verb+{L,R}DAC+ & input & Left/Right audio output channel \\    \hline
+    \verb+{L,R}new_bar+ & output & Audio amplitude, post-processing\\    \hline
+    \verb+{L,R}bar+ & output & Audio amplitude, pre-processing\\    \hline
   \end{tabular}
 \end{figure}
