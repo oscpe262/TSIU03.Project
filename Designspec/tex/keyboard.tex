@@ -6,15 +6,15 @@ The scan codes for the arrow keys consists of two (make code) or three (break co
 
 \begin{figure}[h]
 \centering
-\caption{PS/2 Scan Codes used and corresponding \texttt{kb\_input}}
-\begin{tabular}{|c|c|c|c|}
+\caption{PS/2 Scan Codes used, corresponding \texttt{kb\_input}, and how the input affects the system.}
+\begin{tabular}{|c|c|c|c|c|}
 \hline
-KEY & MAKE & BREAK & \verb+kb_input+\\ \hline
-U ARROW & E0,75 & E0,F0,75 & 00001\\ \hline
-L ARROW & E0,6B & E0,F0,6B & 00010\\ \hline
-D ARROW & E0,72 & E0,F0,72 & 00100\\ \hline
-R ARROW & E0,74 & E0,F0,74 & 01000\\ \hline
-END		& E0,69 & E0,F0,69 & 10000\\ \hline
+KEY & MAKE & BREAK & \verb+kb_input+ & Function\\ \hline
+U ARROW & E0,75 & E0,F0,75 & 00001 & Volume Increase\\ \hline
+L ARROW & E0,6B & E0,F0,6B & 00010 & Balance Bias Left\\ \hline
+D ARROW & E0,72 & E0,F0,72 & 00100 & Volume Decrease\\ \hline
+R ARROW & E0,74 & E0,F0,74 & 01000 & Balance Bias Right\\ \hline
+END		& E0,69 & E0,F0,69 & 10000 & Mute Volume\\ \hline
 \end{tabular}
 \label{fig:scancodes}
 \end{figure}
