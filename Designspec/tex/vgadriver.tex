@@ -4,10 +4,10 @@ To render an image on the VGA screen, five main signals is needed. Three analog 
 
 %The module \verb+VGA_drive+ has four input signals and five output signals described in table \ref{tab:vgaio}. It consists of eleven sub modules which can be over viewed in \ref{fig:VGAdrive} described below.
 
-\subsection{VGA\_Driver:BarTender and BarMixer}\label{sec:BarTender}
-\verb+BarTender+ is the submodule responsible for rendering the bar graphs displaying volume, balance and signal strength before and after signal manipulation. The background image already has the bars drawed filled and to give the appearance of them being filled to different levels pixels will be blanked out from the top down. Using \verb=volume, balance, bar, new_bar= and \verb=pixelindex=, \verb+BarTender+ will calculate which pixels should be blanked and set the signal \verb=render_bar= high.
+\subsection{VGA\_Driver:Bar\_Tender and Bar\_Mixer}\label{sec:Bar_Tender}
+\verb+Bar_Tender+ is the submodule responsible for rendering the bar graphs displaying volume, balance and signal strength before and after signal manipulation. The background image already has the bars drawed filled and to give the appearance of them being filled to different levels pixels will be blanked out from the top down. Using \verb=volume, balance, bar, new_bar= and \verb=pixelindex=, \verb+Bar_Tender+ will calculate which pixels should be blanked and set the signal \verb=render_bar= high.
 
-\verb+BarMixer+ works as a multiplexer blanking out the bars. The color information is passed through if \verb=render_bar= signal is low and blanks out the pixel if high, which gives the effect of bar graphs being filled.
+\verb+Bar_Mixer+ works as a multiplexer blanking out the bars. The color information is passed through if \verb=render_bar= signal is low and blanks out the pixel if high, which gives the effect of bar graphs being filled.
 
 \begin{figure}[H]
   \centering
@@ -62,9 +62,9 @@ To render an image on the VGA screen, five main signals is needed. Three analog 
 %\subsection{VGA\_Driver:RAM\_Control}
 %The image used as a background is pre-stored in the SRAM and to acess the image data we need to generate some signals to the SRAM. The control signals \verb=CE, OE, WE, UB, LB= are set constant to 0, 0, 1, 0, 0, which means that SRAM should be enabled read-only and access both upper and lower byte.
 
-%Each 16 bit row in the SRAM contains color information about two pixels, one in the lower and one in the upper byte. Therefore we must generate two signals: \verb=sram_addr= which provides the SRAM with the correct adress and \verb=up_lo_byte= that provides the sub module Pixelreg with the information about which of the bytes should be read. It also generates the output \verb=pixelindex= which is a counter that counts each pixel in the visible area used by \verb=BarTender= (see section \ref{BarTender}).   
+%Each 16 bit row in the SRAM contains color information about two pixels, one in the lower and one in the upper byte. Therefore we must generate two signals: \verb=sram_addr= which provides the SRAM with the correct adress and \verb=up_lo_byte= that provides the sub module Pixelreg with the information about which of the bytes should be read. It also generates the output \verb=pixelindex= which is a counter that counts each pixel in the visible area used by \verb=Bar_Tender= (see section \ref{Bar_Tender}).   
 
-%This module is identic to the \verb=RAM_Control= module in the third laboration with the exception of \verb=pixelindex=, which is a counter for each pixel in the visible area. It is used by \verb=BarTender= (see section \ref{sec:BarTender}
+%This module is identic to the \verb=RAM_Control= module in the third laboration with the exception of \verb=pixelindex=, which is a counter for each pixel in the visible area. It is used by \verb=Bar_Tender= (see section \ref{sec:Bar_Tender}
 
 %\subsection{VGA\_Driver:Hsyncr, Vsyncr}
 %The sub modules \verb+Hsyncr+ and \verb+Vsyncr+ are responsible for generating the \verb=hsync= and \verb=vsync= signals used for resetting the sweep. In the resolution used in this application this means that \verb=hsync= should be active(low) during hcount values between 490 and 493 and \verb=vsync= between \verb=vcount= values of 655 and 750.   
@@ -76,6 +76,6 @@ To render an image on the VGA screen, five main signals is needed. Three analog 
 %\verb=Pixelregister= is responsible for reading the image information from SRAM, the image information is avaliable on the SRAM-bus and the module simply needs to read the correct byte (using \verb=up_lo_byte=) and put it in a pipeline register.
 
 %\subsection{VGA\_Driver:VGA\_gen}
-%\verb+VGA_gen+ will take the \verb=pix_reg= register and supply it to the three color channel outputs \verb=VGA_r=, \verb=VGA_g= and \verb=VGA_b=. Due to the fact that the AVD7123 chip expects 10 bit values and the stored image containing 3-bit color values the values need to be scaled up before provided to \verb+BarMixer+.
+%\verb+VGA_gen+ will take the \verb=pix_reg= register and supply it to the three color channel outputs \verb=VGA_r=, \verb=VGA_g= and \verb=VGA_b=. Due to the fact that the AVD7123 chip expects 10 bit values and the stored image containing 3-bit color values the values need to be scaled up before provided to \verb+Bar_Mixer+.
 
 
