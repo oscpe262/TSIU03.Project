@@ -1,0 +1,26 @@
+% Document props and library inclusions
+\documentclass{beamer} 
+\usetheme{default}
+\usepackage[utf8]{inputenc} 
+\usepackage[english]{babel}
+\usepackage{mathtools,tikz,textcomp,fixltx2e,color,graphicx,afterpage,float,parskip,xfrac,gensymb,etoolbox}
+\usetikzlibrary{calc,matrix,positioning,arrows,shapes,trees,plotmarks,decorations.markings}
+\usepackage[font={small,it}]{caption}
+\usepackage[europeancurrents,europeanvoltages,europeanresistors,europeaninductors,smartlabels]{circuitikz}
+\usepackage[font={small,it}]{caption} %% Italics in captions
+
+\setcounter{secnumdepth}{0} % Levels enumerated
+\setcounter{tocdepth}{0} % ToC levels enumerated
+
+\graphicspath{{../Designspec/fig/}} % including pictures from here
+
+\title{Group 41}
+\subtitle{TSIU03 - First Presentation}
+\author{Niklas Blomqvist, Philip Johansson, Matteus Laurent,\\ Johan Levinsson, Oscar Petersson, Erik Peyronson}
+
+\begin{document}
+
+\frame{\titlepage}
+\input{./tex/slides.tex}
+
+\end{document}
