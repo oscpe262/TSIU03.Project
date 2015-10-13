@@ -22,12 +22,3 @@ work exactly as they are supposed to before putting them all together.
 \section{Bar Graph Rendering}
 \input{./tex/cha.barrend.tex} 
 
-There are sveral different ways to render the bar graphs on the
-screen but sience this application will use a pre defined background
-this will be used to our advantage. Instead of manipulating the pixel
-values in the areas covered by the bar-graphs to draw out the
-bars the background image has the bars drawn out in the background
-image, and the application simply blanks out from the top down, which
-will give the apperence of bars (with gradients) being filled to
-diffrent levels while only having to keep track of which pixels should
-show the background and which that should be blanked out.

@@ -1,9 +1,9 @@
 The \verb=Vol_Bal= module will be handling volume and balance adjustment as a whole, of which the basic layout is presented in section \ref{sec:volbal}.
 
-Related problems that need solving:
+Related problems which need solving:
 
 \begin{itemize}
-\item Inside the \verb=Vol_Bal= module, 4-bit registers hold current volume and balance levels. Of the 16 possible values each respective register group can hold, only 11 will be used. Thusly, the system needs to prevent any illegal states.
-\item The system allows audio signal adjustment in form of decrements of 3 dB. Accordingly, our input signal will have its amplitude divided by a value of the square root of 2 a number of times corresponding to the amount of necessary 3 dB decrements. The square root of 2 is an iffy constant to compute and work with, so the system should be optimized to eliminate unnecessary divisions. Furthermore, when dividing, the system should instead multiply with the inverse.
-\item The exponent for the computation of the modified amplitude is a variable. The logic for selecting the correct function of two available and performing the calculation itself will require some thought in order to avoid potential missteps.
+\item Inside the \verb=Vol_Bal= module, 4-bit registers hold current volume and balance levels. Of the 16 possible values each respective register group can hold, only 11 will be used. Hence, the system needs to prevent any illegal states.
+\item The system allows audio signal adjustment in form of decrements of 3 dB. Accordingly, our input signal will have its amplitude divided by a value of $\sqrt{2}$ a number of times corresponding to the amount of necessary 3 dB decrements. $\sqrt{2}$ is an iffy constant to compute and work with, so the system should be optimized to eliminate unnecessary divisions. Furthermore, when dividing, the system should instead multiply with the inverse.
+\item The exponent for the computation of the modified amplitude is a variable. The logic for selecting the correct function out of two available, and performing the calculation itself will require some thought in order to avoid issues.
 \end{itemize}
