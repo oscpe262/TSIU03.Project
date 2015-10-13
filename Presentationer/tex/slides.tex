@@ -63,7 +63,7 @@
 \begin{frame}
   \frametitle{\texttt{Vol\_Bal} (1)}
     \begin{itemize}
-      \item Sub-module \texttt{Current\_Vol\_Bal} holds current values for volume, balance and mute.
+      \item Sub-module \texttt{Current\_Vol\_Bal} holds current values for volume, balance and mute
       \item Sub-module \texttt{Adjustment} $$A_{l\_new} = A_{l\_old} \cdot (1/\sqrt{2})^{n + m}\qquad\ ,\ m = 0\ for\ m < 0$$
 $$A_{r\_new} = A_{r\_old} \cdot (1/\sqrt{2})^{n + |m|}\qquad,\ m = 0\ for\ m > 0\ ,$$
     \end{itemize}
@@ -107,6 +107,17 @@ $$A_{r\_new} = A_{r\_old} \cdot (1/\sqrt{2})^{n + |m|}\qquad,\ m = 0\ for\ m > 0
         \texttt{\{L,R\}bar} & output & Bar amplitude, pre-processing\\    \hline
       \end{tabular}
     \end{figure}
+\end{frame}
+
+\begin{frame}
+  \frametitle{\texttt{Analysis}}
+	\begin{figure}
+	  \includegraphics[scale=.35]{lowpass.png}
+	  \begin{itemize}
+	    \item 100 ms saturation time, $k$ is worked out accordingly
+	  \end{itemize}
+	  $$\frac{1}{10}\mathrm{\ s} = 2^k\cdot\frac{1}{48800}\Rightarrow 2^k=4880\approx 2^{12}\Rightarrow k = 12$$
+	\end{figure}
 \end{frame}
 
 % frame 8
