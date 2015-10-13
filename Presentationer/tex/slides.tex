@@ -122,18 +122,8 @@ $$A_{r\_new} = A_{r\_old} \cdot (1/\sqrt{2})^{n + |m|}\qquad,\ m = 0\ for\ m > 0
     \end{figure}
 \end{frame}
 
-% frame 9
 \begin{frame}
-  \frametitle{\texttt{Bar\_Tender}}
-    \begin{figure}
-      \centering
-      \includegraphics[scale=.25]{UI}
-    \end{figure}
-    \begin{itemize}
-      \item Creates rendering control signal \texttt{render\_bars} for bar graphs (volume, balance, signal strength pre- and post-processing)
-      \item Background pre-filled bars are blanked out downwards
-      \item Based on the signals:
-    \end{itemize}
+  \frametitle{\texttt{VGA-driver}}
     \begin{figure}
       \centering
       \small{
@@ -149,11 +139,25 @@ $$A_{r\_new} = A_{r\_old} \cdot (1/\sqrt{2})^{n + |m|}\qquad,\ m = 0\ for\ m > 0
           \hline
           \texttt{\{L,R\}new\_bar} & Input & An 8-bit input containing manipulated input signal level\\
           \hline
-          \texttt{vga\_clk} & Output & Clock signal needed for scanning\\
+          \texttt{vsync} & Output & Control signal for reading the analysis registers\\
           \hline
         \end{tabular}
       }
     \end{figure}
+\end{frame}
+
+% frame 9
+\begin{frame}
+  \frametitle{\texttt{Bar\_Tender}}
+    \begin{figure}
+      \centering
+      \includegraphics[scale=.25]{UI}
+    \end{figure}
+    \begin{itemize}
+      \item Creates rendering control signal \texttt{render\_bars} for bar graphs (volume, balance, signal strength pre- and post-processing)
+      \item Background pre-filled bars are blanked out downwards
+    \end{itemize}
+
 \end{frame}
 
 % frame 10
