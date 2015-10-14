@@ -54,7 +54,7 @@
       \item Identical function as the one in \emph{Lab 4}\\ (\texttt{Vol\_Bal} replaces \texttt{Application})
         \begin{figure}
           \centering
-          \includegraphics[scale=.24]{snddriver}
+          \includegraphics[scale=.37]{snddriver}
         \end{figure}
     \end{itemize}
 \end{frame}
@@ -64,8 +64,7 @@
   \frametitle{\texttt{Vol\_Bal} (1)}
     \begin{itemize}
       \item Sub-module \texttt{Current\_Vol\_Bal} holds current values for volume, balance and mute
-      \item Sub-module \texttt{Adjustment} $$A_{l\_new} = A_{l\_old} \cdot (1/\sqrt{2})^{n + m}\qquad\ ,\ m = 0\ for\ m < 0$$
-$$A_{r\_new} = A_{r\_old} \cdot (1/\sqrt{2})^{n + |m|}\qquad,\ m = 0\ for\ m > 0\ ,$$
+      \item Sub-module \texttt{Adjustment} $$A_{new} = A_{old} \cdot (1/\sqrt{2})^{n}$$
     \end{itemize}
     \begin{figure}
       \centering
@@ -121,7 +120,7 @@ $$A_{r\_new} = A_{r\_old} \cdot (1/\sqrt{2})^{n + |m|}\qquad,\ m = 0\ for\ m > 0
 \end{frame}
 
 % frame 8
-\begin{frame}
+\begin{frame}[plain]
   \frametitle{\texttt{VGA-driver}}
     \begin{itemize}
       \item Similar to \emph{Lab 3} 
@@ -129,7 +128,7 @@ $$A_{r\_new} = A_{r\_old} \cdot (1/\sqrt{2})^{n + |m|}\qquad,\ m = 0\ for\ m > 0
     \end{itemize}
     \begin{figure}
       \centering
-      \includegraphics[scale=.2]{vgadrive}
+      \includegraphics[scale=.23]{vgadrive}
     \end{figure}
 \end{frame}
 
@@ -179,6 +178,6 @@ $$A_{r\_new} = A_{r\_old} \cdot (1/\sqrt{2})^{n + |m|}\qquad,\ m = 0\ for\ m > 0
     \end{itemize}
     \begin{figure}
       \centering
-      \includegraphics[scale=.2]{vgadrive}
+      \includegraphics[scale=.23]{vgadrive}
     \end{figure}
 \end{frame}
