@@ -19,4 +19,4 @@ END		& E0,69 & E0,F0,69 & 10000 & Mute Volume\\ \hline
 \label{fig:scancodes}
 \end{figure}
 
-The scan codes are shifted into a 26-bit shift register which is reset to all ones, and once the start bit (0) is shifted out, the third byte is compared to a table comparable with figure \ref{fig:scancodes}. A match with the expected third byte of a released control key which on success sends a \verb+kb_input+ to \verb+Vol_Bal+.
+The scan codes are shifted into a 10-bit shift register which is reset to all ones, and once the start bit (0) is shifted out, the byte is compared to a table comparable with figure \ref{fig:scancodes}. A match with $F0_{16}$ indicates a ``key released'' even, upon which we set a boolean value \verb=BREAK_SET= to indicate that next byte check will be compared to a match with the expected byte of a released control key ($75_{16}, 6B_{16}, 72_{16}, 74_{16} or 69_{16}$), which on success sends a \verb+kb_input+ to \verb+Vol_Bal+. Regardless of the outcome of this event, \verb=BREAK_SET= will be reset before the final reset of the shift register, preparing the process to recieve new key events.
