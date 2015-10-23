@@ -2,29 +2,81 @@
 \pagestyle{plain}
 \setcounter{page}{1}
 
-%% Inledning
-\chapter{Inledning}
-\input{./tex/inledning}
+%%%
+\section{Introduction}\label{cha:intro}
+\input{./tex/introduction.tex}
+%%%
+1/2 page
 
-%% Syfte och frågeställningar
-\chapter{Syfte och frågeställningar}
-\input{./tex/syfte}
+{\LARGE Har du inte läst README.txt (efter 23/10), gör det omgående!}
 
-%% Litteratur/Tidigare forskning/Forskningsöversikt/Teoretisk ram
-\chapter{Litteratur och forskningsöversikt}
-\input{./tex/litteratur}
+%%%
+\section{Achievements}\label{cha:achievements}
+\subsection{User Noticable Achievements}\label{sec:userachievments}
+\input{./tex/user.achievements.tex}
+\subsection{Design Challenges}\label{sec:designchallenges}
+\input{./tex/design.achievements.tex}
+%%%
+1/2 page
 
-%% Metod och etiska överväganden
-\chapter{Metoder och etiska överväganden}
-\input{./tex/metod}
+Outline the technical challenges that you have solved in your project. This is not the same as the requirements. For instance, it is not a challenge to “use the DE2 board”, it is not a challenge to “use 16 bits for the audio signal”. But it is a challenge to “generate an echo of 0.1 to 3s” or “display numbers on the screen” or “display bars for a signal level indicator on the screen”. Additionally, to have a “smooth movement of the signal level indicator bars on the screen” is an extra achievement apart from just displaying the bars. There are two tables. In the first one (Achievements) write the technical challenges that a user can notice (like the previous ones). In the second table (Design Challenges) write the challenges of the hardware design that cannot be observed from the outside. Like “use the SRAM to store both an image and audio data”, or “implement a low-pass filter with cut-off frequency 500 Hz”, or “transform the value of a sound sample into a coordinate in the screen for the oscilloscope”, or “determine the size of the memory for...”, or “codify the image in a way that uses a small amount of memory”. Note that some difficulties found during the project may not be technical challenges. Some examples are “much time spent on debugging” or “it was difficult to coordinate the group”. Please, keep these difficulties for Subsection 6, where the Project Execution is evaluated.
 
-%% Resultat/Utredande del
-\chapter{Resultat}
-\input{./tex/resultat}
+%%%
+\section{System Level Description}\label{cha:syslvl}
+\input{./tex/sysl.desc.tex}
+%%%
+1 to 2 pages\\
+Block diagram + description
 
-%% Diskussion
-\chapter{Diskussion}
-\input{./tex/diskussion}
+%%%
+\section{Justification of the Achievements}\label{cha:justice}
+\input{./tex/justification.tex}
+%%%
+4 to 6 pages
 
-%% Referenslista
-\input{./tex/referenser.tex}
+In this subsection, explain how you have solved the challenges described in Subsection 2. It is important that you show how you got from the challenge to a specific solution, and do not miss steps. From the challenge, to the algorithm (mathematical explanation or model), maybe doing some tests in Matlab to take design decisions and validate that the algorithm works. Include the mathematical equations if the algorithm is not obvious. From the algorithm to the hardware implementation, making the numbers of sizes for memories, timing for the signals, design alternatives, decision that you took and why, etc. Include relevant pictures of the circuits or sub-modules of the system to support the explanations. IMPORTANT: You can structure this subsection as a description of the sub-modules of your system, but you have to be aware that what is really important is that you explain clearly how you solved the challenges that you found.
+%%%
+\section{User Interface}\label{cha:ui}
+\input{./tex/ui.tex}
+%%%
+1 page
+How to control the system + image visualized on the screen
+
+%%%
+\section{Improvements}\label{cha:improvements}
+\input{./tex/improvements.tex}
+%%%
+1/2 page
+
+In this subsection, discuss what could be improved in the system and which additional features could be added.
+%%%
+\section{Evaluation of the Project Execution}\label{cha:eval}
+\input{./tex/eval.tex}
+%%%
+1/2 page
+
+In this subsection, discuss how the execution of the project was, if it was according to the original plan, how was the coordination between the members, the time spent of each member in his/her tasks (you have the table below for that), difficulties that you faced, what took more time than expected, why, what took less time than expected, what was easier/more difficult than expected. 
+
+
+%%%
+\section{Personal Experiences}\label{cha:personalexp}
+%%%
+1/2 to 1 pages
+
+In this subsection, include your experiences. What did you liked most in the project? What you have learned? Did you learn from some mistakes/failures? Did you have a good time? Is there something in the course that should be improved? IMPORTANT: The personal experiences are individual and each student in the group has to write a personal paragraph in this subsection. If you want to add more information, or the information is sensitive, please, talk to the Course Responsible.
+
+%%%
+\subsection{Niklas}
+\input{./tex/exp.niklas.tex}
+\subsection{Philip}
+\input{./tex/exp.philip.tex}
+\subsection{Matteus}
+\input{./tex/exp.matteus.tex}
+\subsection{Johan}
+\input{./tex/exp.johan.tex}
+\subsection{Oscar}
+\input{./tex/exp.oscar.tex}
+\subsection{Erik}
+\input{./tex/exp.erik.tex}
+
+\input{./tex/references.tex}

@@ -1,5 +1,5 @@
 %% Doc Props
-\documentclass[10pt,a4paper]{report}
+\documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 
@@ -7,6 +7,7 @@
 \usepackage{
   titlesec,  tikz,  textcomp,  fixltx2e,  color,  fullpage,  graphicx,  afterpage,  float,  parskip,  xfrac,  gensymb,  titlesec,  mathtools, pdfpages, etoolbox, hyperref
 }
+\usepackage[nottoc,numbib]{tocbibind}
 \usepackage[europeancurrents,europeanvoltages,europeanresistors,europeaninductors,smartlabels]{circuitikz}
 \usepackage{pgfplotstable}
 \pgfplotsset{compat=1.12}
@@ -21,7 +22,7 @@
   pdfmenubar=true,             % show Acrobat’s menu?
   pdffitwindow=false,          % window fit to page when opened
   pdfstartview={FitH},         % fits the width of the page to the window
-  pdftitle={},                 % title
+  pdftitle={Project Report},                 % title
   pdfauthor={Oscar Petersson}, % author
   pdfsubject={},          % subject of the document
   pdfkeywords={}          % list of keywords
@@ -42,12 +43,15 @@
 \newcommand{\itb}{\begin{itemize}}
 \newcommand{\ite}{\end{itemize}}
 \newcommand{\tb}{\textbackslash}
-\newcommand{\citep}[1]{\emph{Datablad \cite{#1}}}
-\renewcommand{\contentsname}{Innehållsförteckning}
+\newcommand{\citeD}{\emph{Design Specification \cite{design}}}
+\newcommand{\citeR}{\emph{Design Specification \cite{design}}}
+\newcommand{\citeF}{\emph{Design Specification \cite{design}}}
+\newcommand{\citeP}{\emph{Design Specification \cite{design}}}
+\newcommand{\citeM}[2]{\texttt{#1.vhd} \cite[line #2]{#1}}
 
 %% First Page Information
 \author{Niklas Blomqvist, Philip Johansson, Matteus Laurent, Johan Levinsson, Oscar Petersson, Erik Peyronsson}
-\title{Group 41}
+\title{Group 41 - Project Report}
 \date{\today}
 \newcommand{\course}{System Design - Project, HT15}
 \newcommand{\coursenumber}{TSIU03, Linköpings universitet}
@@ -58,19 +62,6 @@
 
 %\newcommand{\includelogo}{\includegraphics[width=48 mm]{LiTH_sigill_sv.pdf}\makeatletter\begin{center}\vskip 4.5cm}
 \newcommand{\excludelogo}{\makeatletter\begin{center}~\vfill}
-
-%% Remove chapter ``chapter'', keep chapter number
-\makeatletter
-\renewcommand{\@makechapterhead}[1]{%
-  \vspace*{50 pt}%
-          {\setlength{\parindent}{0pt} \raggedright \normalfont
-            \bfseries\Huge
-            \ifnum \value{secnumdepth}>1
-            \if@mainmatter\thechapter.\ \fi%
-            \fi
-            #1\par\nobreak\vspace{40 pt}}}
-\makeatother
-
 
 %%% Document %%%
 \begin{document}
@@ -92,8 +83,8 @@
 \coursenumber\hfill\institution
 \makeatother
 \newpage
-\afterpage{\null\newpage}
-\thispagestyle{empty}
+%\afterpage{\null\newpage}
+%\thispagestyle{empty}
 
 %% Table of Contents
 \addtocontents{toc}{\protect\hypertarget{toc}{}}

@@ -1,25 +1,44 @@
-Detta är för stunden endast en mall med dummy-filer för respektive kapitel och kommer att ändras vad tiden lider.
+Detta är mallen med dummy-filer för respektive kapitel rapporten ska bestå utav.
 
-Följande kommer dock inte att ändras utan gäller tills vidare:
+Följande gäller (och är ni inte bekanta med principen såhär dags, då är det fan
+i mig dags att lära sig :p): 
 
-report.* - grundfiler till rapporten. Kommer inte att behöva ändras om allt vill sig väl.
+report.* - grundfilen till rapporten. Kommer inte att behöva ändras om allt vill
+sig väl.
+
 latexmk.pl - script för att automatiskt uppdatera dokumentet. Ska ej ändras.
 	   Körs från linuxterminal enligt: "./latexmk.pl -pvc -pdf report.tex"
+	   Manuell kompilering: "pdflatex report.tex"
+	   
 fig/ - Här i läggs alla bilder, företrädesvis i .png-format.
+
 tex/ - Här ligger alla textfiler (se nedan).
 
 
-MAPPEN TEX/
-Filen main.tex utgör nästa nivå av rapporten. Här inkluderas respektive kapitel. Det går bra att ändra i den enligt
-det format som redan exemplifierats i den. Ändra dock ej de första tre raderna.
+MAPPEN <./TEX/>
+Filen main.tex utgör nästa nivå av rapporten. Här inkluderas respektive kapitel-
+fil samt kapiteltitel. Här står även beskrivningen som syns i kompilerad pdf-fil
+från början. Denna text tas bort först när kapitlet i det närmaste är klart.
+Maximalt sidantal är 12!
 
-När det kommer till kapitelfilerna så ska dessa vara utf-8-formaterade (ett måste) textfiler med ändelsen .tex (för
-eventuella windowsmänniskors skull). Jag vill att ni läser min LaTeX-guide, främst kapitel 1-4 och 9, helst innan ni
-går vidare i detta dokument om ni inte använt LaTeX tidigare.
+När det kommer till kapitelfilerna så ska dessa vara utf-8-formaterade (ett måste)
+textfiler med ändelsen .tex (för eventuella windowsmänniskors skull). Jag vill
+att ni läser min LaTeX-guide, främst kapitel 1-4 och 9, helst innan ni går vidare
+i detta dokument om ni fortfarande är osäkra på LaTeX.
 
-Se till att märka upp era sections/chapters etc enligt följande modell: \section{avsnitt}\label{sec:avsnitt}
-Detta för att enkelt kunna hänvisa inom dokumentet.
+De kapitel och underrubriker som ska förekomma är redan definierade. Inga nya ska
+behöva läggas till.
 
-Vi har förvisso vår Dropboxmapp till förfogande, men jag har även speglat den på github, vilken kan underlätta en hel
-del när det kommer till att följa ändringar etc, så vill ni ha tillgång till repot, hojta. Ni kommer redan att ha
-gitstrukturen i er mapp ... 
+Några (se report.tex för samtliga) specialkommandon tillgängliga är:
+\citeD - infogar referens till designspec.
+\citeR - infogar referens till kravspec.
+\citeF - infogar referens till första pres.sliden
+\citeP - infogar referens till projektplanen
+\citeM{foo}{nn} - infogar referens till foo.vhd, rad nn. Kräver adekvat referens i
+		  references.tex (se vhdldummy)
+
+Vi har förvisso vår Dropboxmapp till förfogande, men jag har även speglat den på
+github, vilken kan underlätta en hel del när det kommer till att följa ändringar
+etc, så vill ni ha tillgång till repot, hojta. Ni kommer redan att ha git-
+strukturen i er mapp. Pushningar kommer, om ingen annan vill använda det, att
+ske dagligen.
