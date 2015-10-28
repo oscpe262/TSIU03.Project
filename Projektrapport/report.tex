@@ -5,13 +5,28 @@
 
 % Packages
 \usepackage{
-  titlesec,  tikz,  textcomp,  fixltx2e,  color,  fullpage,  graphicx,  afterpage,  float,  parskip,  xfrac,  gensymb,  titlesec,  mathtools, pdfpages, etoolbox, hyperref
+  titlesec,
+  %tikz,
+  textcomp,
+  fixltx2e,
+  color,
+  fullpage,
+  graphicx,
+  afterpage,
+  float,
+  parskip,
+  xfrac,
+  gensymb,
+  mathtools,
+  pdfpages,
+  etoolbox,
+  hyperref
 }
-\usepackage[nottoc,numbib]{tocbibind}
-\usepackage[europeancurrents,europeanvoltages,europeanresistors,europeaninductors,smartlabels]{circuitikz}
-\usepackage{pgfplotstable}
-\pgfplotsset{compat=1.12}
-\usetikzlibrary{calc,matrix,positioning,arrows,shapes,trees,plotmarks,decorations.markings}
+\usepackage[nottoc,section,numbib]{tocbibind}
+%\usepackage[europeancurrents,europeanvoltages,europeanresistors,europeaninductors,smartlabels]{circuitikz}
+%\usepackage{pgfplotstable}
+%\pgfplotsset{compat=1.12}
+%\usetikzlibrary{calc,matrix,positioning,arrows,shapes,trees,plotmarks,decorations.markings}
 \usepackage[font={small,it}]{caption} %% Italics in captions
 
 % PDF props
@@ -22,10 +37,10 @@
   pdfmenubar=true,             % show Acrobat’s menu?
   pdffitwindow=false,          % window fit to page when opened
   pdfstartview={FitH},         % fits the width of the page to the window
-  pdftitle={Project Report},                 % title
+  pdftitle={G41 Project Report},                 % title
   pdfauthor={Oscar Petersson}, % author
-  pdfsubject={},          % subject of the document
-  pdfkeywords={}          % list of keywords
+  pdfsubject={TSIU03 Project Report},          % subject of the document
+  pdfkeywords={TSIU03,Project,Report}          % list of keywords
   pdfnewwindow=true,           % links in new window
   hidelinks,                   % hide links (removing color and border)
   linktoc=all,                 % parts of TOC made into links    
@@ -34,9 +49,7 @@
 
 % More Props
 \graphicspath{{./fig/}}
-
-% Add Bibliography to ToC
-\apptocmd{\thebibliography}{\csname phantomsection\endcsname\addcontentsline{toc}{chapter}{\bibname}}{}{}
+\graphicspath{{../Designspec/fig/}}
 
 % Comfy Command Redefinitions
 \newcommand{\bve}{\begin{verbatim}}
@@ -50,7 +63,7 @@
 \newcommand{\citeM}[2]{\texttt{#1.vhd} \cite[line #2]{#1}}
 
 %% First Page Information
-\author{Niklas Blomqvist, Philip Johansson, Matteus Laurent, Johan Levinsson, Oscar Petersson, Erik Peyronsson}
+\author{Niklas Blomqvist, Philip Johansson, Matteus Laurent, Johan Levinsson, Oscar Petersson, Erik Peyronson}
 \title{Group 41 - Project Report}
 \date{\today}
 \newcommand{\course}{System Design - Project, HT15}
@@ -60,9 +73,6 @@
 \newcommand{\institution}{Department of Electrical Engineering (ISY)}
 \newcommand{\reptype}{Project Report}
 
-%\newcommand{\includelogo}{\includegraphics[width=48 mm]{LiTH_sigill_sv.pdf}\makeatletter\begin{center}\vskip 4.5cm}
-\newcommand{\excludelogo}{\makeatletter\begin{center}~\vfill}
-
 %%% Document %%%
 \begin{document}
 
@@ -71,8 +81,7 @@
 
 %% Custom titlepage, empty backside, do not use with \maketitle
 \pagestyle{empty}
-%\includelogo
- \excludelogo
+  \makeatletter\begin{center}~\vfill
   \Large{\@author}\vskip .3cm
   \textbf{\LARGE{\@title}}\vskip .2cm
   \large{\programme}
@@ -83,8 +92,6 @@
 \coursenumber\hfill\institution
 \makeatother
 \newpage
-%\afterpage{\null\newpage}
-%\thispagestyle{empty}
 
 %% Table of Contents
 \addtocontents{toc}{\protect\hypertarget{toc}{}}
@@ -92,6 +99,7 @@
 \addtocontents{toc}{\protect\thispagestyle{empty}}
 \cleardoublepage
 
+% Call First File Branch
 \input{./tex/main.tex}
 
 \end{document}
