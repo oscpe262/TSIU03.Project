@@ -1,7 +1,9 @@
+%%% Slide number to be inserted! %%%
 % Document props and library inclusions
-\documentclass{beamer}
+\documentclass[t]{beamer}
+\usetheme[width=1.9cm]{Hannover}
 %\documentclass[handout]{beamer} 
-\usetheme{default}
+\usecolortheme{seagull}
 \usepackage[utf8]{inputenc} 
 \usepackage[english]{babel}
 \usepackage{mathtools,tikz,textcomp,fixltx2e,color,graphicx,afterpage,float,parskip,xfrac,gensymb,etoolbox}
@@ -16,20 +18,18 @@
 \setcounter{secnumdepth}{0} % Levels enumerated
 \setcounter{tocdepth}{0} % ToC levels enumerated
 
-\graphicspath{{../Designspec/fig/}} % including pictures from here
+\graphicspath{{../../Designspec/fig/}} % including pictures from here
 
 \title{Group 41}
-\subtitle{TSIU03 - First Presentation}
+\subtitle{TSIU03 - Final Presentation}
 \author{Niklas Blomqvist, Philip Johansson, Matteus Laurent,\\ Johan Levinsson, Oscar Petersson, Erik Peyronson}
 
-\setbeamerfont{page number in head/foot}{size=\normalsize}
 \setbeamertemplate{footline}[frame number]
-
-
+\beamertemplatenavigationsymbolsempty
 
 \begin{document}
-
+\addtocounter{framenumber}{-1}
 \frame{\titlepage}
-\input{./tex/slides.tex}
+\input{./tex/main.tex}
 
 \end{document}
