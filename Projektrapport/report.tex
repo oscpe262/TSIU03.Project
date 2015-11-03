@@ -57,9 +57,9 @@
 \newcommand{\ite}{\end{itemize}}
 \newcommand{\tb}{\textbackslash}
 \newcommand{\citeD}{\emph{Design Specification \cite{design}}}
-\newcommand{\citeR}{\emph{Design Specification \cite{design}}}
-\newcommand{\citeF}{\emph{Design Specification \cite{design}}}
-\newcommand{\citeP}{\emph{Design Specification \cite{design}}}
+\newcommand{\citeR}{\emph{Requirement Specification \cite{reqspec}}}
+\newcommand{\citeF}{\emph{First Presentation \cite{pres}}}
+\newcommand{\citeP}{\emph{Project Plan \cite{plan}}}
 \newcommand{\citeM}[2]{\texttt{#1.vhd} \cite[line #2]{#1}}
 
 %% First Page Information
@@ -98,9 +98,8 @@
 \tableofcontents\label{sec:toc}
 \addtocontents{toc}{\protect\thispagestyle{empty}}
 \cleardoublepage
-
 % Call First File Branch
-\input{./tex/main.tex}
-%\input{./tex/mainclean.tex}
+%\input{./tex/main.tex}
+\input{./tex/mainclean.tex}
 
 \end{document}

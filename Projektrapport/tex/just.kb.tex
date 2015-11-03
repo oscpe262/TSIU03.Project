@@ -1,0 +1,10 @@
+\subsection{Justification Keyboard}
+In order to detect and register a keypress only once, the \verb=Keyboard= module had to differ signific\-antly from \emph{Laboration 2}. Two viable options were considered: Either, a control for typematic rate effectively reducing the polling rate, else a ``detect-on-release-only''  would have to be implemented. The latter approach was decided upon.
+
+The basic functionality of the module is the same as in the laboration, with the scan codes going through a shift register and being checked against a set of 8-bit values. These values correspond to the control keys plus the break byte F0$_{16}$.
+
+When a start bit reaches the end of the shift register, the shift register is set to reset to 1:s next \texttt{PS2\_CLK} cycle, allowing us to detect each new byte as they are shifted through. This results in the shift register being ``unusable'' for one \texttt{PS2\_CLK} cycle. We circumvent this problem by using a 10 bit (1 bit less than a full sent byte) and ignoring the stop bit.
+
+Next, the current 8-bit value following the start bit is checked. If it equals F0$_{16}$, a register \texttt{BREAKSET} is set in order to enable the next byte to be checked against the control key values. If at the next byte cycle \texttt{BREAKSET} is not set, the byte is ignored. If set, \texttt{BREAKSET} is reset to '0', the byte checked and \verb=kb_input= set to corresponding value.
+
+``Outside'' this \texttt{PS2\_CLK} cycle, the process is controlled by the regular clock. This allows us to again set \verb=kb_input= to idle (all '0') each system clock cycle, which in turn allows us to restrain \verb=kb_input= to be anything but 0 for no more than 1 clock cycle and therefore never registered by \verb=Vol_Bal= more than once per key press.
