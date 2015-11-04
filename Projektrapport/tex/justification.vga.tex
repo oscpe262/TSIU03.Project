@@ -14,7 +14,7 @@ application draw the bar itself.
         \label{fig:picture_xy}
 \end{figure}
 
-\verb+figure+ \ref{fig:picture_xy}. is a concept version of the image
+Figure \ref{fig:picture_xy} is a concept version of the image
 used. Constants were declared using the coordinates of the upper right
 corner of the bars displaying signal level, both right and left
 channel before manipulation, the volume bar and the mute symbol and
@@ -22,7 +22,7 @@ the width height and offset to the remaining bars. This way conditions
 could be defined for when \verb+hcnt+ and \verb+vcnt+ coordinates were
 inside the bars or not.
 
-The input consists of four 8 bit unsigned with values spaning from 0
+The input consists of four 8 bit unsigned with values spanning from 0
 to 171 that holds information about the signal level bars, a 4 bit
 unsigned for volume setting spanning from 0 to 9 and a 5 bit signed
 value for balance setting spanning from -8 to 8.
@@ -40,7 +40,7 @@ a constant declaring the width of the boxes, and checking towards
 \verb+hcnt+ instead since the bar is positioned horizontally rather
 than verticaly.
 
-The balance works as volume with the exception that it's divided in two
+The balance works as volume with the exception that it is divided in two
 parts, one representing the right side being filled and one
 representing the left.
 

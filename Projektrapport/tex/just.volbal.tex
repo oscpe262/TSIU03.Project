@@ -2,59 +2,52 @@
 % konsekvenser
 % implementation
 
-\subsection{Adjusting Volume and Balance}
+\subsection{Justification Volume and Balance Adjustment}
 
 % Behöver vi uttrycka dessa explicit? Sparar annars utrymme om direkt ref. till krav.spec, alt. merga till 2-3 längre haranger
-Detailed in the \citeR{} we find the following statements about audio signal adjustment:
+The framework for the layout of the \texttt{Vol\_Bal} module and its functionalities is grounded in item 5 and 6 of the \citeR{}. Design choices regarding volume and balance adjustment were made with those in mind, and one of the first steps was to centralize these functionalities within one module, thus, \texttt{Vol\_Bal}. Inspiration was drawn from the system structure in \emph{Laboration 4, Audio Codec} where this module replaces the \texttt{Application} module.
 	
-\begin{figure}[h]
-\centering
-\begin{itemize}
-\item 5a. The system shall have a volume control.
-\item  5b. The volume control shall have at least 10 levels.
-\item  5c. The volume control shall be logarithmic with at most 4 dB per step.
-\item  5d. The volume control shall span at least 27 dB between lowest and highest level.
-\item  5e. An additional volume may be used, that represents mute.
-\item  6a. The system shall have a balance control.
-\item  6b. The balance control shall have at least 10 levels.
-\item  6c. The balance shall be linear between only left and only right.
-\end{itemize}
-\end{figure}
+% \begin{figure}[h]
+% \centering
+% \begin{itemize}
+% \item 5a. The system shall have a volume control.
+% \item  5b. The volume control shall have at least 10 levels.
+% \item  5c. The volume control shall be logarithmic with at most 4 dB per step.
+% \item  5d. The volume control shall span at least 27 dB between lowest and highest level.
+% \item  5e. An additional volume may be used, that represents mute.
+% \item  6a. The system shall have a balance control.
+% \item  6b. The balance control shall have at least 10 levels.
+% \item  6c. The balance shall be linear between only left and only right.
+% \end{itemize}
+% \end{figure}
 	
-A decision was made to assign one module as the central hub for audio signal processing. Inspiration was drawn from the system structure in \emph{Laboration 4}, Audio Codec, where our module \texttt{Vol\_Bal} replaces the \texttt{Application} module.
+Two serial and separate submodules were decided on to handle audio signal adjustment - first a logarithmic adjustment for volume, which is then followed by linear balance scaling. The balance adjustment was initially interpreted as being logarithmic, but corrections were made which led to the splitting of the two. 
+A third submodule in \texttt{Vol\_Bal} was assigned to read the \verb=kb_input= signal and determine when user input is legal and then updating internal system levels accordingly.
+It was also decided that mute would be treated as a separate system status instead of implementing a special case for "no" volume. Since volume adjustment represents logarithmic reductions in the amplitude, we would need a workaround to truly mute output anyway.
 	
-The balance adjustment was initially interpreted as being logarithmic. Corrections were made and the design eventually landed on creating two serial and separate modules. First adjusting logarithmically for volume, and then linearly for balance.
-%* System level registers kept in \texttt{Vol\_Bal} because of relatability. %relevant för att motivera lösningen av utmaningen?
-A separate submodule in \texttt{Vol\_Bal} was assigned to read the \verb=kb_input= signal and determine when user input is legal.
-It was also decided that mute would be treated as a separate system status instead of implementing a special case for "no" volume (since volume adjustment represents logarithmic reductions in the amplitude, a special case would be needed to truly mute output anyway).
-	
-Logarithmic volume scaling. A natural increment/decrement in decibel to scale the volume is $\pm$ 3 dB, since a 3 dB increase of a signal is approximately twice the power or the amplitude multiplied by the square root of 2. Since the incoming signals can be assumed to use the full range of the amplitude sampling, it makes sense to only make signal adjustments that lower the amplitude. These facts led us to the decision to allow for eleven levels of volume, where internally an unsigned value between 0 and 10 represents the amount of logarithmic reductions we perform on the incoming amplitude, per the formula below:
-	
+A natural increment/decrement in decibel to scale the volume is $\pm$ 3 dB, since a 3 dB increase of a signal is approximately twice the power or the amplitude multiplied by the square root of 2. Furthermore, since the incoming signals can be assumed to use the full range of the amplitude sampling, it makes sense to only make signal adjustments that lower the amplitude output. These facts led us to the decision to allow for eleven levels of volume, where internally an unsigned value between 0 and 10 represents the amount of logarithmic reductions we perform on the incoming amplitude, per the formula below. The result is a possible volume adjustment on the range -30 to 0 dB, with intervals of 3 dB.
 	
 $$A_{adj} = A_{in} \cdot (1/\sqrt{2})^n$$
 
-	The volume adjustment can thus change the signal on the range -30 to 0 dB, with intervals of 3 db.
-
-	* Linear balance scaling. An early design choice was to avoid division in general unless performed by a shift\_right statement (allowing for divisions of powers of 2). Since the requirements document specified at least ten levels of balance, the conclusion was to subtract the incoming signal with one-eights to implement the formulas below:
+An early design choice was to avoid division in general unless performed by a \texttt{shift\_right} statement (allowing for divisions of powers of 2). This affected the algorithm for the linear balance scaling. Since the requirements document specified at least ten levels of balance, the conclusion was to subtract the incoming signal with one-eights to implement the formulas below:
 	
 $$A_{l\_out} = \frac{8 - m}{8} \cdot A_{l\_adj}\qquad,\ A_{l\_out} = A_{l\_adj}\ for\ m < 0$$
 $$A_{r\_out} = \frac{8 - |m|}{8} \cdot A_{r\_adj}\qquad,\ A_{r\_out} = A_{r\_adj}\ for\ m > 0$$
 	
-	After a few iterations, the above was locked in and the system balance level was made to have 17 legal values, allowing for complete muting of a separate channel.
+After a few iterations, the above was locked in with 17 legal values for \emph{m}, allowing for complete muting of a separate channel.
 	
 	
-Implementation:
+\subsubsection{Implementation}
 
-	* Volume\_Adjustment:
-	To implement the logarithmic scaling, a varied amount of multiplications needed to be performed on the incoming signal. To achieve this, a state machine was adopted, utilizing the steps below:
-	
-	* idle: Set volume done to low. When the lrsel signal changes, load the relevant audio signal and the volume system level. Go to state "odd".
-	* odd: If the volume input is odd, multiply the signal by 3 and divide by 4 (0.75 = approximation for 1/sqrt(2)). Go to state "evens" regardless.
-	* evens: If the copied volume input is 2 or more, half the signal, subtract 2 from the volume input, and go to state "evens". If not, go to state "end".
-	* end: Set volume done to high. Demultiplex the result to the left or right channel, using lrsel as a selection signal. Go to state "idle".
+To realize the logarithmic volume scaling, a varied amount of multiplications needs to be performed on the incoming signal. To achieve this, a state machine for its submodule was adopted, utilizing the steps below:
 
-	* Balance_Adjustment:
-	We only want to adjust for balance once we're done with the volume part. This led to the logical inclusion of the volume done output from the serially preceeding module. In line with the mathematical functions above, we select our balance value based on the lrsel logic and whether the balance level is positive or negative. Multiply by 8 minus the balance value, followed by a shift of three bits right to divide by 8. If lrsel or balance level signals we're not to balance adjust the current audio channel, balance value will be 0, resulting in status quo since we multiply by 8, and then divide by 8 (the order is important).
+\begin{itemize}
+\item \verb=idle:  =Set \texttt{volume\_done} to low. When the \texttt{lrsel} signal changes, load the relevant audio signal and the volume system level, and only then go to state \texttt{odd}.
+\item \verb=odd:   =If the volume input is odd, multiply the signal by 3 and divide by 4 (0.75 = approximation for $1/\sqrt{2}$). Go to state \texttt{evens} in either case.
+\item \verb=evens: =If the copied volume input is 2 or more, half the amplitude, subtract 2 from the volume input, and go to state \texttt{evens}. If not, go to state \texttt{end}.
+\item \verb=end:   =Set \texttt{volume\_done} to high. Demultiplex the result to the left or right channel, using \texttt{lrsel} as a selection signal. Go to state \texttt{idle}.
+\end{itemize} 
+
+We only want to adjust for balance once we are done with the volume part. This led to the logical inclusion of the \texttt{volume\_done} output from the serially preceeding module. In line with the mathematical functions above, we select our balance value based on the \texttt{lrsel} logic and whether the balance level is positive or negative. Multiply by 8 minus the balance value, followed by a shift of three bits right to divide by 8. If \texttt{lrsel} or balance level indicates we are not to balance adjust the current audio channel, balance value will be 0, resulting in status quo since we multiply by 8, and then divide by 8 (the order is important).
 	
-	* Current_vol_bal:
-	From the design, current_vol_bal module's task was clear. Read the 5-bit wide kb_input for issued commands and update system level registers accordingly. The implementation first uses simple AND/OR logic to check whether the command is legal based on our current system levels, zeroing out any illegal kb_input. The registers update every clock cycle, incrementing or decrementing whenever the corresponding bits in the modified kb_input signal is a '1'. Mute is XOR'd with its current value and mute-bit in kb_input.	
+From the design, \texttt{Current\_Vol\_Bal} module's task is clear. Read the 5-bit wide \texttt{kb\_input} for issued commands and update system level registers accordingly. The implementation first uses simple \texttt{AND/OR} logic to check whether the command is legal based on our current system levels, zeroing out any illegal \texttt{kb\_input}. The registers update every clock cycle, incrementing or decrementing whenever the corresponding bits in the modified \texttt{kb\_input} signal is a '1'. Mute is \texttt{XOR}'d with its current value and mute-bit in \texttt{kb\_input}.	
