@@ -1,0 +1,253 @@
+vsim -gui work.keyboard_tb
+# vsim -gui work.keyboard_tb 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboard_tb(sim)#1
+run
+# ** Error: kb_down failed
+#    Time: 2200200 ns  Iteration: 0  Instance: /keyboard_tb
+# ** Error: kb_up failed
+#    Time: 4400400 ns  Iteration: 0  Instance: /keyboard_tb
+# ** Error: kb_offset failed
+#    Time: 9800800 ns  Iteration: 0  Instance: /keyboard_tb
+add wave sim:/keyboard_tb/DUT/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: oscpe262  Hostname: TELEKOM3-12  ProcessID: 5880
+# 
+#           Attempting to use alternate WLF file "./wlfti8974z".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlfti8974z
+# 
+run
+do wave.do
+# ** Error: (vish-4014) No objects found matching '/keyboard_tb/DUT/rstn'.
+# Executing ONERROR command at macro ./wave.do line 5
+# ** Error: (vish-4014) No objects found matching '/keyboard_tb/DUT/clk'.
+# Executing ONERROR command at macro ./wave.do line 7
+# ** Error: (vish-4014) No objects found matching '/keyboard_tb/DUT/PS2_DAT'.
+# Executing ONERROR command at macro ./wave.do line 11
+run
+run
+restart
+run
+# ** Error: kb_down failed
+#    Time: 2200200 ns  Iteration: 0  Instance: /keyboard_tb
+# ** Error: kb_up failed
+#    Time: 4400400 ns  Iteration: 0  Instance: /keyboard_tb
+# ** Error: kb_offset failed
+#    Time: 9800800 ns  Iteration: 0  Instance: /keyboard_tb
+# Compile of Keyboard_TB.vhd was successful.
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboard_tb(sim)#1
+run
+# ** Error: kb_down failed
+#    Time: 2200200 ns  Iteration: 0  Instance: /keyboard_tb
+# ** Error: kb_up failed
+#    Time: 4400400 ns  Iteration: 0  Instance: /keyboard_tb
+# Compile of Keyboard.vhd was successful.
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboard_tb(sim)#1
+run
+# ** Error: kb_down failed
+#    Time: 2200200 ns  Iteration: 0  Instance: /keyboard_tb
+# ** Error: kb_up failed
+#    Time: 4400400 ns  Iteration: 0  Instance: /keyboard_tb
+restart
+run
+# ** Error: kb_down failed
+#    Time: 2200200 ns  Iteration: 0  Instance: /keyboard_tb
+# ** Error: kb_up failed
+#    Time: 4400400 ns  Iteration: 0  Instance: /keyboard_tb
+quit -sim
+vsim -gui work.keyboard_tb
+# vsim -gui work.keyboard_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboard_tb(sim)#1
+run
+# ** Error: kb_down failed
+#    Time: 2200200 ns  Iteration: 0  Instance: /keyboard_tb
+# ** Error: kb_up failed
+#    Time: 4400400 ns  Iteration: 0  Instance: /keyboard_tb
+do wave.do
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: oscpe262  Hostname: TELEKOM3-12  ProcessID: 5880
+# 
+#           Attempting to use alternate WLF file "./wlft2f7r9z".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft2f7r9z
+# 
+# ** Error: (vish-4014) No objects found matching '/keyboard_tb/DUT/rstn'.
+# Executing ONERROR command at macro ./wave.do line 5
+# ** Error: (vish-4014) No objects found matching '/keyboard_tb/DUT/clk'.
+# Executing ONERROR command at macro ./wave.do line 7
+# ** Error: (vish-4014) No objects found matching '/keyboard_tb/DUT/PS2_DAT'.
+# Executing ONERROR command at macro ./wave.do line 11
+run
+# ** Error: kb_offset failed
+#    Time: 10800800 ns  Iteration: 0  Instance: /keyboard_tb
+restart
+run
+# ** Error: kb_down failed
+#    Time: 2200200 ns  Iteration: 0  Instance: /keyboard_tb
+# ** Error: kb_up failed
+#    Time: 4400400 ns  Iteration: 0  Instance: /keyboard_tb
+restart
+run
+# ** Error: kb_down failed
+#    Time: 2200200 ns  Iteration: 0  Instance: /keyboard_tb
+# ** Error: kb_up failed
+#    Time: 4400400 ns  Iteration: 0  Instance: /keyboard_tb
+quit -sim
+vsim -voptargs=+acc work.keyboard_tb
+# vsim -voptargs=+acc work.keyboard_tb 
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboard_tb(sim)#1
+# Loading work.keyboard(rtl)#1
+run
+# ** Error: kb_down failed
+#    Time: 2200200 ns  Iteration: 0  Instance: /keyboard_tb
+# ** Error: kb_up failed
+#    Time: 4400400 ns  Iteration: 0  Instance: /keyboard_tb
+do wave.do
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: oscpe262  Hostname: TELEKOM3-12  ProcessID: 5880
+# 
+#           Attempting to use alternate WLF file "./wlft477qiw".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft477qiw
+# 
+run
+# ** Error: kb_offset failed
+#    Time: 10800800 ns  Iteration: 0  Instance: /keyboard_tb
+run
+restart
+run
+# ** Error: kb_down failed
+#    Time: 2200200 ns  Iteration: 0  Instance: /keyboard_tb
+# ** Error: kb_up failed
+#    Time: 4400400 ns  Iteration: 0  Instance: /keyboard_tb
+quit -sim
+# Compile of Keyboard.vhd was successful.
+vsim -voptargs=+acc work.keyboard_tb
+# vsim -voptargs=+acc work.keyboard_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboard_tb(sim)#1
+# Loading work.keyboard(rtl)#1
+run
+# ** Error: kb_down failed
+#    Time: 2200200 ns  Iteration: 0  Instance: /keyboard_tb
+# ** Error: kb_up failed
+#    Time: 4400400 ns  Iteration: 0  Instance: /keyboard_tb
+do wave.do
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: oscpe262  Hostname: TELEKOM3-12  ProcessID: 5880
+# 
+#           Attempting to use alternate WLF file "./wlfts1gygz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlfts1gygz
+# 
+# ** Error: (vish-4014) No objects found matching '/keyboard_tb/DUT/BYTE_IN'.
+# Executing ONERROR command at macro ./wave.do line 10
+run
+# ** Error: kb_offset failed
+#    Time: 10800800 ns  Iteration: 0  Instance: /keyboard_tb
+restart
+run
+# ** Error: kb_down failed
+#    Time: 2200200 ns  Iteration: 0  Instance: /keyboard_tb
+# ** Error: kb_up failed
+#    Time: 4400400 ns  Iteration: 0  Instance: /keyboard_tb
+# Compile of Keyboard_TB.vhd was successful.
+vsim -voptargs=+acc work.keyboard_tb
+# vsim -voptargs=+acc work.keyboard_tb 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboard_tb(sim)#1
+# Loading work.keyboard(rtl)#1
+restart
+do wave.do
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: oscpe262  Hostname: TELEKOM3-12  ProcessID: 5880
+# 
+#           Attempting to use alternate WLF file "./wlftdffbbf".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftdffbbf
+# 
+# ** Error: (vish-4014) No objects found matching '/keyboard_tb/DUT/BYTE_IN'.
+# Executing ONERROR command at macro ./wave.do line 10
+run
+# ** Error: kb_down failed
+#    Time: 2200200 ns  Iteration: 0  Instance: /keyboard_tb
+# ** Error: kb_up failed
+#    Time: 4400400 ns  Iteration: 0  Instance: /keyboard_tb
+# Compile of Keyboard_TB.vhd was successful.
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboard_tb(sim)#1
+# Loading work.keyboard(rtl)#1
+run
+restart
+# Compile of Keyboard_TB.vhd was successful.
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboard_tb(sim)#1
+# Loading work.keyboard(rtl)#1
+run
+# Compile of Keyboard_TB.vhd was successful.
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.keyboard_tb(sim)#1
+# Loading work.keyboard(rtl)#1
+run
+# ** Error: kb_up failed
+#    Time: 4400400 ns  Iteration: 0  Instance: /keyboard_tb
+# Compile of Keyboard_TB.vhd was successful.
+quit

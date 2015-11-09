@@ -1,0 +1,510 @@
+m255
+K3
+13
+cModel Technology
+dH:\TSIU03\lab1\TASK2
+Ebar_tender
+Z0 w1445593415
+Z1 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+Z2 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z3 DPx4 ieee 16 std_logic_signed 0 22 E>OLoMaBGQ?hbGgOoNXM^1
+Z4 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z5 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z6 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z7 dU:\es\projects\projgroup41\vga_drive
+Z8 8U:/es/projects/projgroup41/vga_drive/bar_tender.vhd
+Z9 FU:/es/projects/projgroup41/vga_drive/bar_tender.vhd
+l0
+L12
+VOV>cJg8z@l=EcEB7B>Qmc3
+!s100 aS0bh=G11iSS`c@XFmFW93
+Z10 OL;C;10.1b;51
+32
+!i10b 1
+Z11 !s108 1445593418.642000
+Z12 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vga_drive/bar_tender.vhd|
+Z13 !s107 U:/es/projects/projgroup41/vga_drive/bar_tender.vhd|
+Z14 o-work work -2002 -explicit
+Z15 tExplicit 1
+Artl
+R1
+R2
+R3
+R4
+R5
+R6
+DEx4 work 10 bar_tender 0 22 OV>cJg8z@l=EcEB7B>Qmc3
+l102
+L30
+VQ[l31=T]8T<z67RRVPUdF0
+!s100 ;A4C[`31TM3oZ^z@FM_Ke2
+R10
+32
+!i10b 1
+R11
+R12
+R13
+R14
+R15
+Eblank_syncr
+Z16 w1443022303
+R5
+R6
+R7
+Z17 8U:/es/projects/projgroup41/vga_drive/blank_syncr.vhd
+Z18 FU:/es/projects/projgroup41/vga_drive/blank_syncr.vhd
+l0
+L5
+VL48Fm_QT1h7h2Ca<nEX^Z1
+R10
+32
+Z19 !s108 1445503941.926000
+Z20 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vga_drive/blank_syncr.vhd|
+Z21 !s107 U:/es/projects/projgroup41/vga_drive/blank_syncr.vhd|
+R14
+R15
+!s100 [j5<IL;7mgG4:3?cj0HTz0
+!i10b 1
+Artl
+R5
+R6
+DEx4 work 11 blank_syncr 0 22 L48Fm_QT1h7h2Ca<nEX^Z1
+l14
+L12
+VUEK>5f`OA6GQz17iMz;nK1
+R10
+32
+R19
+R20
+R21
+R14
+R15
+!s100 <kFIEaF33E;^UTi?J2W9i0
+!i10b 1
+Eblank_video
+Z22 w1443025411
+R4
+R5
+R6
+R7
+Z23 8U:/es/projects/projgroup41/vga_drive/blank_video.vhd
+Z24 FU:/es/projects/projgroup41/vga_drive/blank_video.vhd
+l0
+L5
+VGXSKE@l>;SI<VVPiJ5O^G2
+R10
+32
+Z25 !s108 1445503942.746000
+Z26 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vga_drive/blank_video.vhd|
+Z27 !s107 U:/es/projects/projgroup41/vga_drive/blank_video.vhd|
+R14
+R15
+!s100 ]PL6SaJHFNBzm8C>Nln6W3
+!i10b 1
+Artl
+R4
+R5
+R6
+DEx4 work 11 blank_video 0 22 GXSKE@l>;SI<VVPiJ5O^G2
+l13
+L11
+VjZhihbm>9Nbkj=FMoTVA?0
+R10
+32
+R25
+R26
+R27
+R14
+R15
+!s100 @RWe34]DRE2NY9WzK3Go=3
+!i10b 1
+Eclock_gen
+Z28 w1442930946
+R4
+R5
+R6
+R7
+Z29 8U:/es/projects/projgroup41/vga_drive/clock_gen.vhd
+Z30 FU:/es/projects/projgroup41/vga_drive/clock_gen.vhd
+l0
+L5
+VHEZF75m=hR<kVHRTP15?D3
+R10
+32
+Z31 !s108 1445503943.476000
+Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vga_drive/clock_gen.vhd|
+Z33 !s107 U:/es/projects/projgroup41/vga_drive/clock_gen.vhd|
+R14
+R15
+!s100 _JA@REgU__eo>i]6BadOS0
+!i10b 1
+Artl
+R4
+R5
+R6
+DEx4 work 9 clock_gen 0 22 HEZF75m=hR<kVHRTP15?D3
+l12
+L10
+VA4S:c9QD;EBYn^Z8XQ^110
+R10
+32
+R31
+R32
+R33
+R14
+R15
+!s100 >728o[FSoki<9RC:^VmiJ2
+!i10b 1
+Egroup_no
+Z34 w1441630032
+R5
+R6
+R7
+Z35 8U:/es/projects/projgroup41/vga_drive/group_no.vhd
+Z36 FU:/es/projects/projgroup41/vga_drive/group_no.vhd
+l0
+L7
+V`8kKI3`WTeQbzbm56fQFA3
+R10
+32
+Z37 !s108 1445503953.486000
+Z38 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vga_drive/group_no.vhd|
+Z39 !s107 U:/es/projects/projgroup41/vga_drive/group_no.vhd|
+R14
+R15
+!s100 UJXobCL?NB3?5oGOWTR8e0
+!i10b 1
+Afoo
+R5
+R6
+DEx4 work 8 group_no 0 22 `8kKI3`WTeQbzbm56fQFA3
+l14
+L12
+VlJ6L[:;CelmcT<N3:DFeO3
+R10
+32
+R37
+R38
+R39
+R14
+R15
+!s100 T<J4cS<RI;MoUO:1;:3:`1
+!i10b 1
+Ehsyncr
+Z40 w1443031736
+R4
+R5
+R6
+R7
+Z41 8U:/es/projects/projgroup41/vga_drive/hsyncr.vhd
+Z42 FU:/es/projects/projgroup41/vga_drive/hsyncr.vhd
+l0
+L5
+VTTFCz>z1lJO35z@ijUL9L2
+R10
+32
+Z43 !s108 1445503945.126000
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vga_drive/hsyncr.vhd|
+Z45 !s107 U:/es/projects/projgroup41/vga_drive/hsyncr.vhd|
+R14
+R15
+!s100 99cP;U[:BP?T99ElH6GWD0
+!i10b 1
+Artl
+R4
+R5
+R6
+DEx4 work 6 hsyncr 0 22 TTFCz>z1lJO35z@ijUL9L2
+l15
+L12
+Vif[NU6gAlllBZ688dg=mi1
+R10
+32
+R43
+R44
+R45
+R14
+R15
+!s100 a34I^28P]=8dWk]T1EC3X1
+!i10b 1
+Elinecounter
+Z46 w1443023536
+R4
+R5
+R6
+R7
+Z47 8U:/es/projects/projgroup41/vga_drive/linecounter.vhd
+Z48 FU:/es/projects/projgroup41/vga_drive/linecounter.vhd
+l0
+L5
+VR:jiKfP^23;>hHzi`R0<g3
+R10
+32
+Z49 !s108 1445503959.736000
+Z50 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vga_drive/linecounter.vhd|
+Z51 !s107 U:/es/projects/projgroup41/vga_drive/linecounter.vhd|
+R14
+R15
+!s100 V24I9XEWLo_PaSTX_WLX03
+!i10b 1
+Artl
+R4
+R5
+R6
+DEx4 work 11 linecounter 0 22 R:jiKfP^23;>hHzi`R0<g3
+l14
+L11
+VnaU6OB=M]Qc[5;YDEBaWh3
+R10
+32
+R49
+R50
+R51
+R14
+R15
+!s100 JhM^YTUAl_0@ELQJGA?m^2
+!i10b 1
+Epixel_reg
+Z52 w1443031157
+R4
+R5
+R6
+R7
+Z53 8U:/es/projects/projgroup41/vga_drive/pixel_reg.vhd
+Z54 FU:/es/projects/projgroup41/vga_drive/pixel_reg.vhd
+l0
+L5
+V=DG60HT9=mG[dmWNI9SXO3
+R10
+32
+Z55 !s108 1445503960.536000
+Z56 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vga_drive/pixel_reg.vhd|
+Z57 !s107 U:/es/projects/projgroup41/vga_drive/pixel_reg.vhd|
+R14
+R15
+!s100 G70zX=<8hP?^YK0`dT4390
+!i10b 1
+Artl
+R4
+R5
+R6
+DEx4 work 9 pixel_reg 0 22 =DG60HT9=mG[dmWNI9SXO3
+l15
+L14
+VdW@bOnFPze;UJ]S;m2jDT3
+R10
+32
+R55
+R56
+R57
+R14
+R15
+!s100 W8KJ[VGf><;k7I2^WjSG?0
+!i10b 1
+Epixelcounter
+R34
+R4
+R5
+R6
+R7
+Z58 8U:/es/projects/projgroup41/vga_drive/pixelcounter.vhd
+Z59 FU:/es/projects/projgroup41/vga_drive/pixelcounter.vhd
+l0
+L5
+V1UmHH_cKcGO_ngzE>__?02
+R10
+32
+Z60 !s108 1445503961.306000
+Z61 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vga_drive/pixelcounter.vhd|
+Z62 !s107 U:/es/projects/projgroup41/vga_drive/pixelcounter.vhd|
+R14
+R15
+!s100 zFBd7cCg;_VJefEWPeB7P2
+!i10b 1
+Artl
+R4
+R5
+R6
+DEx4 work 12 pixelcounter 0 22 1UmHH_cKcGO_ngzE>__?02
+l13
+L11
+V<jQ12``E@okBCkl=Ra7;`1
+R10
+32
+R60
+R61
+R62
+R14
+R15
+!s100 QFMei`iNFkSa31XHf3A2z2
+!i10b 1
+Eram_control
+Z63 w1443032215
+R4
+R5
+R6
+R7
+Z64 8U:/es/projects/projgroup41/vga_drive/RAM_control.vhd
+Z65 FU:/es/projects/projgroup41/vga_drive/RAM_control.vhd
+l0
+L5
+Vne?UVi2?S6]^[iaoD;Y:S0
+R10
+32
+Z66 !s108 1445503962.156000
+Z67 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vga_drive/RAM_control.vhd|
+Z68 !s107 U:/es/projects/projgroup41/vga_drive/RAM_control.vhd|
+R14
+R15
+!s100 ZGJGIhPObS]4OTY5ULBB;3
+!i10b 1
+Artl
+R4
+R5
+R6
+DEx4 work 11 ram_control 0 22 ne?UVi2?S6]^[iaoD;Y:S0
+l18
+L16
+VSm7B`QmR>23J>U1NaFklT1
+R10
+32
+R66
+R67
+R68
+R14
+R15
+!s100 3GT9cXD]9i]=0K<zo1ln81
+!i10b 1
+Etb_bar_tender
+w1445503629
+R4
+R2
+R1
+R5
+R6
+R7
+8U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd
+FU:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd
+l0
+L8
+V@T`CaS>a5]I2S=Dk_FcE43
+R10
+32
+R14
+R15
+!s100 BNO`9l@aQWnKT9T?aVQQo2
+!i10b 1
+!s108 1445590502.353000
+!s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd|
+!s107 U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd|
+Evga_contr
+Z69 w1442923877
+R4
+R5
+R6
+R7
+Z70 8U:/es/projects/projgroup41/vga_drive/VGA_contr.vhd
+Z71 FU:/es/projects/projgroup41/vga_drive/VGA_contr.vhd
+l0
+L25
+VidP;<M2zYT2K^[D^bT80:3
+R10
+32
+Z72 !s108 1445503962.946000
+Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vga_drive/VGA_contr.vhd|
+Z74 !s107 U:/es/projects/projgroup41/vga_drive/VGA_contr.vhd|
+R14
+R15
+!s100 HQ92hBBDZ1:Wi80TEMcz^2
+!i10b 1
+Abdf_type
+R4
+R5
+R6
+DEx4 work 9 vga_contr 0 22 idP;<M2zYT2K^[D^bT80:3
+l161
+L50
+VCCjZ56Q3KZehRo4c2YKBe3
+R10
+32
+R72
+R73
+R74
+R14
+R15
+!s100 Z3GZBRI61V]4H4VXdASmM2
+!i10b 1
+Evga_gen
+Z75 w1443031751
+R4
+R5
+R6
+R7
+Z76 8U:/es/projects/projgroup41/vga_drive/vga_gen.vhd
+Z77 FU:/es/projects/projgroup41/vga_drive/vga_gen.vhd
+l0
+L5
+V13FBG]oXX0EQoR5Ka5oM?2
+R10
+32
+Z78 !s108 1445503963.816000
+Z79 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vga_drive/vga_gen.vhd|
+Z80 !s107 U:/es/projects/projgroup41/vga_drive/vga_gen.vhd|
+R14
+R15
+!s100 7TY^3So?Gm7UTj]AoQ89J1
+!i10b 1
+Abehave
+R4
+R5
+R6
+DEx4 work 7 vga_gen 0 22 13FBG]oXX0EQoR5Ka5oM?2
+l20
+L16
+VMOXe30eRCAk]aNl@A8lSa0
+R10
+32
+R78
+R79
+R80
+R14
+R15
+!s100 QAfFM@0cB7CCT0j_F`nli3
+!i10b 1
+Evsyncr
+Z81 w1443023163
+R4
+R5
+R6
+R7
+Z82 8U:/es/projects/projgroup41/vga_drive/vsyncr.vhd
+Z83 FU:/es/projects/projgroup41/vga_drive/vsyncr.vhd
+l0
+L5
+Va5e:FDeazglE9TAEIR1kL0
+R10
+32
+Z84 !s108 1445503964.586000
+Z85 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vga_drive/vsyncr.vhd|
+Z86 !s107 U:/es/projects/projgroup41/vga_drive/vsyncr.vhd|
+R14
+R15
+!s100 jd4o5RJWYdo2g^AIfz20]0
+!i10b 1
+Artl
+R4
+R5
+R6
+DEx4 work 6 vsyncr 0 22 a5e:FDeazglE9TAEIR1kL0
+l14
+L12
+V^<GVCVi;MKKXgbziG3ZT`1
+R10
+32
+R84
+R85
+R86
+R14
+R15
+!s100 b3kCzVmh2ODC^N:O0Vmmm2
+!i10b 1

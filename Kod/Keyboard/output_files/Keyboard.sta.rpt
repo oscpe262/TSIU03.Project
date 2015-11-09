@@ -1,0 +1,1114 @@
+TimeQuest Timing Analyzer report for Keyboard
+Fri Oct 23 11:03:02 2015
+Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clk'
+ 12. Slow Model Hold: 'clk'
+ 13. Slow Model Minimum Pulse Width: 'clk'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clk'
+ 24. Fast Model Hold: 'clk'
+ 25. Fast Model Minimum Pulse Width: 'clk'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                        ;
++--------------------+---------------------------------------------------------------------+
+; Quartus II Version ; Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version ;
+; Revision Name      ; Keyboard                                                            ;
+; Device Family      ; Cyclone II                                                          ;
+; Device Name        ; EP2C35F672C6                                                        ;
+; Timing Models      ; Final                                                               ;
+; Delay Model        ; Combined                                                            ;
+; Rise/Fall Delays   ; Unavailable                                                         ;
++--------------------+---------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ; < 0.1%      ;
+;     3-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                   ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 424.63 MHz ; 420.17 MHz      ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -1.355 ; -25.883       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -28.380               ;
++-------+--------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                   ;
++--------+--------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+-------------+--------------+-------------+--------------+------------+------------+
+; -1.355 ; BYTE_IN[5]   ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.391      ;
+; -1.355 ; BYTE_IN[5]   ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.391      ;
+; -1.353 ; BYTE_IN[5]   ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.389      ;
+; -1.353 ; BYTE_IN[5]   ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.389      ;
+; -1.352 ; BYTE_IN[5]   ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.388      ;
+; -1.206 ; BYTE_IN[6]   ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.242      ;
+; -1.206 ; BYTE_IN[6]   ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.242      ;
+; -1.204 ; BYTE_IN[6]   ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.240      ;
+; -1.204 ; BYTE_IN[6]   ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.240      ;
+; -1.203 ; BYTE_IN[6]   ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.239      ;
+; -1.178 ; BYTE_IN[7]   ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.214      ;
+; -1.178 ; BYTE_IN[7]   ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.214      ;
+; -1.176 ; BYTE_IN[7]   ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.212      ;
+; -1.176 ; BYTE_IN[7]   ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.212      ;
+; -1.175 ; BYTE_IN[7]   ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.211      ;
+; -1.171 ; PS2_CLK2_old ; shiftreg[4] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.206      ;
+; -1.171 ; PS2_CLK2_old ; shiftreg[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.206      ;
+; -1.171 ; PS2_CLK2_old ; shiftreg[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.206      ;
+; -1.171 ; PS2_CLK2_old ; shiftreg[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.206      ;
+; -1.171 ; PS2_CLK2_old ; shiftreg[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 2.206      ;
+; -1.109 ; kb_reg[3]    ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.145      ;
+; -1.109 ; kb_reg[3]    ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.145      ;
+; -1.107 ; kb_reg[3]    ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.143      ;
+; -1.107 ; kb_reg[3]    ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.143      ;
+; -1.106 ; kb_reg[3]    ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.142      ;
+; -1.070 ; BYTE_IN[2]   ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.001      ; 2.107      ;
+; -1.070 ; BYTE_IN[2]   ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.001      ; 2.107      ;
+; -1.068 ; BYTE_IN[2]   ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.001      ; 2.105      ;
+; -1.068 ; BYTE_IN[2]   ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.001      ; 2.105      ;
+; -1.067 ; BYTE_IN[2]   ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.001      ; 2.104      ;
+; -1.034 ; BYTE_IN[0]   ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.001      ; 2.071      ;
+; -1.034 ; BYTE_IN[0]   ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.001      ; 2.071      ;
+; -1.032 ; BYTE_IN[0]   ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.001      ; 2.069      ;
+; -1.032 ; BYTE_IN[0]   ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.001      ; 2.069      ;
+; -1.031 ; BYTE_IN[0]   ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.001      ; 2.068      ;
+; -1.030 ; shiftreg[0]  ; BYTE_IN[1]  ; clk          ; clk         ; 1.000        ; 0.001      ; 2.067      ;
+; -1.030 ; shiftreg[0]  ; BYTE_IN[5]  ; clk          ; clk         ; 1.000        ; 0.001      ; 2.067      ;
+; -1.030 ; shiftreg[0]  ; BYTE_IN[7]  ; clk          ; clk         ; 1.000        ; 0.001      ; 2.067      ;
+; -1.030 ; shiftreg[0]  ; BYTE_IN[6]  ; clk          ; clk         ; 1.000        ; 0.001      ; 2.067      ;
+; -1.030 ; shiftreg[0]  ; BREAKSET    ; clk          ; clk         ; 1.000        ; 0.001      ; 2.067      ;
+; -0.993 ; BREAKSET     ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.029      ;
+; -0.993 ; BREAKSET     ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.029      ;
+; -0.991 ; BREAKSET     ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.027      ;
+; -0.991 ; BREAKSET     ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.027      ;
+; -0.990 ; BREAKSET     ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 2.026      ;
+; -0.980 ; PS2_CLK2     ; BYTE_IN[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.016      ;
+; -0.980 ; PS2_CLK2     ; BYTE_IN[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.016      ;
+; -0.980 ; PS2_CLK2     ; BYTE_IN[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.016      ;
+; -0.980 ; PS2_CLK2     ; BYTE_IN[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 2.016      ;
+; -0.980 ; PS2_CLK2     ; BREAKSET    ; clk          ; clk         ; 1.000        ; 0.000      ; 2.016      ;
+; -0.958 ; PS2_CLK2     ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.994      ;
+; -0.958 ; PS2_CLK2     ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.994      ;
+; -0.956 ; PS2_CLK2     ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.992      ;
+; -0.956 ; PS2_CLK2     ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.992      ;
+; -0.955 ; PS2_CLK2     ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.991      ;
+; -0.950 ; BYTE_IN[3]   ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.987      ;
+; -0.950 ; BYTE_IN[3]   ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.987      ;
+; -0.948 ; BYTE_IN[3]   ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.985      ;
+; -0.948 ; BYTE_IN[3]   ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.985      ;
+; -0.947 ; BYTE_IN[3]   ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.984      ;
+; -0.927 ; shiftreg[0]  ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.964      ;
+; -0.927 ; shiftreg[0]  ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.964      ;
+; -0.925 ; BYTE_IN[1]   ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.961      ;
+; -0.925 ; BYTE_IN[1]   ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.961      ;
+; -0.925 ; shiftreg[0]  ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.962      ;
+; -0.925 ; shiftreg[0]  ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.962      ;
+; -0.924 ; shiftreg[0]  ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.961      ;
+; -0.923 ; BYTE_IN[1]   ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.959      ;
+; -0.923 ; BYTE_IN[1]   ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.959      ;
+; -0.922 ; BYTE_IN[1]   ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.958      ;
+; -0.915 ; kb_reg[0]    ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.951      ;
+; -0.915 ; kb_reg[0]    ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.951      ;
+; -0.914 ; kb_reg[0]    ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.950      ;
+; -0.910 ; kb_reg[0]    ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.946      ;
+; -0.908 ; kb_reg[0]    ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.944      ;
+; -0.905 ; shiftreg[0]  ; BYTE_IN[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.941      ;
+; -0.905 ; shiftreg[0]  ; BYTE_IN[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.941      ;
+; -0.905 ; shiftreg[0]  ; BYTE_IN[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.941      ;
+; -0.905 ; shiftreg[0]  ; BYTE_IN[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.941      ;
+; -0.898 ; PS2_CLK2_old ; shiftreg[9] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.934      ;
+; -0.898 ; PS2_CLK2_old ; shiftreg[8] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.934      ;
+; -0.898 ; PS2_CLK2_old ; shiftreg[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.934      ;
+; -0.898 ; PS2_CLK2_old ; shiftreg[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.934      ;
+; -0.898 ; PS2_CLK2_old ; shiftreg[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 1.934      ;
+; -0.894 ; PS2_CLK2_old ; BYTE_IN[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.930      ;
+; -0.894 ; PS2_CLK2_old ; BYTE_IN[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.930      ;
+; -0.894 ; PS2_CLK2_old ; BYTE_IN[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.930      ;
+; -0.894 ; PS2_CLK2_old ; BYTE_IN[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.930      ;
+; -0.894 ; PS2_CLK2_old ; BREAKSET    ; clk          ; clk         ; 1.000        ; 0.000      ; 1.930      ;
+; -0.860 ; kb_reg[4]    ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.896      ;
+; -0.860 ; kb_reg[4]    ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.896      ;
+; -0.858 ; kb_reg[4]    ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.894      ;
+; -0.858 ; kb_reg[4]    ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.894      ;
+; -0.857 ; BYTE_IN[4]   ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.894      ;
+; -0.857 ; kb_reg[4]    ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.893      ;
+; -0.855 ; PS2_CLK2     ; BYTE_IN[4]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.890      ;
+; -0.855 ; PS2_CLK2     ; BYTE_IN[3]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.890      ;
+; -0.855 ; PS2_CLK2     ; BYTE_IN[0]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.890      ;
+; -0.855 ; PS2_CLK2     ; BYTE_IN[2]  ; clk          ; clk         ; 1.000        ; -0.001     ; 1.890      ;
+; -0.853 ; BYTE_IN[4]   ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.001      ; 1.890      ;
++--------+--------------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                    ;
++-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; shiftreg[0]  ; shiftreg[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.516 ; shiftreg[9]  ; shiftreg[8]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.782      ;
+; 0.523 ; shiftreg[3]  ; BYTE_IN[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.789      ;
+; 0.524 ; shiftreg[8]  ; shiftreg[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.790      ;
+; 0.524 ; shiftreg[7]  ; shiftreg[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.790      ;
+; 0.524 ; shiftreg[3]  ; shiftreg[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.790      ;
+; 0.530 ; shiftreg[1]  ; BYTE_IN[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.796      ;
+; 0.532 ; shiftreg[1]  ; shiftreg[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.798      ;
+; 0.653 ; shiftreg[6]  ; shiftreg[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.919      ;
+; 0.671 ; shiftreg[4]  ; BYTE_IN[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.937      ;
+; 0.677 ; shiftreg[7]  ; BYTE_IN[6]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.943      ;
+; 0.679 ; PS2_CLK2     ; PS2_CLK2_old ; clk          ; clk         ; 0.000        ; 0.000      ; 0.945      ;
+; 0.697 ; PS2_DAT2     ; shiftreg[9]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.963      ;
+; 0.703 ; shiftreg[0]  ; shiftreg[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.969      ;
+; 0.707 ; shiftreg[0]  ; shiftreg[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.973      ;
+; 0.708 ; shiftreg[0]  ; shiftreg[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.974      ;
+; 0.709 ; shiftreg[0]  ; shiftreg[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.975      ;
+; 0.711 ; shiftreg[2]  ; BYTE_IN[1]   ; clk          ; clk         ; 0.000        ; 0.001      ; 0.978      ;
+; 0.717 ; shiftreg[6]  ; BYTE_IN[5]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.983      ;
+; 0.811 ; shiftreg[4]  ; shiftreg[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.077      ;
+; 0.836 ; shiftreg[8]  ; BYTE_IN[7]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.102      ;
+; 0.862 ; shiftreg[2]  ; shiftreg[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.128      ;
+; 0.957 ; shiftreg[5]  ; shiftreg[4]  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.222      ;
+; 0.960 ; shiftreg[5]  ; BYTE_IN[4]   ; clk          ; clk         ; 0.000        ; -0.001     ; 1.225      ;
+; 1.092 ; BYTE_IN[1]   ; BREAKSET     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.358      ;
+; 1.098 ; shiftreg[0]  ; shiftreg[7]  ; clk          ; clk         ; 0.000        ; 0.001      ; 1.365      ;
+; 1.100 ; shiftreg[0]  ; shiftreg[8]  ; clk          ; clk         ; 0.000        ; 0.001      ; 1.367      ;
+; 1.102 ; shiftreg[0]  ; shiftreg[6]  ; clk          ; clk         ; 0.000        ; 0.001      ; 1.369      ;
+; 1.104 ; shiftreg[0]  ; shiftreg[9]  ; clk          ; clk         ; 0.000        ; 0.001      ; 1.371      ;
+; 1.138 ; BYTE_IN[4]   ; BREAKSET     ; clk          ; clk         ; 0.000        ; 0.001      ; 1.405      ;
+; 1.207 ; BYTE_IN[5]   ; BREAKSET     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.473      ;
+; 1.232 ; BYTE_IN[0]   ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.499      ;
+; 1.235 ; shiftreg[0]  ; shiftreg[5]  ; clk          ; clk         ; 0.000        ; 0.001      ; 1.502      ;
+; 1.244 ; BYTE_IN[0]   ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.511      ;
+; 1.271 ; BYTE_IN[1]   ; kb_reg[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.537      ;
+; 1.279 ; BYTE_IN[1]   ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.545      ;
+; 1.280 ; BYTE_IN[1]   ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.546      ;
+; 1.294 ; BYTE_IN[3]   ; BREAKSET     ; clk          ; clk         ; 0.000        ; 0.001      ; 1.561      ;
+; 1.342 ; PS2_CLK2     ; shiftreg[9]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.608      ;
+; 1.342 ; PS2_CLK2     ; shiftreg[8]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.608      ;
+; 1.342 ; PS2_CLK2     ; shiftreg[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.608      ;
+; 1.342 ; PS2_CLK2     ; shiftreg[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.608      ;
+; 1.342 ; PS2_CLK2     ; shiftreg[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 1.608      ;
+; 1.345 ; BYTE_IN[7]   ; BREAKSET     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.611      ;
+; 1.351 ; PS2_CLK2_old ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.617      ;
+; 1.352 ; PS2_CLK2_old ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.618      ;
+; 1.352 ; PS2_CLK2_old ; kb_reg[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.618      ;
+; 1.354 ; PS2_CLK2_old ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.620      ;
+; 1.354 ; PS2_CLK2_old ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.620      ;
+; 1.373 ; BYTE_IN[6]   ; BREAKSET     ; clk          ; clk         ; 0.000        ; 0.000      ; 1.639      ;
+; 1.376 ; BYTE_IN[2]   ; kb_reg[4]    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.643      ;
+; 1.378 ; BYTE_IN[0]   ; BREAKSET     ; clk          ; clk         ; 0.000        ; 0.001      ; 1.645      ;
+; 1.382 ; BYTE_IN[2]   ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.649      ;
+; 1.384 ; BYTE_IN[4]   ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.651      ;
+; 1.390 ; BYTE_IN[2]   ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.657      ;
+; 1.394 ; BYTE_IN[2]   ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.661      ;
+; 1.414 ; BYTE_IN[2]   ; BREAKSET     ; clk          ; clk         ; 0.000        ; 0.001      ; 1.681      ;
+; 1.461 ; kb_reg[2]    ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.727      ;
+; 1.463 ; kb_reg[2]    ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.729      ;
+; 1.467 ; kb_reg[2]    ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.733      ;
+; 1.468 ; kb_reg[2]    ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.734      ;
+; 1.468 ; kb_reg[2]    ; kb_reg[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.734      ;
+; 1.494 ; BYTE_IN[3]   ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.761      ;
+; 1.498 ; BYTE_IN[3]   ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.765      ;
+; 1.514 ; BYTE_IN[0]   ; kb_reg[4]    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.781      ;
+; 1.520 ; BYTE_IN[0]   ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.787      ;
+; 1.539 ; PS2_CLK2_old ; BYTE_IN[4]   ; clk          ; clk         ; 0.000        ; -0.001     ; 1.804      ;
+; 1.539 ; PS2_CLK2_old ; BYTE_IN[3]   ; clk          ; clk         ; 0.000        ; -0.001     ; 1.804      ;
+; 1.539 ; PS2_CLK2_old ; BYTE_IN[0]   ; clk          ; clk         ; 0.000        ; -0.001     ; 1.804      ;
+; 1.539 ; PS2_CLK2_old ; BYTE_IN[2]   ; clk          ; clk         ; 0.000        ; -0.001     ; 1.804      ;
+; 1.540 ; BYTE_IN[3]   ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.807      ;
+; 1.561 ; BYTE_IN[4]   ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.828      ;
+; 1.562 ; BYTE_IN[4]   ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.829      ;
+; 1.562 ; BYTE_IN[4]   ; kb_reg[4]    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.829      ;
+; 1.564 ; BYTE_IN[4]   ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.831      ;
+; 1.583 ; kb_reg[1]    ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.849      ;
+; 1.585 ; kb_reg[1]    ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.851      ;
+; 1.589 ; kb_reg[1]    ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.855      ;
+; 1.590 ; kb_reg[1]    ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.856      ;
+; 1.590 ; kb_reg[1]    ; kb_reg[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.856      ;
+; 1.603 ; BYTE_IN[1]   ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.869      ;
+; 1.607 ; BYTE_IN[1]   ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.873      ;
+; 1.615 ; PS2_CLK2     ; shiftreg[4]  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.880      ;
+; 1.615 ; PS2_CLK2     ; shiftreg[3]  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.880      ;
+; 1.615 ; PS2_CLK2     ; shiftreg[2]  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.880      ;
+; 1.615 ; PS2_CLK2     ; shiftreg[1]  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.880      ;
+; 1.615 ; PS2_CLK2     ; shiftreg[0]  ; clk          ; clk         ; 0.000        ; -0.001     ; 1.880      ;
+; 1.624 ; BYTE_IN[0]   ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.891      ;
+; 1.625 ; PS2_CLK2     ; BYTE_IN[4]   ; clk          ; clk         ; 0.000        ; -0.001     ; 1.890      ;
+; 1.625 ; PS2_CLK2     ; BYTE_IN[3]   ; clk          ; clk         ; 0.000        ; -0.001     ; 1.890      ;
+; 1.625 ; PS2_CLK2     ; BYTE_IN[0]   ; clk          ; clk         ; 0.000        ; -0.001     ; 1.890      ;
+; 1.625 ; PS2_CLK2     ; BYTE_IN[2]   ; clk          ; clk         ; 0.000        ; -0.001     ; 1.890      ;
+; 1.627 ; kb_reg[4]    ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.893      ;
+; 1.628 ; kb_reg[4]    ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.894      ;
+; 1.628 ; kb_reg[4]    ; kb_reg[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.894      ;
+; 1.630 ; kb_reg[4]    ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.896      ;
+; 1.630 ; kb_reg[4]    ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 1.896      ;
+; 1.660 ; BYTE_IN[2]   ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.001      ; 1.927      ;
+; 1.664 ; PS2_CLK2_old ; BYTE_IN[1]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.930      ;
+; 1.664 ; PS2_CLK2_old ; BYTE_IN[5]   ; clk          ; clk         ; 0.000        ; 0.000      ; 1.930      ;
++-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BREAKSET             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BREAKSET             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[4]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[4]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[5]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[5]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[6]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[6]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[7]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[7]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PS2_CLK2             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PS2_CLK2             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PS2_CLK2_old         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PS2_CLK2_old         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PS2_DAT2             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PS2_DAT2             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[0]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[0]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[1]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[1]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[2]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[2]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[3]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[3]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[4]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[4]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[5]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[5]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[6]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[6]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[7]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[7]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[8]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[8]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[9]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[9]          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BREAKSET|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BREAKSET|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[0]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[0]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[1]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[1]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[2]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[2]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[3]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[3]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[4]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[4]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[5]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[5]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[6]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[6]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[7]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[7]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PS2_CLK2_old|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PS2_CLK2_old|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PS2_CLK2|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PS2_CLK2|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PS2_DAT2|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PS2_DAT2|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[2]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[2]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[3]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[3]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[4]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[4]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[2]|clk      ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; PS2_CLK   ; clk        ; -0.510 ; -0.510 ; Rise       ; clk             ;
+; PS2_DAT   ; clk        ; -0.893 ; -0.893 ; Rise       ; clk             ;
+; rstn      ; clk        ; 1.677  ; 1.677  ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; PS2_CLK   ; clk        ; 0.740  ; 0.740  ; Rise       ; clk             ;
+; PS2_DAT   ; clk        ; 1.123  ; 1.123  ; Rise       ; clk             ;
+; rstn      ; clk        ; -1.322 ; -1.322 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; kb_input[*]  ; clk        ; 6.409 ; 6.409 ; Rise       ; clk             ;
+;  kb_input[0] ; clk        ; 6.338 ; 6.338 ; Rise       ; clk             ;
+;  kb_input[1] ; clk        ; 6.398 ; 6.398 ; Rise       ; clk             ;
+;  kb_input[2] ; clk        ; 6.347 ; 6.347 ; Rise       ; clk             ;
+;  kb_input[3] ; clk        ; 6.379 ; 6.379 ; Rise       ; clk             ;
+;  kb_input[4] ; clk        ; 6.409 ; 6.409 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; kb_input[*]  ; clk        ; 6.338 ; 6.338 ; Rise       ; clk             ;
+;  kb_input[0] ; clk        ; 6.338 ; 6.338 ; Rise       ; clk             ;
+;  kb_input[1] ; clk        ; 6.398 ; 6.398 ; Rise       ; clk             ;
+;  kb_input[2] ; clk        ; 6.347 ; 6.347 ; Rise       ; clk             ;
+;  kb_input[3] ; clk        ; 6.379 ; 6.379 ; Rise       ; clk             ;
+;  kb_input[4] ; clk        ; 6.409 ; 6.409 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; -0.081 ; -0.819        ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clk   ; -1.380 ; -28.380               ;
++-------+--------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                   ;
++--------+--------------+-------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node    ; To Node     ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------+-------------+--------------+-------------+--------------+------------+------------+
+; -0.081 ; PS2_CLK2_old ; shiftreg[4] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.112      ;
+; -0.081 ; PS2_CLK2_old ; shiftreg[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.112      ;
+; -0.081 ; PS2_CLK2_old ; shiftreg[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.112      ;
+; -0.081 ; PS2_CLK2_old ; shiftreg[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.112      ;
+; -0.081 ; PS2_CLK2_old ; shiftreg[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 1.112      ;
+; -0.058 ; BYTE_IN[5]   ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.090      ;
+; -0.057 ; BYTE_IN[5]   ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.089      ;
+; -0.055 ; BYTE_IN[5]   ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.087      ;
+; -0.055 ; BYTE_IN[5]   ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.087      ;
+; -0.054 ; BYTE_IN[5]   ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.086      ;
+; -0.027 ; shiftreg[0]  ; BYTE_IN[1]  ; clk          ; clk         ; 1.000        ; 0.001      ; 1.060      ;
+; -0.027 ; shiftreg[0]  ; BYTE_IN[5]  ; clk          ; clk         ; 1.000        ; 0.001      ; 1.060      ;
+; -0.027 ; shiftreg[0]  ; BYTE_IN[7]  ; clk          ; clk         ; 1.000        ; 0.001      ; 1.060      ;
+; -0.027 ; shiftreg[0]  ; BYTE_IN[6]  ; clk          ; clk         ; 1.000        ; 0.001      ; 1.060      ;
+; -0.027 ; shiftreg[0]  ; BREAKSET    ; clk          ; clk         ; 1.000        ; 0.001      ; 1.060      ;
+; 0.013  ; BYTE_IN[6]   ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.019      ;
+; 0.014  ; BYTE_IN[6]   ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.018      ;
+; 0.016  ; BYTE_IN[6]   ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.016      ;
+; 0.016  ; BYTE_IN[6]   ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.016      ;
+; 0.017  ; BYTE_IN[6]   ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.015      ;
+; 0.018  ; PS2_CLK2     ; BYTE_IN[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.014      ;
+; 0.018  ; PS2_CLK2     ; BYTE_IN[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.014      ;
+; 0.018  ; PS2_CLK2     ; BYTE_IN[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.014      ;
+; 0.018  ; PS2_CLK2     ; BYTE_IN[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.014      ;
+; 0.018  ; PS2_CLK2     ; BREAKSET    ; clk          ; clk         ; 1.000        ; 0.000      ; 1.014      ;
+; 0.023  ; BYTE_IN[7]   ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.009      ;
+; 0.024  ; BYTE_IN[7]   ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.008      ;
+; 0.026  ; BYTE_IN[7]   ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.006      ;
+; 0.026  ; BYTE_IN[7]   ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.006      ;
+; 0.027  ; BYTE_IN[7]   ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.005      ;
+; 0.030  ; kb_reg[3]    ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.002      ;
+; 0.031  ; shiftreg[0]  ; BYTE_IN[4]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.001      ;
+; 0.031  ; shiftreg[0]  ; BYTE_IN[3]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.001      ;
+; 0.031  ; shiftreg[0]  ; BYTE_IN[0]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.001      ;
+; 0.031  ; shiftreg[0]  ; BYTE_IN[2]  ; clk          ; clk         ; 1.000        ; 0.000      ; 1.001      ;
+; 0.031  ; kb_reg[3]    ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 1.001      ;
+; 0.032  ; PS2_CLK2     ; shiftreg[4] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.999      ;
+; 0.032  ; PS2_CLK2     ; shiftreg[3] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.999      ;
+; 0.032  ; PS2_CLK2     ; shiftreg[2] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.999      ;
+; 0.032  ; PS2_CLK2     ; shiftreg[1] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.999      ;
+; 0.032  ; PS2_CLK2     ; shiftreg[0] ; clk          ; clk         ; 1.000        ; -0.001     ; 0.999      ;
+; 0.033  ; kb_reg[3]    ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.999      ;
+; 0.033  ; kb_reg[3]    ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.999      ;
+; 0.034  ; kb_reg[3]    ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.998      ;
+; 0.048  ; PS2_CLK2_old ; shiftreg[9] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.984      ;
+; 0.048  ; PS2_CLK2_old ; shiftreg[8] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.984      ;
+; 0.048  ; PS2_CLK2_old ; shiftreg[7] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.984      ;
+; 0.048  ; PS2_CLK2_old ; shiftreg[6] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.984      ;
+; 0.048  ; PS2_CLK2_old ; shiftreg[5] ; clk          ; clk         ; 1.000        ; 0.000      ; 0.984      ;
+; 0.052  ; PS2_CLK2_old ; BYTE_IN[1]  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.980      ;
+; 0.052  ; PS2_CLK2_old ; BYTE_IN[5]  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.980      ;
+; 0.052  ; PS2_CLK2_old ; BYTE_IN[7]  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.980      ;
+; 0.052  ; PS2_CLK2_old ; BYTE_IN[6]  ; clk          ; clk         ; 1.000        ; 0.000      ; 0.980      ;
+; 0.052  ; PS2_CLK2_old ; BREAKSET    ; clk          ; clk         ; 1.000        ; 0.000      ; 0.980      ;
+; 0.057  ; BYTE_IN[2]   ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.976      ;
+; 0.058  ; BYTE_IN[2]   ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.975      ;
+; 0.060  ; BYTE_IN[2]   ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.973      ;
+; 0.060  ; BYTE_IN[2]   ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.973      ;
+; 0.061  ; BYTE_IN[2]   ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.972      ;
+; 0.063  ; BYTE_IN[0]   ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.970      ;
+; 0.064  ; BYTE_IN[0]   ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.969      ;
+; 0.066  ; BYTE_IN[0]   ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.967      ;
+; 0.066  ; BYTE_IN[0]   ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.967      ;
+; 0.067  ; BYTE_IN[0]   ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.966      ;
+; 0.076  ; BREAKSET     ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.956      ;
+; 0.076  ; PS2_CLK2     ; BYTE_IN[4]  ; clk          ; clk         ; 1.000        ; -0.001     ; 0.955      ;
+; 0.076  ; PS2_CLK2     ; BYTE_IN[3]  ; clk          ; clk         ; 1.000        ; -0.001     ; 0.955      ;
+; 0.076  ; PS2_CLK2     ; BYTE_IN[0]  ; clk          ; clk         ; 1.000        ; -0.001     ; 0.955      ;
+; 0.076  ; PS2_CLK2     ; BYTE_IN[2]  ; clk          ; clk         ; 1.000        ; -0.001     ; 0.955      ;
+; 0.077  ; BREAKSET     ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.955      ;
+; 0.079  ; BREAKSET     ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.953      ;
+; 0.079  ; BREAKSET     ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.953      ;
+; 0.079  ; PS2_CLK2     ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.953      ;
+; 0.080  ; BREAKSET     ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.952      ;
+; 0.080  ; PS2_CLK2     ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.952      ;
+; 0.082  ; PS2_CLK2     ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.950      ;
+; 0.082  ; PS2_CLK2     ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.950      ;
+; 0.083  ; PS2_CLK2     ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.949      ;
+; 0.086  ; kb_reg[0]    ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.946      ;
+; 0.086  ; kb_reg[0]    ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.946      ;
+; 0.087  ; kb_reg[0]    ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.945      ;
+; 0.091  ; kb_reg[0]    ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.941      ;
+; 0.093  ; kb_reg[0]    ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.939      ;
+; 0.108  ; BYTE_IN[3]   ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.925      ;
+; 0.110  ; BYTE_IN[3]   ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.923      ;
+; 0.110  ; PS2_CLK2_old ; BYTE_IN[4]  ; clk          ; clk         ; 1.000        ; -0.001     ; 0.921      ;
+; 0.110  ; PS2_CLK2_old ; BYTE_IN[3]  ; clk          ; clk         ; 1.000        ; -0.001     ; 0.921      ;
+; 0.110  ; PS2_CLK2_old ; BYTE_IN[0]  ; clk          ; clk         ; 1.000        ; -0.001     ; 0.921      ;
+; 0.110  ; PS2_CLK2_old ; BYTE_IN[2]  ; clk          ; clk         ; 1.000        ; -0.001     ; 0.921      ;
+; 0.114  ; shiftreg[0]  ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.919      ;
+; 0.115  ; shiftreg[0]  ; kb_reg[1]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.918      ;
+; 0.117  ; shiftreg[0]  ; kb_reg[4]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.916      ;
+; 0.117  ; shiftreg[0]  ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.916      ;
+; 0.118  ; shiftreg[0]  ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.915      ;
+; 0.126  ; BYTE_IN[4]   ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.907      ;
+; 0.127  ; BYTE_IN[4]   ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.906      ;
+; 0.127  ; BYTE_IN[3]   ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.906      ;
+; 0.130  ; BYTE_IN[3]   ; kb_reg[0]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.903      ;
+; 0.131  ; BYTE_IN[3]   ; kb_reg[3]   ; clk          ; clk         ; 1.000        ; 0.001      ; 0.902      ;
+; 0.136  ; BYTE_IN[1]   ; kb_reg[2]   ; clk          ; clk         ; 1.000        ; 0.000      ; 0.896      ;
++--------+--------------+-------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                    ;
++-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node    ; To Node      ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; shiftreg[0]  ; shiftreg[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.237 ; shiftreg[9]  ; shiftreg[8]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.389      ;
+; 0.239 ; shiftreg[8]  ; shiftreg[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.391      ;
+; 0.239 ; shiftreg[7]  ; shiftreg[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.391      ;
+; 0.242 ; shiftreg[3]  ; shiftreg[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.394      ;
+; 0.247 ; shiftreg[1]  ; shiftreg[0]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.399      ;
+; 0.261 ; shiftreg[3]  ; BYTE_IN[2]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.413      ;
+; 0.265 ; shiftreg[1]  ; BYTE_IN[0]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.417      ;
+; 0.301 ; shiftreg[4]  ; BYTE_IN[3]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.453      ;
+; 0.314 ; shiftreg[6]  ; shiftreg[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.466      ;
+; 0.315 ; shiftreg[0]  ; shiftreg[2]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.467      ;
+; 0.316 ; PS2_DAT2     ; shiftreg[9]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.468      ;
+; 0.319 ; shiftreg[0]  ; shiftreg[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.471      ;
+; 0.321 ; shiftreg[0]  ; shiftreg[4]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.473      ;
+; 0.321 ; shiftreg[0]  ; shiftreg[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.473      ;
+; 0.334 ; PS2_CLK2     ; PS2_CLK2_old ; clk          ; clk         ; 0.000        ; 0.000      ; 0.486      ;
+; 0.336 ; shiftreg[7]  ; BYTE_IN[6]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.488      ;
+; 0.341 ; shiftreg[2]  ; BYTE_IN[1]   ; clk          ; clk         ; 0.000        ; 0.001      ; 0.494      ;
+; 0.346 ; shiftreg[6]  ; BYTE_IN[5]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.498      ;
+; 0.368 ; shiftreg[8]  ; BYTE_IN[7]   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.520      ;
+; 0.373 ; shiftreg[4]  ; shiftreg[3]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.525      ;
+; 0.396 ; shiftreg[2]  ; shiftreg[1]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.548      ;
+; 0.438 ; shiftreg[5]  ; shiftreg[4]  ; clk          ; clk         ; 0.000        ; -0.001     ; 0.589      ;
+; 0.460 ; shiftreg[5]  ; BYTE_IN[4]   ; clk          ; clk         ; 0.000        ; -0.001     ; 0.611      ;
+; 0.491 ; shiftreg[0]  ; shiftreg[7]  ; clk          ; clk         ; 0.000        ; 0.001      ; 0.644      ;
+; 0.493 ; shiftreg[0]  ; shiftreg[8]  ; clk          ; clk         ; 0.000        ; 0.001      ; 0.646      ;
+; 0.495 ; shiftreg[0]  ; shiftreg[6]  ; clk          ; clk         ; 0.000        ; 0.001      ; 0.648      ;
+; 0.498 ; shiftreg[0]  ; shiftreg[9]  ; clk          ; clk         ; 0.000        ; 0.001      ; 0.651      ;
+; 0.503 ; BYTE_IN[4]   ; BREAKSET     ; clk          ; clk         ; 0.000        ; 0.001      ; 0.656      ;
+; 0.508 ; BYTE_IN[1]   ; BREAKSET     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.660      ;
+; 0.567 ; BYTE_IN[0]   ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.720      ;
+; 0.568 ; BYTE_IN[3]   ; BREAKSET     ; clk          ; clk         ; 0.000        ; 0.001      ; 0.721      ;
+; 0.574 ; shiftreg[0]  ; shiftreg[5]  ; clk          ; clk         ; 0.000        ; 0.001      ; 0.727      ;
+; 0.575 ; BYTE_IN[0]   ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.728      ;
+; 0.576 ; BYTE_IN[5]   ; BREAKSET     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.728      ;
+; 0.587 ; BYTE_IN[1]   ; kb_reg[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.739      ;
+; 0.590 ; BYTE_IN[1]   ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.742      ;
+; 0.592 ; BYTE_IN[1]   ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.744      ;
+; 0.621 ; BYTE_IN[7]   ; BREAKSET     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.773      ;
+; 0.624 ; BYTE_IN[2]   ; kb_reg[4]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.777      ;
+; 0.626 ; BYTE_IN[2]   ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.779      ;
+; 0.627 ; BYTE_IN[4]   ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.780      ;
+; 0.631 ; BYTE_IN[6]   ; BREAKSET     ; clk          ; clk         ; 0.000        ; 0.000      ; 0.783      ;
+; 0.632 ; BYTE_IN[0]   ; BREAKSET     ; clk          ; clk         ; 0.000        ; 0.001      ; 0.785      ;
+; 0.634 ; BYTE_IN[2]   ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.787      ;
+; 0.635 ; BYTE_IN[2]   ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.788      ;
+; 0.638 ; BYTE_IN[2]   ; BREAKSET     ; clk          ; clk         ; 0.000        ; 0.001      ; 0.791      ;
+; 0.642 ; PS2_CLK2_old ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.794      ;
+; 0.643 ; PS2_CLK2_old ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.795      ;
+; 0.643 ; PS2_CLK2_old ; kb_reg[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.795      ;
+; 0.645 ; PS2_CLK2_old ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.797      ;
+; 0.646 ; PS2_CLK2_old ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.798      ;
+; 0.669 ; BYTE_IN[3]   ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.822      ;
+; 0.670 ; kb_reg[2]    ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.822      ;
+; 0.670 ; BYTE_IN[3]   ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.823      ;
+; 0.672 ; kb_reg[2]    ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.824      ;
+; 0.676 ; kb_reg[2]    ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.828      ;
+; 0.677 ; kb_reg[2]    ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.829      ;
+; 0.677 ; kb_reg[2]    ; kb_reg[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.829      ;
+; 0.684 ; BYTE_IN[4]   ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.837      ;
+; 0.685 ; BYTE_IN[4]   ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.838      ;
+; 0.685 ; BYTE_IN[4]   ; kb_reg[4]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.838      ;
+; 0.687 ; BYTE_IN[4]   ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.840      ;
+; 0.692 ; BYTE_IN[3]   ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.845      ;
+; 0.706 ; BYTE_IN[0]   ; kb_reg[4]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.859      ;
+; 0.708 ; BYTE_IN[0]   ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.861      ;
+; 0.713 ; kb_reg[4]    ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.865      ;
+; 0.714 ; kb_reg[4]    ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.866      ;
+; 0.714 ; kb_reg[4]    ; kb_reg[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.866      ;
+; 0.716 ; kb_reg[4]    ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.868      ;
+; 0.716 ; kb_reg[1]    ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.868      ;
+; 0.717 ; kb_reg[4]    ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.869      ;
+; 0.718 ; kb_reg[1]    ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.870      ;
+; 0.719 ; PS2_CLK2     ; shiftreg[9]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.871      ;
+; 0.719 ; PS2_CLK2     ; shiftreg[8]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.871      ;
+; 0.719 ; PS2_CLK2     ; shiftreg[7]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.871      ;
+; 0.719 ; PS2_CLK2     ; shiftreg[6]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.871      ;
+; 0.719 ; PS2_CLK2     ; shiftreg[5]  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.871      ;
+; 0.722 ; kb_reg[1]    ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.874      ;
+; 0.723 ; kb_reg[1]    ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.875      ;
+; 0.723 ; kb_reg[1]    ; kb_reg[4]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.875      ;
+; 0.740 ; BYTE_IN[1]   ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.892      ;
+; 0.741 ; BYTE_IN[1]   ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.893      ;
+; 0.750 ; BYTE_IN[3]   ; kb_reg[4]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.903      ;
+; 0.752 ; BYTE_IN[3]   ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.905      ;
+; 0.756 ; BYTE_IN[0]   ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.909      ;
+; 0.762 ; BYTE_IN[2]   ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.915      ;
+; 0.762 ; shiftreg[0]  ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.915      ;
+; 0.763 ; shiftreg[0]  ; kb_reg[0]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.916      ;
+; 0.763 ; shiftreg[0]  ; kb_reg[4]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.916      ;
+; 0.765 ; shiftreg[0]  ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.918      ;
+; 0.766 ; shiftreg[0]  ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.001      ; 0.919      ;
+; 0.770 ; PS2_CLK2_old ; BYTE_IN[4]   ; clk          ; clk         ; 0.000        ; -0.001     ; 0.921      ;
+; 0.770 ; PS2_CLK2_old ; BYTE_IN[3]   ; clk          ; clk         ; 0.000        ; -0.001     ; 0.921      ;
+; 0.770 ; PS2_CLK2_old ; BYTE_IN[0]   ; clk          ; clk         ; 0.000        ; -0.001     ; 0.921      ;
+; 0.770 ; PS2_CLK2_old ; BYTE_IN[2]   ; clk          ; clk         ; 0.000        ; -0.001     ; 0.921      ;
+; 0.787 ; kb_reg[0]    ; kb_reg[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.939      ;
+; 0.789 ; kb_reg[0]    ; kb_reg[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.941      ;
+; 0.792 ; BYTE_IN[6]   ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.944      ;
+; 0.793 ; kb_reg[0]    ; kb_reg[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.945      ;
++-------+--------------+--------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                 ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clk   ; Rise       ; clk                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BREAKSET             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BREAKSET             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[0]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[1]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[2]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[3]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[4]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[4]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[5]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[5]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[6]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[6]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[7]           ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[7]           ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PS2_CLK2             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PS2_CLK2             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PS2_CLK2_old         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PS2_CLK2_old         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; PS2_DAT2             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; PS2_DAT2             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[0]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[1]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[2]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[3]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[4]            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[0]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[0]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[1]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[1]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[2]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[2]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[3]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[3]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[4]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[4]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[5]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[5]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[6]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[6]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[7]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[7]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[8]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[8]          ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[9]          ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[9]          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BREAKSET|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BREAKSET|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[0]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[0]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[1]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[1]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[2]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[2]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[3]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[3]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[4]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[4]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[5]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[5]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[6]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[6]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; BYTE_IN[7]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; BYTE_IN[7]|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PS2_CLK2_old|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PS2_CLK2_old|clk     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PS2_CLK2|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PS2_CLK2|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; PS2_DAT2|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; PS2_DAT2|clk         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk|combout          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|inclk[0] ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~clkctrl|outclk   ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[0]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[1]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[2]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[2]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[3]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[3]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; kb_reg[4]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; kb_reg[4]|clk        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[0]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; shiftreg[1]|clk      ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; shiftreg[2]|clk      ;
++--------+--------------+----------------+------------------+-------+------------+----------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; PS2_CLK   ; clk        ; -0.568 ; -0.568 ; Rise       ; clk             ;
+; PS2_DAT   ; clk        ; -0.769 ; -0.769 ; Rise       ; clk             ;
+; rstn      ; clk        ; 0.617  ; 0.617  ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; PS2_CLK   ; clk        ; 0.688  ; 0.688  ; Rise       ; clk             ;
+; PS2_DAT   ; clk        ; 0.889  ; 0.889  ; Rise       ; clk             ;
+; rstn      ; clk        ; -0.439 ; -0.439 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; kb_input[*]  ; clk        ; 3.688 ; 3.688 ; Rise       ; clk             ;
+;  kb_input[0] ; clk        ; 3.620 ; 3.620 ; Rise       ; clk             ;
+;  kb_input[1] ; clk        ; 3.680 ; 3.680 ; Rise       ; clk             ;
+;  kb_input[2] ; clk        ; 3.629 ; 3.629 ; Rise       ; clk             ;
+;  kb_input[3] ; clk        ; 3.658 ; 3.658 ; Rise       ; clk             ;
+;  kb_input[4] ; clk        ; 3.688 ; 3.688 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; kb_input[*]  ; clk        ; 3.620 ; 3.620 ; Rise       ; clk             ;
+;  kb_input[0] ; clk        ; 3.620 ; 3.620 ; Rise       ; clk             ;
+;  kb_input[1] ; clk        ; 3.680 ; 3.680 ; Rise       ; clk             ;
+;  kb_input[2] ; clk        ; 3.629 ; 3.629 ; Rise       ; clk             ;
+;  kb_input[3] ; clk        ; 3.658 ; 3.658 ; Rise       ; clk             ;
+;  kb_input[4] ; clk        ; 3.688 ; 3.688 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.355  ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  clk             ; -1.355  ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -25.883 ; 0.0   ; 0.0      ; 0.0     ; -28.38              ;
+;  clk             ; -25.883 ; 0.000 ; N/A      ; N/A     ; -28.380             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------+
+; Setup Times                                                             ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; PS2_CLK   ; clk        ; -0.510 ; -0.510 ; Rise       ; clk             ;
+; PS2_DAT   ; clk        ; -0.769 ; -0.769 ; Rise       ; clk             ;
+; rstn      ; clk        ; 1.677  ; 1.677  ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; PS2_CLK   ; clk        ; 0.740  ; 0.740  ; Rise       ; clk             ;
+; PS2_DAT   ; clk        ; 1.123  ; 1.123  ; Rise       ; clk             ;
+; rstn      ; clk        ; -0.439 ; -0.439 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Clock to Output Times                                                    ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; kb_input[*]  ; clk        ; 6.409 ; 6.409 ; Rise       ; clk             ;
+;  kb_input[0] ; clk        ; 6.338 ; 6.338 ; Rise       ; clk             ;
+;  kb_input[1] ; clk        ; 6.398 ; 6.398 ; Rise       ; clk             ;
+;  kb_input[2] ; clk        ; 6.347 ; 6.347 ; Rise       ; clk             ;
+;  kb_input[3] ; clk        ; 6.379 ; 6.379 ; Rise       ; clk             ;
+;  kb_input[4] ; clk        ; 6.409 ; 6.409 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++--------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                            ;
++--------------+------------+-------+-------+------------+-----------------+
+; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++--------------+------------+-------+-------+------------+-----------------+
+; kb_input[*]  ; clk        ; 3.620 ; 3.620 ; Rise       ; clk             ;
+;  kb_input[0] ; clk        ; 3.620 ; 3.620 ; Rise       ; clk             ;
+;  kb_input[1] ; clk        ; 3.680 ; 3.680 ; Rise       ; clk             ;
+;  kb_input[2] ; clk        ; 3.629 ; 3.629 ; Rise       ; clk             ;
+;  kb_input[3] ; clk        ; 3.658 ; 3.658 ; Rise       ; clk             ;
+;  kb_input[4] ; clk        ; 3.688 ; 3.688 ; Rise       ; clk             ;
++--------------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 209      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 209      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 3     ; 3    ;
+; Unconstrained Input Port Paths  ; 26    ; 26   ;
+; Unconstrained Output Ports      ; 5     ; 5    ;
+; Unconstrained Output Port Paths ; 5     ; 5    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
+    Info: Processing started: Fri Oct 23 11:02:57 2015
+Info: Command: quartus_sta Keyboard -c Keyboard
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'Keyboard.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.355
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.355       -25.883 clk 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -28.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.081
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.081        -0.819 clk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -28.380 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 434 megabytes
+    Info: Processing ended: Fri Oct 23 11:03:02 2015
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:01
+
+

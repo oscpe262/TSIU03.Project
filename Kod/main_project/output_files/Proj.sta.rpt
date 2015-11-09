@@ -1,0 +1,1263 @@
+TimeQuest Timing Analyzer report for Proj
+Thu Nov 05 14:36:52 2015
+Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. SDC File List
+  5. Clocks
+  6. Slow Model Fmax Summary
+  7. Slow Model Setup Summary
+  8. Slow Model Hold Summary
+  9. Slow Model Recovery Summary
+ 10. Slow Model Removal Summary
+ 11. Slow Model Minimum Pulse Width Summary
+ 12. Slow Model Setup: 'clk'
+ 13. Slow Model Hold: 'clk'
+ 14. Slow Model Minimum Pulse Width: 'clk'
+ 15. Setup Times
+ 16. Hold Times
+ 17. Clock to Output Times
+ 18. Minimum Clock to Output Times
+ 19. Output Enable Times
+ 20. Minimum Output Enable Times
+ 21. Output Disable Times
+ 22. Minimum Output Disable Times
+ 23. Fast Model Setup Summary
+ 24. Fast Model Hold Summary
+ 25. Fast Model Recovery Summary
+ 26. Fast Model Removal Summary
+ 27. Fast Model Minimum Pulse Width Summary
+ 28. Fast Model Setup: 'clk'
+ 29. Fast Model Hold: 'clk'
+ 30. Fast Model Minimum Pulse Width: 'clk'
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Output Enable Times
+ 36. Minimum Output Enable Times
+ 37. Output Disable Times
+ 38. Minimum Output Disable Times
+ 39. Multicorner Timing Analysis Summary
+ 40. Setup Times
+ 41. Hold Times
+ 42. Clock to Output Times
+ 43. Minimum Clock to Output Times
+ 44. Setup Transfers
+ 45. Hold Transfers
+ 46. Report TCCS
+ 47. Report RSKM
+ 48. Unconstrained Paths
+ 49. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                        ;
++--------------------+---------------------------------------------------------------------+
+; Quartus II Version ; Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version ;
+; Revision Name      ; Proj                                                                ;
+; Device Family      ; Cyclone II                                                          ;
+; Device Name        ; EP2C35F672C6                                                        ;
+; Timing Models      ; Final                                                               ;
+; Delay Model        ; Combined                                                            ;
+; Rise/Fall Delays   ; Unavailable                                                         ;
++--------------------+---------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2 processors           ; < 0.1%      ;
+;     3-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++---------------------------------------------------+
+; SDC File List                                     ;
++---------------+--------+--------------------------+
+; SDC File Path ; Status ; Read at                  ;
++---------------+--------+--------------------------+
+; Proj.sdc      ; OK     ; Thu Nov 05 14:36:45 2015 ;
++---------------+--------+--------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency ; Rise  ; Fall   ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 20.000 ; 50.0 MHz  ; 0.000 ; 10.000 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+-----------+-------+--------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-------------------------------------------------+
+; Slow Model Fmax Summary                         ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 88.11 MHz ; 88.11 MHz       ; clk        ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------+
+; Slow Model Setup Summary      ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 8.650 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+-------+------------------------+
+; Clock ; Slack ; End Point TNS          ;
++-------+-------+------------------------+
+; clk   ; 8.077 ; 0.000                  ;
++-------+-------+------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clk'                                                                                                                                                     ;
++--------+---------------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                         ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 8.650  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.033     ; 11.353     ;
+; 8.691  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.033     ; 11.312     ;
+; 8.774  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; -0.033     ; 11.229     ;
+; 9.326  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[38]  ; clk          ; clk         ; 20.000       ; -0.004     ; 10.706     ;
+; 9.339  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[25]  ; clk          ; clk         ; 20.000       ; 0.000      ; 10.697     ;
+; 9.363  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[37]  ; clk          ; clk         ; 20.000       ; -0.004     ; 10.669     ;
+; 9.415  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[32]  ; clk          ; clk         ; 20.000       ; -0.004     ; 10.617     ;
+; 9.424  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[28]  ; clk          ; clk         ; 20.000       ; -0.004     ; 10.608     ;
+; 9.447  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[35]  ; clk          ; clk         ; 20.000       ; -0.004     ; 10.585     ;
+; 9.466  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[34]  ; clk          ; clk         ; 20.000       ; -0.004     ; 10.566     ;
+; 9.537  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[33]  ; clk          ; clk         ; 20.000       ; -0.004     ; 10.495     ;
+; 9.556  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[36]  ; clk          ; clk         ; 20.000       ; -0.004     ; 10.476     ;
+; 9.564  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[9]  ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.015     ; 10.457     ;
+; 9.593  ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[41] ; clk          ; clk         ; 20.000       ; 0.013      ; 10.456     ;
+; 9.605  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[9]  ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.015     ; 10.416     ;
+; 9.632  ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[40] ; clk          ; clk         ; 20.000       ; 0.013      ; 10.417     ;
+; 9.688  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[9]  ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; -0.015     ; 10.333     ;
+; 9.720  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[31]  ; clk          ; clk         ; 20.000       ; -0.004     ; 10.312     ;
+; 9.740  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[2]  ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.015     ; 10.281     ;
+; 9.741  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[24]  ; clk          ; clk         ; 20.000       ; -0.004     ; 10.291     ;
+; 9.742  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[5]  ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.015     ; 10.279     ;
+; 9.744  ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[39] ; clk          ; clk         ; 20.000       ; 0.013      ; 10.305     ;
+; 9.751  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[30]  ; clk          ; clk         ; 20.000       ; -0.004     ; 10.281     ;
+; 9.767  ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[35] ; clk          ; clk         ; 20.000       ; 0.002      ; 10.271     ;
+; 9.781  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[2]  ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.015     ; 10.240     ;
+; 9.783  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[5]  ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.015     ; 10.238     ;
+; 9.798  ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[0]   ; Analysis:inst_pre_adjustment|lafter[40]  ; clk          ; clk         ; 20.000       ; -0.010     ; 10.228     ;
+; 9.821  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[29]  ; clk          ; clk         ; 20.000       ; -0.004     ; 10.211     ;
+; 9.838  ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[34] ; clk          ; clk         ; 20.000       ; 0.009      ; 10.207     ;
+; 9.864  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[2]  ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; -0.015     ; 10.157     ;
+; 9.866  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[5]  ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; -0.015     ; 10.155     ;
+; 9.867  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[6]  ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.015     ; 10.154     ;
+; 9.871  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[26]  ; clk          ; clk         ; 20.000       ; -0.004     ; 10.161     ;
+; 9.876  ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[1]   ; Analysis:inst_post_adjustment|lafter[41] ; clk          ; clk         ; 20.000       ; 0.011      ; 10.171     ;
+; 9.884  ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[31] ; clk          ; clk         ; 20.000       ; 0.008      ; 10.160     ;
+; 9.908  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[6]  ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.015     ; 10.113     ;
+; 9.915  ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[1]   ; Analysis:inst_post_adjustment|lafter[40] ; clk          ; clk         ; 20.000       ; 0.011      ; 10.132     ;
+; 9.950  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[3]  ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.015     ; 10.071     ;
+; 9.957  ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[0]   ; Analysis:inst_pre_adjustment|lafter[41]  ; clk          ; clk         ; 20.000       ; -0.002     ; 10.077     ;
+; 9.957  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[1]  ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.015     ; 10.064     ;
+; 9.961  ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[30] ; clk          ; clk         ; 20.000       ; 0.008      ; 10.083     ;
+; 9.974  ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[33] ; clk          ; clk         ; 20.000       ; 0.009      ; 10.071     ;
+; 9.983  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[4]  ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.015     ; 10.038     ;
+; 9.991  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[3]  ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.015     ; 10.030     ;
+; 9.991  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[6]  ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; -0.015     ; 10.030     ;
+; 9.998  ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[32] ; clk          ; clk         ; 20.000       ; 0.002      ; 10.040     ;
+; 9.998  ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[1]  ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.015     ; 10.023     ;
+; 10.022 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[23]  ; clk          ; clk         ; 20.000       ; 0.000      ; 10.014     ;
+; 10.024 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[4]  ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.015     ; 9.997      ;
+; 10.027 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[1]   ; Analysis:inst_post_adjustment|lafter[39] ; clk          ; clk         ; 20.000       ; 0.011      ; 10.020     ;
+; 10.040 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[27]  ; clk          ; clk         ; 20.000       ; 0.000      ; 9.996      ;
+; 10.050 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[1]   ; Analysis:inst_post_adjustment|lafter[35] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.986      ;
+; 10.074 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[3]  ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; -0.015     ; 9.947      ;
+; 10.081 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[1]  ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; -0.015     ; 9.940      ;
+; 10.091 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[2]   ; Analysis:inst_post_adjustment|lafter[41] ; clk          ; clk         ; 20.000       ; 0.011      ; 9.956      ;
+; 10.107 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[4]  ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; -0.015     ; 9.914      ;
+; 10.111 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[37] ; clk          ; clk         ; 20.000       ; 0.011      ; 9.936      ;
+; 10.121 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[1]   ; Analysis:inst_post_adjustment|lafter[34] ; clk          ; clk         ; 20.000       ; 0.007      ; 9.922      ;
+; 10.130 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[2]   ; Analysis:inst_post_adjustment|lafter[40] ; clk          ; clk         ; 20.000       ; 0.011      ; 9.917      ;
+; 10.133 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[3]   ; Analysis:inst_post_adjustment|lafter[41] ; clk          ; clk         ; 20.000       ; 0.013      ; 9.916      ;
+; 10.134 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[7]  ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.015     ; 9.887      ;
+; 10.139 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[22] ; clk          ; clk         ; 20.000       ; 0.009      ; 9.906      ;
+; 10.158 ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[0]   ; Analysis:inst_pre_adjustment|lafter[39]  ; clk          ; clk         ; 20.000       ; -0.010     ; 9.868      ;
+; 10.167 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[1]   ; Analysis:inst_post_adjustment|lafter[31] ; clk          ; clk         ; 20.000       ; 0.006      ; 9.875      ;
+; 10.172 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[3]   ; Analysis:inst_post_adjustment|lafter[40] ; clk          ; clk         ; 20.000       ; 0.013      ; 9.877      ;
+; 10.175 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[7]  ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.015     ; 9.846      ;
+; 10.206 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[6]   ; Analysis:inst_post_adjustment|lafter[41] ; clk          ; clk         ; 20.000       ; 0.011      ; 9.841      ;
+; 10.218 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[27] ; clk          ; clk         ; 20.000       ; 0.008      ; 9.826      ;
+; 10.219 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[15] ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.033     ; 9.784      ;
+; 10.219 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[4]   ; Analysis:inst_post_adjustment|lafter[41] ; clk          ; clk         ; 20.000       ; 0.011      ; 9.828      ;
+; 10.233 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[38] ; clk          ; clk         ; 20.000       ; 0.011      ; 9.814      ;
+; 10.240 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[9]  ; Analysis:inst_pre_adjustment|rafter[38]  ; clk          ; clk         ; 20.000       ; 0.014      ; 9.810      ;
+; 10.242 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[2]   ; Analysis:inst_post_adjustment|lafter[39] ; clk          ; clk         ; 20.000       ; 0.011      ; 9.805      ;
+; 10.244 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[1]   ; Analysis:inst_post_adjustment|lafter[30] ; clk          ; clk         ; 20.000       ; 0.006      ; 9.798      ;
+; 10.245 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[6]   ; Analysis:inst_post_adjustment|lafter[40] ; clk          ; clk         ; 20.000       ; 0.011      ; 9.802      ;
+; 10.252 ; Vol_Bal:inst1|Balance_Adjustment:inst2|R_REG[0]   ; Analysis:inst_post_adjustment|rafter[39] ; clk          ; clk         ; 20.000       ; 0.005      ; 9.789      ;
+; 10.253 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[9]  ; Analysis:inst_pre_adjustment|rafter[25]  ; clk          ; clk         ; 20.000       ; 0.018      ; 9.801      ;
+; 10.257 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[1]   ; Analysis:inst_post_adjustment|lafter[33] ; clk          ; clk         ; 20.000       ; 0.007      ; 9.786      ;
+; 10.258 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[7]  ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; -0.015     ; 9.763      ;
+; 10.258 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[4]   ; Analysis:inst_post_adjustment|lafter[40] ; clk          ; clk         ; 20.000       ; 0.011      ; 9.789      ;
+; 10.260 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[15] ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.033     ; 9.743      ;
+; 10.262 ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[0]   ; Analysis:inst_pre_adjustment|lafter[35]  ; clk          ; clk         ; 20.000       ; -0.010     ; 9.764      ;
+; 10.265 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[2]   ; Analysis:inst_post_adjustment|lafter[35] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.771      ;
+; 10.271 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[29] ; clk          ; clk         ; 20.000       ; 0.008      ; 9.773      ;
+; 10.277 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[9]  ; Analysis:inst_pre_adjustment|rafter[37]  ; clk          ; clk         ; 20.000       ; 0.014      ; 9.773      ;
+; 10.281 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[1]   ; Analysis:inst_post_adjustment|lafter[32] ; clk          ; clk         ; 20.000       ; 0.000      ; 9.755      ;
+; 10.284 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[3]   ; Analysis:inst_post_adjustment|lafter[39] ; clk          ; clk         ; 20.000       ; 0.013      ; 9.765      ;
+; 10.284 ; Vol_Bal:inst1|Balance_Adjustment:inst2|R_REG[1]   ; Analysis:inst_post_adjustment|rafter[39] ; clk          ; clk         ; 20.000       ; 0.009      ; 9.761      ;
+; 10.288 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[24] ; clk          ; clk         ; 20.000       ; 0.008      ; 9.756      ;
+; 10.292 ; Vol_Bal:inst1|Balance_Adjustment:inst2|R_REG[0]   ; Analysis:inst_post_adjustment|rafter[31] ; clk          ; clk         ; 20.000       ; 0.006      ; 9.750      ;
+; 10.302 ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[0]   ; Analysis:inst_pre_adjustment|lafter[30]  ; clk          ; clk         ; 20.000       ; -0.009     ; 9.725      ;
+; 10.307 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[3]   ; Analysis:inst_post_adjustment|lafter[35] ; clk          ; clk         ; 20.000       ; 0.002      ; 9.731      ;
+; 10.309 ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[1]   ; Analysis:inst_pre_adjustment|lafter[40]  ; clk          ; clk         ; 20.000       ; -0.013     ; 9.714      ;
+; 10.313 ; Vol_Bal:inst1|Balance_Adjustment:inst2|R_REG[3]   ; Analysis:inst_post_adjustment|rafter[39] ; clk          ; clk         ; 20.000       ; 0.009      ; 9.732      ;
+; 10.320 ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[2]   ; Analysis:inst_pre_adjustment|lafter[40]  ; clk          ; clk         ; 20.000       ; -0.013     ; 9.703      ;
+; 10.321 ; Analysis:inst_post_adjustment|rafter[15]          ; Analysis:inst_post_adjustment|rafter[39] ; clk          ; clk         ; 20.000       ; -0.001     ; 9.714      ;
+; 10.324 ; Vol_Bal:inst1|Balance_Adjustment:inst2|R_REG[1]   ; Analysis:inst_post_adjustment|rafter[31] ; clk          ; clk         ; 20.000       ; 0.010      ; 9.722      ;
+; 10.329 ; Vol_Bal:inst1|Balance_Adjustment:inst2|R_REG[0]   ; Analysis:inst_post_adjustment|rafter[38] ; clk          ; clk         ; 20.000       ; 0.006      ; 9.713      ;
+; 10.329 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[9]  ; Analysis:inst_pre_adjustment|rafter[32]  ; clk          ; clk         ; 20.000       ; 0.014      ; 9.721      ;
+; 10.336 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[2]   ; Analysis:inst_post_adjustment|lafter[34] ; clk          ; clk         ; 20.000       ; 0.007      ; 9.707      ;
++--------+---------------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clk'                                                                                                                                                                          ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                               ; To Node                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; i2c_driver:inst|cnt[0]                                  ; i2c_driver:inst|cnt[0]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_driver:inst|cnt[1]                                  ; i2c_driver:inst|cnt[1]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_driver:inst|cnt[2]                                  ; i2c_driver:inst|cnt[2]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_driver:inst|cnt[3]                                  ; i2c_driver:inst|cnt[3]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_driver:inst|i2c_start                               ; i2c_driver:inst|i2c_start                               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_driver:inst|i2c_ready                               ; i2c_driver:inst|i2c_ready                               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Snd_Driver:inst3|Ctrl:inst_ctrl|counter[0]              ; Snd_Driver:inst3|Ctrl:inst_ctrl|counter[0]              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_idle  ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_idle  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_evens ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_evens ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Keyboard:inst2|shiftreg[0]                              ; Keyboard:inst2|shiftreg[0]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Keyboard:inst2|BREAKSET                                 ; Keyboard:inst2|BREAKSET                                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Vol_Bal:inst1|Volume_Adjustment:inst1|vol_counter[2]    ; Vol_Bal:inst1|Volume_Adjustment:inst1|vol_counter[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Vol_Bal:inst1|Volume_Adjustment:inst1|vol_counter[3]    ; Vol_Bal:inst1|Volume_Adjustment:inst1|vol_counter[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Vol_Bal:inst1|Volume_Adjustment:inst1|vol_counter[1]    ; Vol_Bal:inst1|Volume_Adjustment:inst1|vol_counter[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Vol_Bal:inst1|Current_Vol_Bal:inst|i_mute               ; Vol_Bal:inst1|Current_Vol_Bal:inst|i_mute               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Analysis:inst_post_adjustment|current_s.s_3             ; Analysis:inst_post_adjustment|current_s.s_3             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Analysis:inst_post_adjustment|current_s.s_2             ; Analysis:inst_post_adjustment|current_s.s_2             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Analysis:inst_post_adjustment|channel                   ; Analysis:inst_post_adjustment|channel                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Analysis:inst_post_adjustment|current_s.s_idle          ; Analysis:inst_post_adjustment|current_s.s_idle          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Analysis:inst_pre_adjustment|current_s.s_2              ; Analysis:inst_pre_adjustment|current_s.s_2              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Analysis:inst_pre_adjustment|current_s.s_3              ; Analysis:inst_pre_adjustment|current_s.s_3              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Analysis:inst_pre_adjustment|current_s.s_idle           ; Analysis:inst_pre_adjustment|current_s.s_idle           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[0]        ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[0]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; Snd_Driver:inst3|Channel_Mod:inst_left|TXReg[0]         ; Snd_Driver:inst3|Channel_Mod:inst_left|TXReg[0]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_driver:inst|i2c_data_int[0]                         ; i2c_driver:inst|i2c_data_int[0]                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; i2c_driver:inst|sda_int                                 ; i2c_driver:inst|sda_int                                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; VGA_Driver:inst5|clock_gen:inst|clki                    ; VGA_Driver:inst5|clock_gen:inst|clki                    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.657      ;
+; 0.514 ; Keyboard:inst2|shiftreg[9]                              ; Keyboard:inst2|shiftreg[8]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.780      ;
+; 0.519 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[3]        ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[4]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.785      ;
+; 0.522 ; Keyboard:inst2|PS2_DAT2                                 ; Keyboard:inst2|shiftreg[9]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.788      ;
+; 0.523 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[5]        ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[6]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.789      ;
+; 0.524 ; Analysis:inst_post_adjustment|lafter[1]                 ; Analysis:inst_post_adjustment|temp[1]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.790      ;
+; 0.526 ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[15]           ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[14]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.792      ;
+; 0.527 ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[6]            ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[5]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.793      ;
+; 0.528 ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[5]         ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[6]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.794      ;
+; 0.528 ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[14]           ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[13]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.794      ;
+; 0.529 ; Keyboard:inst2|shiftreg[7]                              ; Keyboard:inst2|shiftreg[6]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.795      ;
+; 0.530 ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[9]            ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[8]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.796      ;
+; 0.532 ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[10]           ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[9]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.798      ;
+; 0.533 ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[14]        ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[15]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.799      ;
+; 0.533 ; Analysis:inst_pre_adjustment|lafter[1]                  ; Analysis:inst_pre_adjustment|temp[1]                    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.799      ;
+; 0.534 ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[7]         ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[8]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.800      ;
+; 0.535 ; Analysis:inst_post_adjustment|lafter[5]                 ; Analysis:inst_post_adjustment|temp[5]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.801      ;
+; 0.536 ; Analysis:inst_post_adjustment|lrsel_old                 ; Analysis:inst_post_adjustment|lrsel_change              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.802      ;
+; 0.537 ; Analysis:inst_pre_adjustment|counter[3]                 ; Analysis:inst_pre_adjustment|rbar[5]                    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.803      ;
+; 0.539 ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[13]           ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[12]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.805      ;
+; 0.540 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[14]        ; Snd_Driver:inst3|Channel_Mod:inst_left|TXReg[14]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.806      ;
+; 0.542 ; Analysis:inst_pre_adjustment|counter[5]                 ; Analysis:inst_pre_adjustment|rbar[7]                    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.808      ;
+; 0.542 ; Analysis:inst_post_adjustment|counter[0]                ; Analysis:inst_post_adjustment|lbar[2]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.808      ;
+; 0.548 ; i2c_driver:inst|cnt[0]                                  ; i2c_driver:inst|cnt[1]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.814      ;
+; 0.550 ; i2c_driver:inst|bit_cnt[4]                              ; i2c_driver:inst|bit_cnt[4]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.816      ;
+; 0.551 ; Keyboard:inst2|shiftreg[1]                              ; Keyboard:inst2|kb_reg[0]                                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.817      ;
+; 0.552 ; Keyboard:inst2|shiftreg[1]                              ; Keyboard:inst2|shiftreg[0]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.818      ;
+; 0.553 ; Keyboard:inst2|shiftreg[1]                              ; Keyboard:inst2|kb_reg[3]                                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.819      ;
+; 0.555 ; Keyboard:inst2|shiftreg[0]                              ; Keyboard:inst2|shiftreg[3]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.821      ;
+; 0.556 ; Keyboard:inst2|shiftreg[0]                              ; Keyboard:inst2|shiftreg[2]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.822      ;
+; 0.558 ; Keyboard:inst2|shiftreg[2]                              ; Keyboard:inst2|kb_reg[4]                                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.824      ;
+; 0.559 ; Keyboard:inst2|shiftreg[2]                              ; Keyboard:inst2|kb_reg[1]                                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.825      ;
+; 0.561 ; Keyboard:inst2|shiftreg[2]                              ; Keyboard:inst2|shiftreg[1]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.827      ;
+; 0.563 ; Keyboard:inst2|shiftreg[2]                              ; Keyboard:inst2|kb_reg[2]                                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.829      ;
+; 0.565 ; Analysis:inst_pre_adjustment|current_s.s_3              ; Analysis:inst_pre_adjustment|current_s.s_idle           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.831      ;
+; 0.566 ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_odd   ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_idle  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.832      ;
+; 0.566 ; Analysis:inst_post_adjustment|current_s.s_2             ; Analysis:inst_post_adjustment|current_s.s_3             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.832      ;
+; 0.568 ; Analysis:inst_pre_adjustment|current_s.s_3              ; Analysis:inst_pre_adjustment|current_s.s_2              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.834      ;
+; 0.571 ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_odd   ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_evens ; clk          ; clk         ; 0.000        ; 0.000      ; 0.837      ;
+; 0.576 ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_evens ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_end   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.842      ;
+; 0.577 ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_evens ; Vol_Bal:inst1|Volume_Adjustment:inst1|vol_counter[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.843      ;
+; 0.587 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[10]       ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[11]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.853      ;
+; 0.628 ; i2c_driver:inst|i2c_data_int[20]                        ; i2c_driver:inst|i2c_data_int[21]                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.894      ;
+; 0.650 ; i2c_driver:inst|i2c_data_int[14]                        ; i2c_driver:inst|i2c_data_int[15]                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.916      ;
+; 0.651 ; i2c_driver:inst|i2c_data_int[8]                         ; i2c_driver:inst|i2c_data_int[9]                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.917      ;
+; 0.652 ; i2c_driver:inst|i2c_data_int[6]                         ; i2c_driver:inst|i2c_data_int[7]                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.918      ;
+; 0.653 ; i2c_driver:inst|i2c_data_int[4]                         ; i2c_driver:inst|i2c_data_int[5]                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.919      ;
+; 0.653 ; i2c_driver:inst|i2c_data_int[5]                         ; i2c_driver:inst|i2c_data_int[6]                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.919      ;
+; 0.654 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[11]       ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[12]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.920      ;
+; 0.656 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[4]        ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[5]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.922      ;
+; 0.656 ; i2c_driver:inst|i2c_data_int[18]                        ; i2c_driver:inst|i2c_data_int[19]                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.922      ;
+; 0.657 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[6]        ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[7]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.923      ;
+; 0.659 ; Analysis:inst_post_adjustment|temp[38]                  ; Analysis:inst_post_adjustment|temp[39]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.925      ;
+; 0.659 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[2]        ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[3]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.925      ;
+; 0.659 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[8]        ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[9]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.925      ;
+; 0.660 ; Analysis:inst_post_adjustment|temp[24]                  ; Analysis:inst_post_adjustment|temp[25]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.926      ;
+; 0.660 ; Analysis:inst_post_adjustment|temp[28]                  ; Analysis:inst_post_adjustment|temp[29]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.926      ;
+; 0.660 ; Analysis:inst_post_adjustment|temp[29]                  ; Analysis:inst_post_adjustment|temp[30]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.926      ;
+; 0.660 ; Analysis:inst_pre_adjustment|temp[13]                   ; Analysis:inst_pre_adjustment|temp[14]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.926      ;
+; 0.660 ; Analysis:inst_pre_adjustment|temp[24]                   ; Analysis:inst_pre_adjustment|temp[25]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.926      ;
+; 0.660 ; Analysis:inst_pre_adjustment|temp[25]                   ; Analysis:inst_pre_adjustment|temp[26]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.926      ;
+; 0.661 ; Analysis:inst_post_adjustment|temp[36]                  ; Analysis:inst_post_adjustment|temp[37]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.927      ;
+; 0.661 ; Analysis:inst_pre_adjustment|temp[3]                    ; Analysis:inst_pre_adjustment|temp[4]                    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.927      ;
+; 0.662 ; Analysis:inst_post_adjustment|temp[2]                   ; Analysis:inst_post_adjustment|temp[3]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.928      ;
+; 0.662 ; Analysis:inst_post_adjustment|temp[4]                   ; Analysis:inst_post_adjustment|temp[5]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.928      ;
+; 0.662 ; Analysis:inst_post_adjustment|temp[5]                   ; Analysis:inst_post_adjustment|temp[6]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.928      ;
+; 0.662 ; Analysis:inst_post_adjustment|temp[6]                   ; Analysis:inst_post_adjustment|temp[7]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.928      ;
+; 0.662 ; Analysis:inst_post_adjustment|temp[12]                  ; Analysis:inst_post_adjustment|temp[13]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.928      ;
+; 0.662 ; Analysis:inst_post_adjustment|temp[15]                  ; Analysis:inst_post_adjustment|temp[16]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.928      ;
+; 0.662 ; Analysis:inst_post_adjustment|temp[25]                  ; Analysis:inst_post_adjustment|temp[26]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.928      ;
+; 0.662 ; Analysis:inst_pre_adjustment|temp[5]                    ; Analysis:inst_pre_adjustment|temp[6]                    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.928      ;
+; 0.662 ; Analysis:inst_pre_adjustment|temp[34]                   ; Analysis:inst_pre_adjustment|temp[35]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.928      ;
+; 0.662 ; Analysis:inst_pre_adjustment|temp[37]                   ; Analysis:inst_pre_adjustment|temp[38]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.928      ;
+; 0.663 ; Analysis:inst_post_adjustment|temp[34]                  ; Analysis:inst_post_adjustment|temp[35]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.929      ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clk'                                                                                           ;
++-------+--------------+----------------+------------------+-------+------------+-------------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                          ;
++-------+--------------+----------------+------------------+-------+------------+-------------------------------------------------+
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[0]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[0]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[10] ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[10] ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[11] ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[11] ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[12] ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[12] ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[13] ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[13] ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[14] ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[14] ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[15] ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[15] ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[1]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[1]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[2]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[2]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[3]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[3]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[4]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[4]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[5]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[5]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[6]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[6]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[7]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[7]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[8]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[8]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[9]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[9]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[0]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[0]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[10] ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[10] ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[11] ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[11] ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[12] ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[12] ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[13] ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[13] ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[14] ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[14] ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[15] ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[15] ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[1]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[1]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[2]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[2]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[3]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[3]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[4]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[4]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[5]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[5]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[6]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[6]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[7]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[7]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[8]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[8]  ;
+; 8.077 ; 10.000       ; 1.923          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[9]  ;
+; 8.077 ; 10.000       ; 1.923          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[9]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|channel           ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|channel           ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[0]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[0]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[1]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[1]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[2]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[2]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[3]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[3]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[4]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[4]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[5]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[5]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|current_s.s_2     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|current_s.s_2     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|current_s.s_3     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|current_s.s_3     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|current_s.s_idle  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|current_s.s_idle  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[0]         ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[0]         ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[10]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[10]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[11]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[11]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[12]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[12]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[13]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[13]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[14]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[14]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[15]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[15]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[16]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[16]        ;
++-------+--------------+----------------+------------------+-------+------------+-------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY0      ; clk        ; 6.917 ; 6.917 ; Rise       ; clk             ;
+; PS2_CLK   ; clk        ; 4.574 ; 4.574 ; Rise       ; clk             ;
+; PS2_DAT   ; clk        ; 4.453 ; 4.453 ; Rise       ; clk             ;
+; adcdat    ; clk        ; 5.487 ; 5.487 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY0      ; clk        ; -4.667 ; -4.667 ; Rise       ; clk             ;
+; PS2_CLK   ; clk        ; -4.344 ; -4.344 ; Rise       ; clk             ;
+; PS2_DAT   ; clk        ; -4.223 ; -4.223 ; Rise       ; clk             ;
+; adcdat    ; clk        ; -4.304 ; -4.304 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; BICKI     ; clk        ; 8.144  ; 8.144  ; Rise       ; clk             ;
+; LRCKI     ; clk        ; 8.277  ; 8.277  ; Rise       ; clk             ;
+; SDI_12    ; clk        ; 9.390  ; 9.390  ; Rise       ; clk             ;
+; XTI       ; clk        ; 7.547  ; 7.547  ; Rise       ; clk             ;
+; adclrc    ; clk        ; 10.132 ; 10.132 ; Rise       ; clk             ;
+; bclk      ; clk        ; 9.332  ; 9.332  ; Rise       ; clk             ;
+; dacdat    ; clk        ; 9.958  ; 9.958  ; Rise       ; clk             ;
+; daclrc    ; clk        ; 10.132 ; 10.132 ; Rise       ; clk             ;
+; mclk      ; clk        ; 8.095  ; 8.095  ; Rise       ; clk             ;
+; scl       ; clk        ; 10.549 ; 10.549 ; Rise       ; clk             ;
+; sclD      ; clk        ; 9.749  ; 9.749  ; Rise       ; clk             ;
+; sda       ; clk        ; 7.930  ; 7.930  ; Rise       ; clk             ;
+; sdaD      ; clk        ; 7.784  ; 7.784  ; Rise       ; clk             ;
+; vga_clk   ; clk        ; 7.735  ; 7.735  ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                           ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; BICKI     ; clk        ; 8.144  ; 8.144  ; Rise       ; clk             ;
+; LRCKI     ; clk        ; 8.277  ; 8.277  ; Rise       ; clk             ;
+; SDI_12    ; clk        ; 8.422  ; 8.422  ; Rise       ; clk             ;
+; XTI       ; clk        ; 7.547  ; 7.547  ; Rise       ; clk             ;
+; adclrc    ; clk        ; 10.132 ; 10.132 ; Rise       ; clk             ;
+; bclk      ; clk        ; 9.332  ; 9.332  ; Rise       ; clk             ;
+; dacdat    ; clk        ; 8.990  ; 8.990  ; Rise       ; clk             ;
+; daclrc    ; clk        ; 10.132 ; 10.132 ; Rise       ; clk             ;
+; mclk      ; clk        ; 8.095  ; 8.095  ; Rise       ; clk             ;
+; scl       ; clk        ; 9.380  ; 9.380  ; Rise       ; clk             ;
+; sclD      ; clk        ; 8.580  ; 8.580  ; Rise       ; clk             ;
+; sda       ; clk        ; 7.930  ; 7.930  ; Rise       ; clk             ;
+; sdaD      ; clk        ; 7.784  ; 7.784  ; Rise       ; clk             ;
+; vga_clk   ; clk        ; 7.735  ; 7.735  ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Output Enable Times                                                   ;
++-----------+------------+--------+------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+------+------------+-----------------+
+; sda       ; clk        ; 10.632 ;      ; Rise       ; clk             ;
+; sdaD      ; clk        ; 9.865  ;      ; Rise       ; clk             ;
++-----------+------------+--------+------+------------+-----------------+
+
+
++----------------------------------------------------------------------+
+; Minimum Output Enable Times                                          ;
++-----------+------------+-------+------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+------+------------+-----------------+
+; sda       ; clk        ; 9.350 ;      ; Rise       ; clk             ;
+; sdaD      ; clk        ; 8.565 ;      ; Rise       ; clk             ;
++-----------+------------+-------+------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Output Disable Times                                                          ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; Data Port ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; sda       ; clk        ; 10.632    ;           ; Rise       ; clk             ;
+; sdaD      ; clk        ; 9.865     ;           ; Rise       ; clk             ;
++-----------+------------+-----------+-----------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                  ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; Data Port ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; sda       ; clk        ; 9.350     ;           ; Rise       ; clk             ;
+; sdaD      ; clk        ; 8.565     ;           ; Rise       ; clk             ;
++-----------+------------+-----------+-----------+------------+-----------------+
+
+
++--------------------------------+
+; Fast Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clk   ; 15.443 ; 0.000         ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clk   ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+-------+------------------------+
+; Clock ; Slack ; End Point TNS          ;
++-------+-------+------------------------+
+; clk   ; 7.981 ; 0.000                  ;
++-------+-------+------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clk'                                                                                                                                                     ;
++--------+---------------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                         ; To Node                                  ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 15.443 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.028     ; 4.561      ;
+; 15.472 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.028     ; 4.532      ;
+; 15.507 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; -0.028     ; 4.497      ;
+; 15.552 ; Analysis:inst_post_adjustment|rafter[15]          ; Analysis:inst_post_adjustment|rafter[39] ; clk          ; clk         ; 20.000       ; 0.001      ; 4.481      ;
+; 15.592 ; Analysis:inst_post_adjustment|rafter[15]          ; Analysis:inst_post_adjustment|rafter[38] ; clk          ; clk         ; 20.000       ; 0.000      ; 4.440      ;
+; 15.607 ; Analysis:inst_post_adjustment|rafter[15]          ; Analysis:inst_post_adjustment|rafter[31] ; clk          ; clk         ; 20.000       ; 0.000      ; 4.425      ;
+; 15.612 ; Analysis:inst_post_adjustment|rafter[15]          ; Analysis:inst_post_adjustment|rafter[41] ; clk          ; clk         ; 20.000       ; 0.001      ; 4.421      ;
+; 15.770 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[38]  ; clk          ; clk         ; 20.000       ; -0.004     ; 4.258      ;
+; 15.771 ; Analysis:inst_post_adjustment|rafter[15]          ; Analysis:inst_post_adjustment|rafter[40] ; clk          ; clk         ; 20.000       ; 0.001      ; 4.262      ;
+; 15.797 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[37]  ; clk          ; clk         ; 20.000       ; -0.004     ; 4.231      ;
+; 15.825 ; Analysis:inst_post_adjustment|rafter[15]          ; Analysis:inst_post_adjustment|rafter[36] ; clk          ; clk         ; 20.000       ; 0.002      ; 4.209      ;
+; 15.851 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[25]  ; clk          ; clk         ; 20.000       ; 0.000      ; 4.181      ;
+; 15.853 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[32]  ; clk          ; clk         ; 20.000       ; -0.004     ; 4.175      ;
+; 15.853 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[35]  ; clk          ; clk         ; 20.000       ; -0.004     ; 4.175      ;
+; 15.855 ; Analysis:inst_pre_adjustment|rafter[14]           ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.026     ; 4.151      ;
+; 15.857 ; Analysis:inst_post_adjustment|rafter[15]          ; Analysis:inst_post_adjustment|rafter[37] ; clk          ; clk         ; 20.000       ; -0.001     ; 4.174      ;
+; 15.866 ; Analysis:inst_pre_adjustment|rafter[15]           ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.026     ; 4.140      ;
+; 15.872 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[34]  ; clk          ; clk         ; 20.000       ; -0.004     ; 4.156      ;
+; 15.883 ; Analysis:inst_post_adjustment|rafter[15]          ; Analysis:inst_post_adjustment|rafter[35] ; clk          ; clk         ; 20.000       ; 0.002      ; 4.151      ;
+; 15.884 ; Analysis:inst_pre_adjustment|rafter[14]           ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.026     ; 4.122      ;
+; 15.885 ; Analysis:inst_pre_adjustment|rafter[0]            ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; 0.002      ; 4.149      ;
+; 15.890 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[28]  ; clk          ; clk         ; 20.000       ; -0.004     ; 4.138      ;
+; 15.895 ; Analysis:inst_pre_adjustment|rafter[15]           ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.026     ; 4.111      ;
+; 15.900 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[36]  ; clk          ; clk         ; 20.000       ; -0.004     ; 4.128      ;
+; 15.900 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[9]  ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.012     ; 4.120      ;
+; 15.908 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[33]  ; clk          ; clk         ; 20.000       ; -0.004     ; 4.120      ;
+; 15.913 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[41] ; clk          ; clk         ; 20.000       ; 0.014      ; 4.133      ;
+; 15.914 ; Analysis:inst_pre_adjustment|rafter[0]            ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; 0.002      ; 4.120      ;
+; 15.917 ; Analysis:inst_pre_adjustment|rafter[13]           ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.026     ; 4.089      ;
+; 15.919 ; Analysis:inst_pre_adjustment|rafter[14]           ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; -0.026     ; 4.087      ;
+; 15.929 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[9]  ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.012     ; 4.091      ;
+; 15.930 ; Analysis:inst_pre_adjustment|rafter[15]           ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; -0.026     ; 4.076      ;
+; 15.940 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[40] ; clk          ; clk         ; 20.000       ; 0.014      ; 4.106      ;
+; 15.943 ; Analysis:inst_post_adjustment|rafter[13]          ; Analysis:inst_post_adjustment|rafter[39] ; clk          ; clk         ; 20.000       ; 0.000      ; 4.089      ;
+; 15.946 ; Analysis:inst_pre_adjustment|rafter[13]           ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.026     ; 4.060      ;
+; 15.949 ; Analysis:inst_pre_adjustment|rafter[0]            ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; 0.002      ; 4.085      ;
+; 15.952 ; Analysis:inst_pre_adjustment|rafter[16]           ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.026     ; 4.054      ;
+; 15.958 ; Analysis:inst_post_adjustment|rafter[15]          ; Analysis:inst_post_adjustment|rafter[33] ; clk          ; clk         ; 20.000       ; 0.001      ; 4.075      ;
+; 15.964 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[9]  ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; -0.012     ; 4.056      ;
+; 15.965 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[2]  ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.012     ; 4.055      ;
+; 15.965 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[5]  ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.012     ; 4.055      ;
+; 15.978 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[15] ; Analysis:inst_pre_adjustment|rafter[0]   ; clk          ; clk         ; 20.000       ; -0.030     ; 4.024      ;
+; 15.981 ; Analysis:inst_pre_adjustment|rafter[16]           ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.026     ; 4.025      ;
+; 15.981 ; Analysis:inst_pre_adjustment|rafter[13]           ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; -0.026     ; 4.025      ;
+; 15.983 ; Analysis:inst_post_adjustment|rafter[13]          ; Analysis:inst_post_adjustment|rafter[38] ; clk          ; clk         ; 20.000       ; -0.001     ; 4.048      ;
+; 15.989 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[31]  ; clk          ; clk         ; 20.000       ; -0.004     ; 4.039      ;
+; 15.990 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[39] ; clk          ; clk         ; 20.000       ; 0.014      ; 4.056      ;
+; 15.994 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[2]  ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.012     ; 4.026      ;
+; 15.994 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[5]  ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.012     ; 4.026      ;
+; 15.998 ; Analysis:inst_post_adjustment|rafter[13]          ; Analysis:inst_post_adjustment|rafter[31] ; clk          ; clk         ; 20.000       ; -0.001     ; 4.033      ;
+; 16.003 ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[0]   ; Analysis:inst_pre_adjustment|lafter[40]  ; clk          ; clk         ; 20.000       ; -0.008     ; 4.021      ;
+; 16.003 ; Analysis:inst_post_adjustment|rafter[13]          ; Analysis:inst_post_adjustment|rafter[41] ; clk          ; clk         ; 20.000       ; 0.000      ; 4.029      ;
+; 16.014 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[30]  ; clk          ; clk         ; 20.000       ; -0.004     ; 4.014      ;
+; 16.016 ; Analysis:inst_pre_adjustment|rafter[16]           ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; -0.026     ; 3.990      ;
+; 16.025 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[35] ; clk          ; clk         ; 20.000       ; 0.002      ; 4.009      ;
+; 16.026 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[6]  ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.012     ; 3.994      ;
+; 16.029 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[2]  ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; -0.012     ; 3.991      ;
+; 16.029 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[5]  ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; -0.012     ; 3.991      ;
+; 16.032 ; Analysis:inst_post_adjustment|rafter[0]           ; Analysis:inst_post_adjustment|rafter[39] ; clk          ; clk         ; 20.000       ; 0.004      ; 4.004      ;
+; 16.047 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[1]   ; Analysis:inst_post_adjustment|lafter[41] ; clk          ; clk         ; 20.000       ; 0.012      ; 3.997      ;
+; 16.048 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[29]  ; clk          ; clk         ; 20.000       ; -0.004     ; 3.980      ;
+; 16.051 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[24]  ; clk          ; clk         ; 20.000       ; -0.004     ; 3.977      ;
+; 16.052 ; Analysis:inst_post_adjustment|rafter[15]          ; Analysis:inst_post_adjustment|rafter[28] ; clk          ; clk         ; 20.000       ; 0.002      ; 3.982      ;
+; 16.055 ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[0]   ; Analysis:inst_pre_adjustment|lafter[41]  ; clk          ; clk         ; 20.000       ; 0.000      ; 3.977      ;
+; 16.055 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[6]  ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.012     ; 3.965      ;
+; 16.059 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[3]  ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.012     ; 3.961      ;
+; 16.060 ; Analysis:inst_post_adjustment|rafter[15]          ; Analysis:inst_post_adjustment|rafter[30] ; clk          ; clk         ; 20.000       ; 0.002      ; 3.974      ;
+; 16.063 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[1]  ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.012     ; 3.957      ;
+; 16.064 ; Analysis:inst_post_adjustment|rafter[16]          ; Analysis:inst_post_adjustment|rafter[39] ; clk          ; clk         ; 20.000       ; 0.001      ; 3.969      ;
+; 16.064 ; Analysis:inst_pre_adjustment|lafter[3]            ; Analysis:inst_pre_adjustment|lafter[40]  ; clk          ; clk         ; 20.000       ; -0.005     ; 3.963      ;
+; 16.065 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[34] ; clk          ; clk         ; 20.000       ; 0.008      ; 3.975      ;
+; 16.072 ; Analysis:inst_post_adjustment|rafter[0]           ; Analysis:inst_post_adjustment|rafter[38] ; clk          ; clk         ; 20.000       ; 0.003      ; 3.963      ;
+; 16.074 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[1]   ; Analysis:inst_post_adjustment|lafter[40] ; clk          ; clk         ; 20.000       ; 0.012      ; 3.970      ;
+; 16.076 ; Analysis:inst_pre_adjustment|rafter[1]            ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.004     ; 3.952      ;
+; 16.077 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[4]  ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.012     ; 3.943      ;
+; 16.078 ; Analysis:inst_post_adjustment|rafter[15]          ; Analysis:inst_post_adjustment|rafter[27] ; clk          ; clk         ; 20.000       ; 0.002      ; 3.956      ;
+; 16.084 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[15] ; Analysis:inst_pre_adjustment|rafter[16]  ; clk          ; clk         ; 20.000       ; -0.002     ; 3.946      ;
+; 16.084 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[15] ; Analysis:inst_pre_adjustment|rafter[18]  ; clk          ; clk         ; 20.000       ; -0.002     ; 3.946      ;
+; 16.084 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[15] ; Analysis:inst_pre_adjustment|rafter[19]  ; clk          ; clk         ; 20.000       ; -0.002     ; 3.946      ;
+; 16.084 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[15] ; Analysis:inst_pre_adjustment|rafter[20]  ; clk          ; clk         ; 20.000       ; -0.002     ; 3.946      ;
+; 16.084 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[15] ; Analysis:inst_pre_adjustment|rafter[21]  ; clk          ; clk         ; 20.000       ; -0.002     ; 3.946      ;
+; 16.084 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[15] ; Analysis:inst_pre_adjustment|rafter[22]  ; clk          ; clk         ; 20.000       ; -0.002     ; 3.946      ;
+; 16.084 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[15] ; Analysis:inst_pre_adjustment|rafter[13]  ; clk          ; clk         ; 20.000       ; -0.002     ; 3.946      ;
+; 16.084 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[15] ; Analysis:inst_pre_adjustment|rafter[15]  ; clk          ; clk         ; 20.000       ; -0.002     ; 3.946      ;
+; 16.084 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[15] ; Analysis:inst_pre_adjustment|rafter[14]  ; clk          ; clk         ; 20.000       ; -0.002     ; 3.946      ;
+; 16.085 ; Analysis:inst_post_adjustment|rafter[1]           ; Analysis:inst_post_adjustment|rafter[39] ; clk          ; clk         ; 20.000       ; 0.005      ; 3.952      ;
+; 16.087 ; Analysis:inst_post_adjustment|rafter[0]           ; Analysis:inst_post_adjustment|rafter[31] ; clk          ; clk         ; 20.000       ; 0.003      ; 3.948      ;
+; 16.088 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[3]  ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.012     ; 3.932      ;
+; 16.090 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[6]  ; Analysis:inst_pre_adjustment|rafter[39]  ; clk          ; clk         ; 20.000       ; -0.012     ; 3.930      ;
+; 16.091 ; Analysis:inst_post_adjustment|rafter[15]          ; Analysis:inst_post_adjustment|rafter[29] ; clk          ; clk         ; 20.000       ; 0.001      ; 3.942      ;
+; 16.091 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[26]  ; clk          ; clk         ; 20.000       ; -0.004     ; 3.937      ;
+; 16.092 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[1]  ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.012     ; 3.928      ;
+; 16.092 ; Analysis:inst_post_adjustment|rafter[0]           ; Analysis:inst_post_adjustment|rafter[41] ; clk          ; clk         ; 20.000       ; 0.004      ; 3.944      ;
+; 16.098 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[0]   ; Analysis:inst_post_adjustment|lafter[31] ; clk          ; clk         ; 20.000       ; 0.010      ; 3.944      ;
+; 16.104 ; Analysis:inst_post_adjustment|rafter[16]          ; Analysis:inst_post_adjustment|rafter[38] ; clk          ; clk         ; 20.000       ; 0.000      ; 3.928      ;
+; 16.105 ; Analysis:inst_pre_adjustment|rafter[1]            ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.004     ; 3.923      ;
+; 16.106 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[4]  ; Analysis:inst_pre_adjustment|rafter[40]  ; clk          ; clk         ; 20.000       ; -0.012     ; 3.914      ;
+; 16.109 ; Snd_Driver:inst3|Channel_Mod:inst_right|RXReg[0]  ; Analysis:inst_pre_adjustment|rafter[0]   ; clk          ; clk         ; 20.000       ; -0.030     ; 3.893      ;
+; 16.114 ; Analysis:inst_pre_adjustment|rafter[2]            ; Analysis:inst_pre_adjustment|rafter[41]  ; clk          ; clk         ; 20.000       ; -0.004     ; 3.914      ;
+; 16.116 ; Analysis:inst_pre_adjustment|lafter[3]            ; Analysis:inst_pre_adjustment|lafter[41]  ; clk          ; clk         ; 20.000       ; 0.003      ; 3.919      ;
++--------+---------------------------------------------------+------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clk'                                                                                                                                                                          ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                               ; To Node                                                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; i2c_driver:inst|cnt[0]                                  ; i2c_driver:inst|cnt[0]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_driver:inst|cnt[1]                                  ; i2c_driver:inst|cnt[1]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_driver:inst|cnt[2]                                  ; i2c_driver:inst|cnt[2]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_driver:inst|cnt[3]                                  ; i2c_driver:inst|cnt[3]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_driver:inst|i2c_start                               ; i2c_driver:inst|i2c_start                               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_driver:inst|i2c_ready                               ; i2c_driver:inst|i2c_ready                               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Snd_Driver:inst3|Ctrl:inst_ctrl|counter[0]              ; Snd_Driver:inst3|Ctrl:inst_ctrl|counter[0]              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_idle  ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_idle  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_evens ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_evens ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Keyboard:inst2|shiftreg[0]                              ; Keyboard:inst2|shiftreg[0]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Keyboard:inst2|BREAKSET                                 ; Keyboard:inst2|BREAKSET                                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Vol_Bal:inst1|Volume_Adjustment:inst1|vol_counter[2]    ; Vol_Bal:inst1|Volume_Adjustment:inst1|vol_counter[2]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Vol_Bal:inst1|Volume_Adjustment:inst1|vol_counter[3]    ; Vol_Bal:inst1|Volume_Adjustment:inst1|vol_counter[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Vol_Bal:inst1|Volume_Adjustment:inst1|vol_counter[1]    ; Vol_Bal:inst1|Volume_Adjustment:inst1|vol_counter[1]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Vol_Bal:inst1|Current_Vol_Bal:inst|i_mute               ; Vol_Bal:inst1|Current_Vol_Bal:inst|i_mute               ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Analysis:inst_post_adjustment|current_s.s_3             ; Analysis:inst_post_adjustment|current_s.s_3             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Analysis:inst_post_adjustment|current_s.s_2             ; Analysis:inst_post_adjustment|current_s.s_2             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Analysis:inst_post_adjustment|channel                   ; Analysis:inst_post_adjustment|channel                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Analysis:inst_post_adjustment|current_s.s_idle          ; Analysis:inst_post_adjustment|current_s.s_idle          ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Analysis:inst_pre_adjustment|current_s.s_2              ; Analysis:inst_pre_adjustment|current_s.s_2              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Analysis:inst_pre_adjustment|current_s.s_3              ; Analysis:inst_pre_adjustment|current_s.s_3              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Analysis:inst_pre_adjustment|current_s.s_idle           ; Analysis:inst_pre_adjustment|current_s.s_idle           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[0]        ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[0]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; Snd_Driver:inst3|Channel_Mod:inst_left|TXReg[0]         ; Snd_Driver:inst3|Channel_Mod:inst_left|TXReg[0]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_driver:inst|i2c_data_int[0]                         ; i2c_driver:inst|i2c_data_int[0]                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; i2c_driver:inst|sda_int                                 ; i2c_driver:inst|sda_int                                 ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; VGA_Driver:inst5|clock_gen:inst|clki                    ; VGA_Driver:inst5|clock_gen:inst|clki                    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.367      ;
+; 0.236 ; Keyboard:inst2|shiftreg[9]                              ; Keyboard:inst2|shiftreg[8]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.388      ;
+; 0.239 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[3]        ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[4]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.391      ;
+; 0.240 ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[6]            ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[5]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.392      ;
+; 0.240 ; Analysis:inst_post_adjustment|lafter[1]                 ; Analysis:inst_post_adjustment|temp[1]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.392      ;
+; 0.241 ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[15]           ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[14]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.393      ;
+; 0.242 ; Keyboard:inst2|PS2_DAT2                                 ; Keyboard:inst2|shiftreg[9]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.394      ;
+; 0.242 ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[14]           ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[13]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.394      ;
+; 0.243 ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[5]         ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[6]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.395      ;
+; 0.243 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[5]        ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[6]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.395      ;
+; 0.244 ; Keyboard:inst2|shiftreg[7]                              ; Keyboard:inst2|shiftreg[6]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.396      ;
+; 0.244 ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[10]           ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[9]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.396      ;
+; 0.244 ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[9]            ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[8]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.396      ;
+; 0.245 ; Analysis:inst_post_adjustment|lafter[5]                 ; Analysis:inst_post_adjustment|temp[5]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.397      ;
+; 0.246 ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[14]        ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[15]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.398      ;
+; 0.246 ; Analysis:inst_pre_adjustment|lafter[1]                  ; Analysis:inst_pre_adjustment|temp[1]                    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.398      ;
+; 0.247 ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[7]         ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[8]         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.399      ;
+; 0.247 ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[13]           ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[12]           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.399      ;
+; 0.249 ; Analysis:inst_post_adjustment|lrsel_old                 ; Analysis:inst_post_adjustment|lrsel_change              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.401      ;
+; 0.249 ; Vol_Bal:inst1|Balance_Adjustment:inst2|L_REG[14]        ; Snd_Driver:inst3|Channel_Mod:inst_left|TXReg[14]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.401      ;
+; 0.254 ; i2c_driver:inst|bit_cnt[4]                              ; i2c_driver:inst|bit_cnt[4]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.406      ;
+; 0.254 ; i2c_driver:inst|cnt[0]                                  ; i2c_driver:inst|cnt[1]                                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.406      ;
+; 0.259 ; Keyboard:inst2|shiftreg[0]                              ; Keyboard:inst2|shiftreg[3]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.411      ;
+; 0.259 ; Keyboard:inst2|shiftreg[1]                              ; Keyboard:inst2|kb_reg[0]                                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.411      ;
+; 0.259 ; Keyboard:inst2|shiftreg[2]                              ; Keyboard:inst2|kb_reg[4]                                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.411      ;
+; 0.260 ; Keyboard:inst2|shiftreg[0]                              ; Keyboard:inst2|shiftreg[2]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.412      ;
+; 0.260 ; Keyboard:inst2|shiftreg[2]                              ; Keyboard:inst2|kb_reg[1]                                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.412      ;
+; 0.260 ; Keyboard:inst2|shiftreg[1]                              ; Keyboard:inst2|kb_reg[3]                                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.412      ;
+; 0.260 ; Keyboard:inst2|shiftreg[1]                              ; Keyboard:inst2|shiftreg[0]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.412      ;
+; 0.262 ; Keyboard:inst2|shiftreg[2]                              ; Keyboard:inst2|shiftreg[1]                              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.414      ;
+; 0.264 ; Keyboard:inst2|shiftreg[2]                              ; Keyboard:inst2|kb_reg[2]                                ; clk          ; clk         ; 0.000        ; 0.000      ; 0.416      ;
+; 0.265 ; Analysis:inst_pre_adjustment|current_s.s_3              ; Analysis:inst_pre_adjustment|current_s.s_idle           ; clk          ; clk         ; 0.000        ; 0.000      ; 0.417      ;
+; 0.266 ; Analysis:inst_post_adjustment|current_s.s_2             ; Analysis:inst_post_adjustment|current_s.s_3             ; clk          ; clk         ; 0.000        ; 0.000      ; 0.418      ;
+; 0.267 ; Analysis:inst_pre_adjustment|counter[3]                 ; Analysis:inst_pre_adjustment|rbar[5]                    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.419      ;
+; 0.267 ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_odd   ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_idle  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.419      ;
+; 0.268 ; Analysis:inst_pre_adjustment|current_s.s_3              ; Analysis:inst_pre_adjustment|current_s.s_2              ; clk          ; clk         ; 0.000        ; 0.000      ; 0.420      ;
+; 0.271 ; Analysis:inst_pre_adjustment|counter[5]                 ; Analysis:inst_pre_adjustment|rbar[7]                    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.423      ;
+; 0.271 ; Analysis:inst_post_adjustment|counter[0]                ; Analysis:inst_post_adjustment|lbar[2]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.423      ;
+; 0.271 ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_odd   ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_evens ; clk          ; clk         ; 0.000        ; 0.000      ; 0.423      ;
+; 0.272 ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_evens ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_end   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.424      ;
+; 0.273 ; Vol_Bal:inst1|Volume_Adjustment:inst1|state.state_evens ; Vol_Bal:inst1|Volume_Adjustment:inst1|vol_counter[3]    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.425      ;
+; 0.277 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[10]       ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[11]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.429      ;
+; 0.292 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[11]       ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[12]       ; clk          ; clk         ; 0.000        ; 0.000      ; 0.444      ;
+; 0.292 ; i2c_driver:inst|i2c_data_int[14]                        ; i2c_driver:inst|i2c_data_int[15]                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.444      ;
+; 0.293 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[2]        ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[3]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.445      ;
+; 0.293 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[8]        ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[9]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.445      ;
+; 0.294 ; i2c_driver:inst|i2c_data_int[4]                         ; i2c_driver:inst|i2c_data_int[5]                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.446      ;
+; 0.294 ; i2c_driver:inst|i2c_data_int[6]                         ; i2c_driver:inst|i2c_data_int[7]                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.446      ;
+; 0.294 ; i2c_driver:inst|i2c_data_int[8]                         ; i2c_driver:inst|i2c_data_int[9]                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.446      ;
+; 0.295 ; Analysis:inst_pre_adjustment|counter[0]                 ; Analysis:inst_pre_adjustment|rbar[2]                    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.447      ;
+; 0.295 ; i2c_driver:inst|i2c_data_int[5]                         ; i2c_driver:inst|i2c_data_int[6]                         ; clk          ; clk         ; 0.000        ; 0.000      ; 0.447      ;
+; 0.295 ; i2c_driver:inst|i2c_data_int[20]                        ; i2c_driver:inst|i2c_data_int[21]                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.447      ;
+; 0.296 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[4]        ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[5]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.448      ;
+; 0.296 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[6]        ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[7]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.448      ;
+; 0.300 ; Analysis:inst_post_adjustment|counter[3]                ; Analysis:inst_post_adjustment|lbar[5]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.452      ;
+; 0.301 ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[3]         ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[3]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.453      ;
+; 0.307 ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[1]         ; Vol_Bal:inst1|Volume_Adjustment:inst1|ADC[1]            ; clk          ; clk         ; 0.000        ; 0.000      ; 0.459      ;
+; 0.317 ; Vol_Bal:inst1|Balance_Adjustment:inst2|R_REG[12]        ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[12]       ; clk          ; clk         ; 0.000        ; -0.002     ; 0.467      ;
+; 0.320 ; i2c_driver:inst|i2c_data_int[18]                        ; i2c_driver:inst|i2c_data_int[19]                        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.472      ;
+; 0.322 ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[9]         ; Snd_Driver:inst3|Channel_Mod:inst_left|RXReg[10]        ; clk          ; clk         ; 0.000        ; 0.000      ; 0.474      ;
+; 0.322 ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[13]       ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[14]       ; clk          ; clk         ; 0.000        ; 0.002      ; 0.476      ;
+; 0.323 ; Vol_Bal:inst1|Balance_Adjustment:inst2|R_REG[8]         ; Snd_Driver:inst3|Channel_Mod:inst_right|TXReg[8]        ; clk          ; clk         ; 0.000        ; -0.002     ; 0.473      ;
+; 0.323 ; Keyboard:inst2|kb_reg[4]                                ; Vol_Bal:inst1|Current_Vol_Bal:inst|i_mute               ; clk          ; clk         ; 0.000        ; 0.001      ; 0.476      ;
+; 0.324 ; Analysis:inst_post_adjustment|temp[29]                  ; Analysis:inst_post_adjustment|temp[30]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.476      ;
+; 0.324 ; Analysis:inst_post_adjustment|temp[38]                  ; Analysis:inst_post_adjustment|temp[39]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.476      ;
+; 0.324 ; Analysis:inst_pre_adjustment|temp[13]                   ; Analysis:inst_pre_adjustment|temp[14]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.476      ;
+; 0.324 ; Analysis:inst_pre_adjustment|temp[25]                   ; Analysis:inst_pre_adjustment|temp[26]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.476      ;
+; 0.325 ; Analysis:inst_post_adjustment|temp[24]                  ; Analysis:inst_post_adjustment|temp[25]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.477      ;
+; 0.325 ; Analysis:inst_post_adjustment|temp[28]                  ; Analysis:inst_post_adjustment|temp[29]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.477      ;
+; 0.325 ; Analysis:inst_pre_adjustment|temp[3]                    ; Analysis:inst_pre_adjustment|temp[4]                    ; clk          ; clk         ; 0.000        ; 0.000      ; 0.477      ;
+; 0.325 ; Analysis:inst_pre_adjustment|temp[24]                   ; Analysis:inst_pre_adjustment|temp[25]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.477      ;
+; 0.326 ; Analysis:inst_post_adjustment|temp[5]                   ; Analysis:inst_post_adjustment|temp[6]                   ; clk          ; clk         ; 0.000        ; 0.000      ; 0.478      ;
+; 0.326 ; Analysis:inst_post_adjustment|temp[15]                  ; Analysis:inst_post_adjustment|temp[16]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.478      ;
+; 0.326 ; Analysis:inst_post_adjustment|temp[36]                  ; Analysis:inst_post_adjustment|temp[37]                  ; clk          ; clk         ; 0.000        ; 0.000      ; 0.478      ;
++-------+---------------------------------------------------------+---------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clk'                                                                                           ;
++-------+--------------+----------------+------------------+-------+------------+-------------------------------------------------+
+; Slack ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                          ;
++-------+--------------+----------------+------------------+-------+------------+-------------------------------------------------+
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[0]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[0]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[10] ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[10] ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[11] ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[11] ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[12] ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[12] ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[13] ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[13] ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[14] ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[14] ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[15] ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[15] ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[1]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[1]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[2]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[2]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[3]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[3]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[4]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[4]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[5]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[5]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[6]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[6]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[7]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[7]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[8]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[8]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[9]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|L_REG[9]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[0]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[0]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[10] ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[10] ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[11] ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[11] ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[12] ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[12] ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[13] ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[13] ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[14] ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[14] ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[15] ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[15] ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[1]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[1]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[2]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[2]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[3]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[3]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[4]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[4]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[5]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[5]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[6]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[6]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[7]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[7]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[8]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[8]  ;
+; 7.981 ; 10.000       ; 2.019          ; High Pulse Width ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[9]  ;
+; 7.981 ; 10.000       ; 2.019          ; Low Pulse Width  ; clk   ; Rise       ; Vol_Bal:inst1|Volume_Adjustment:inst1|R_REG[9]  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|channel           ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|channel           ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[0]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[0]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[1]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[1]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[2]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[2]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[3]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[3]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[4]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[4]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[5]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|counter[5]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|current_s.s_2     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|current_s.s_2     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|current_s.s_3     ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|current_s.s_3     ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|current_s.s_idle  ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|current_s.s_idle  ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[0]         ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[0]         ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[10]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[10]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[11]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[11]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[12]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[12]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[13]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[13]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[14]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[14]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[15]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[15]        ;
+; 9.000 ; 10.000       ; 1.000          ; High Pulse Width ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[16]        ;
+; 9.000 ; 10.000       ; 1.000          ; Low Pulse Width  ; clk   ; Rise       ; Analysis:inst_post_adjustment|lafter[16]        ;
++-------+--------------+----------------+------------------+-------+------------+-------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY0      ; clk        ; 3.670 ; 3.670 ; Rise       ; clk             ;
+; PS2_CLK   ; clk        ; 2.517 ; 2.517 ; Rise       ; clk             ;
+; PS2_DAT   ; clk        ; 2.441 ; 2.441 ; Rise       ; clk             ;
+; adcdat    ; clk        ; 2.936 ; 2.936 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY0      ; clk        ; -2.548 ; -2.548 ; Rise       ; clk             ;
+; PS2_CLK   ; clk        ; -2.397 ; -2.397 ; Rise       ; clk             ;
+; PS2_DAT   ; clk        ; -2.321 ; -2.321 ; Rise       ; clk             ;
+; adcdat    ; clk        ; -2.360 ; -2.360 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; BICKI     ; clk        ; 4.395 ; 4.395 ; Rise       ; clk             ;
+; LRCKI     ; clk        ; 4.489 ; 4.489 ; Rise       ; clk             ;
+; SDI_12    ; clk        ; 4.958 ; 4.958 ; Rise       ; clk             ;
+; XTI       ; clk        ; 4.181 ; 4.181 ; Rise       ; clk             ;
+; adclrc    ; clk        ; 5.528 ; 5.528 ; Rise       ; clk             ;
+; bclk      ; clk        ; 5.235 ; 5.235 ; Rise       ; clk             ;
+; dacdat    ; clk        ; 5.361 ; 5.361 ; Rise       ; clk             ;
+; daclrc    ; clk        ; 5.528 ; 5.528 ; Rise       ; clk             ;
+; mclk      ; clk        ; 4.562 ; 4.562 ; Rise       ; clk             ;
+; scl       ; clk        ; 5.563 ; 5.563 ; Rise       ; clk             ;
+; sclD      ; clk        ; 5.149 ; 5.149 ; Rise       ; clk             ;
+; sda       ; clk        ; 4.413 ; 4.413 ; Rise       ; clk             ;
+; sdaD      ; clk        ; 4.277 ; 4.277 ; Rise       ; clk             ;
+; vga_clk   ; clk        ; 4.103 ; 4.103 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; BICKI     ; clk        ; 4.395 ; 4.395 ; Rise       ; clk             ;
+; LRCKI     ; clk        ; 4.489 ; 4.489 ; Rise       ; clk             ;
+; SDI_12    ; clk        ; 4.483 ; 4.483 ; Rise       ; clk             ;
+; XTI       ; clk        ; 4.181 ; 4.181 ; Rise       ; clk             ;
+; adclrc    ; clk        ; 5.528 ; 5.528 ; Rise       ; clk             ;
+; bclk      ; clk        ; 5.235 ; 5.235 ; Rise       ; clk             ;
+; dacdat    ; clk        ; 4.886 ; 4.886 ; Rise       ; clk             ;
+; daclrc    ; clk        ; 5.528 ; 5.528 ; Rise       ; clk             ;
+; mclk      ; clk        ; 4.562 ; 4.562 ; Rise       ; clk             ;
+; scl       ; clk        ; 5.030 ; 5.030 ; Rise       ; clk             ;
+; sclD      ; clk        ; 4.617 ; 4.617 ; Rise       ; clk             ;
+; sda       ; clk        ; 4.413 ; 4.413 ; Rise       ; clk             ;
+; sdaD      ; clk        ; 4.277 ; 4.277 ; Rise       ; clk             ;
+; vga_clk   ; clk        ; 4.103 ; 4.103 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++----------------------------------------------------------------------+
+; Output Enable Times                                                  ;
++-----------+------------+-------+------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+------+------------+-----------------+
+; sda       ; clk        ; 5.619 ;      ; Rise       ; clk             ;
+; sdaD      ; clk        ; 5.217 ;      ; Rise       ; clk             ;
++-----------+------------+-------+------+------------+-----------------+
+
+
++----------------------------------------------------------------------+
+; Minimum Output Enable Times                                          ;
++-----------+------------+-------+------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+------+------------+-----------------+
+; sda       ; clk        ; 5.021 ;      ; Rise       ; clk             ;
+; sdaD      ; clk        ; 4.618 ;      ; Rise       ; clk             ;
++-----------+------------+-------+------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Output Disable Times                                                          ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; Data Port ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; sda       ; clk        ; 5.619     ;           ; Rise       ; clk             ;
+; sdaD      ; clk        ; 5.217     ;           ; Rise       ; clk             ;
++-----------+------------+-----------+-----------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Minimum Output Disable Times                                                  ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; Data Port ; Clock Port ; 0 to Hi-Z ; 1 to Hi-Z ; Clock Edge ; Clock Reference ;
++-----------+------------+-----------+-----------+------------+-----------------+
+; sda       ; clk        ; 5.021     ;           ; Rise       ; clk             ;
+; sdaD      ; clk        ; 4.618     ;           ; Rise       ; clk             ;
++-----------+------------+-----------+-----------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                         ;
++------------------+-------+-------+----------+---------+---------------------+
+; Clock            ; Setup ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-------+-------+----------+---------+---------------------+
+; Worst-case Slack ; 8.650 ; 0.215 ; N/A      ; N/A     ; 7.981               ;
+;  clk             ; 8.650 ; 0.215 ; N/A      ; N/A     ; 7.981               ;
+; Design-wide TNS  ; 0.0   ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
+;  clk             ; 0.000 ; 0.000 ; N/A      ; N/A     ; 0.000               ;
++------------------+-------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Times                                                           ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; KEY0      ; clk        ; 6.917 ; 6.917 ; Rise       ; clk             ;
+; PS2_CLK   ; clk        ; 4.574 ; 4.574 ; Rise       ; clk             ;
+; PS2_DAT   ; clk        ; 4.453 ; 4.453 ; Rise       ; clk             ;
+; adcdat    ; clk        ; 5.487 ; 5.487 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Hold Times                                                              ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; KEY0      ; clk        ; -2.548 ; -2.548 ; Rise       ; clk             ;
+; PS2_CLK   ; clk        ; -2.397 ; -2.397 ; Rise       ; clk             ;
+; PS2_DAT   ; clk        ; -2.321 ; -2.321 ; Rise       ; clk             ;
+; adcdat    ; clk        ; -2.360 ; -2.360 ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-------------------------------------------------------------------------+
+; Clock to Output Times                                                   ;
++-----------+------------+--------+--------+------------+-----------------+
+; Data Port ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++-----------+------------+--------+--------+------------+-----------------+
+; BICKI     ; clk        ; 8.144  ; 8.144  ; Rise       ; clk             ;
+; LRCKI     ; clk        ; 8.277  ; 8.277  ; Rise       ; clk             ;
+; SDI_12    ; clk        ; 9.390  ; 9.390  ; Rise       ; clk             ;
+; XTI       ; clk        ; 7.547  ; 7.547  ; Rise       ; clk             ;
+; adclrc    ; clk        ; 10.132 ; 10.132 ; Rise       ; clk             ;
+; bclk      ; clk        ; 9.332  ; 9.332  ; Rise       ; clk             ;
+; dacdat    ; clk        ; 9.958  ; 9.958  ; Rise       ; clk             ;
+; daclrc    ; clk        ; 10.132 ; 10.132 ; Rise       ; clk             ;
+; mclk      ; clk        ; 8.095  ; 8.095  ; Rise       ; clk             ;
+; scl       ; clk        ; 10.549 ; 10.549 ; Rise       ; clk             ;
+; sclD      ; clk        ; 9.749  ; 9.749  ; Rise       ; clk             ;
+; sda       ; clk        ; 7.930  ; 7.930  ; Rise       ; clk             ;
+; sdaD      ; clk        ; 7.784  ; 7.784  ; Rise       ; clk             ;
+; vga_clk   ; clk        ; 7.735  ; 7.735  ; Rise       ; clk             ;
++-----------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; BICKI     ; clk        ; 4.395 ; 4.395 ; Rise       ; clk             ;
+; LRCKI     ; clk        ; 4.489 ; 4.489 ; Rise       ; clk             ;
+; SDI_12    ; clk        ; 4.483 ; 4.483 ; Rise       ; clk             ;
+; XTI       ; clk        ; 4.181 ; 4.181 ; Rise       ; clk             ;
+; adclrc    ; clk        ; 5.528 ; 5.528 ; Rise       ; clk             ;
+; bclk      ; clk        ; 5.235 ; 5.235 ; Rise       ; clk             ;
+; dacdat    ; clk        ; 4.886 ; 4.886 ; Rise       ; clk             ;
+; daclrc    ; clk        ; 5.528 ; 5.528 ; Rise       ; clk             ;
+; mclk      ; clk        ; 4.562 ; 4.562 ; Rise       ; clk             ;
+; scl       ; clk        ; 5.030 ; 5.030 ; Rise       ; clk             ;
+; sclD      ; clk        ; 4.617 ; 4.617 ; Rise       ; clk             ;
+; sda       ; clk        ; 4.413 ; 4.413 ; Rise       ; clk             ;
+; sdaD      ; clk        ; 4.277 ; 4.277 ; Rise       ; clk             ;
+; vga_clk   ; clk        ; 4.103 ; 4.103 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 202806   ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 202806   ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 1     ; 1    ;
+; Unconstrained Input Ports       ; 20    ; 20   ;
+; Unconstrained Input Port Paths  ; 648   ; 648  ;
+; Unconstrained Output Ports      ; 65    ; 65   ;
+; Unconstrained Output Port Paths ; 251   ; 251  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
+    Info: Processing started: Thu Nov 05 14:36:40 2015
+Info: Command: quartus_sta Proj -c Proj
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Info (332104): Reading SDC File: 'Proj.sdc'
+Warning (332060): Node: VGA_Driver:inst5|clock_gen:inst|clki was determined to be a clock but was found without an associated clock assignment.
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Info (332146): Worst-case setup slack is 8.650
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     8.650         0.000 clk 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 8.077
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     8.077         0.000 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Warning (332060): Node: VGA_Driver:inst5|clock_gen:inst|clki was determined to be a clock but was found without an associated clock assignment.
+Info (332146): Worst-case setup slack is 15.443
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    15.443         0.000 clk 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clk 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is 7.981
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     7.981         0.000 clk 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 476 megabytes
+    Info: Processing ended: Thu Nov 05 14:36:52 2015
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:03
+
+

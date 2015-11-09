@@ -1,0 +1,182 @@
+vsim -voptargs=+acc work.tb_analysis
+# vsim -voptargs=+acc work.tb_analysis 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_analysis(sim)#1
+# Loading work.analysis(analarch)#1
+restart
+run 1 ms
+# ** Error: (vdel-134) Unable to remove locked optimized design "_opt".  Locker is phijo078@FREJA-11.
+# 
+# C:/modeltech64_10.1b/win64/vdel failed.
+vsim -novopt work.tb_analysis
+# vsim -novopt work.tb_analysis 
+# Loading std.standard
+# Refreshing U:/es/projects/projgroup41/analysis/work.tb_analysis(sim)
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_analysis(sim)
+# Refreshing U:/es/projects/projgroup41/analysis/work.analysis(analarch)
+# Loading work.analysis(analarch)
+add wave  \
+sim:/tb_analysis/clk \
+sim:/tb_analysis/rstn \
+sim:/tb_analysis/lrsel
+add wave  \
+sim:/tb_analysis/DUT/clk \
+sim:/tb_analysis/DUT/lrsel \
+sim:/tb_analysis/DUT/LC \
+sim:/tb_analysis/DUT/RC \
+sim:/tb_analysis/DUT/vsync \
+sim:/tb_analysis/DUT/lbar \
+sim:/tb_analysis/DUT/rbar \
+sim:/tb_analysis/DUT/ildac \
+sim:/tb_analysis/DUT/irdac \
+sim:/tb_analysis/DUT/lafter \
+sim:/tb_analysis/DUT/rafter \
+sim:/tb_analysis/DUT/temp \
+sim:/tb_analysis/DUT/counter
+run 1 ms
+run 20 ms
+run 20 ms
+run 100 ms
+run 100 ms
+# Compile of TB_Analysis.vhd failed with 4 errors.
+# Compile of Analysis.vhd was successful.
+# 2 compiles, 1 failed with 4 errors. 
+# Compile of TB_Analysis.vhd failed with 4 errors.
+# Compile of Analysis.vhd was successful.
+# 2 compiles, 1 failed with 4 errors. 
+# Compile of TB_Analysis.vhd failed with 4 errors.
+# Compile of Analysis.vhd was successful.
+# 2 compiles, 1 failed with 4 errors. 
+# Compile of TB_Analysis.vhd failed with 1 errors.
+# Compile of Analysis.vhd was successful.
+# 2 compiles, 1 failed with 1 error. 
+# Compile of TB_Analysis.vhd was successful.
+# Compile of Analysis.vhd was successful.
+# 2 compiles, 0 failed with no errors. 
+# Compile of TB_Analysis.vhd was successful.
+# Compile of Analysis.vhd was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.tb_analysis
+# vsim -voptargs=+acc work.tb_analysis 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_analysis(sim)#1
+# Loading work.analysis(analarch)#1
+add wave  \
+sim:/tb_analysis/DUT/clk \
+sim:/tb_analysis/DUT/lrsel \
+sim:/tb_analysis/DUT/LC \
+sim:/tb_analysis/DUT/RC \
+sim:/tb_analysis/DUT/vsync \
+sim:/tb_analysis/DUT/lbar \
+sim:/tb_analysis/DUT/rbar \
+sim:/tb_analysis/DUT/ildac \
+sim:/tb_analysis/DUT/irdac \
+sim:/tb_analysis/DUT/lafter \
+sim:/tb_analysis/DUT/rafter \
+sim:/tb_analysis/DUT/temp \
+sim:/tb_analysis/DUT/counter
+run 50 ms
+# Compile of TB_Analysis.vhd was successful.
+# Compile of Analysis.vhd was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.tb_analysis
+# vsim -voptargs=+acc work.tb_analysis 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_analysis(sim)#1
+# Loading work.analysis(analarch)#1
+add wave  \
+sim:/tb_analysis/DUT/clk \
+sim:/tb_analysis/DUT/LC \
+sim:/tb_analysis/DUT/RC \
+sim:/tb_analysis/DUT/vsync \
+sim:/tb_analysis/DUT/lbar \
+sim:/tb_analysis/DUT/rbar \
+sim:/tb_analysis/DUT/ildac \
+sim:/tb_analysis/DUT/irdac \
+sim:/tb_analysis/DUT/lafter \
+sim:/tb_analysis/DUT/rafter \
+sim:/tb_analysis/DUT/temp \
+sim:/tb_analysis/DUT/counter
+run 50 ms
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf U:/es/projects/projgroup41/analysis/wave.do
+# Compile of TB_Analysis.vhd was successful.
+# Compile of Analysis.vhd was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.tb_analysis
+# vsim -voptargs=+acc work.tb_analysis 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in architecture body "Analysis(analarch)".
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_analysis(sim)#1
+# Loading work.analysis(analarch)#1
+do wave.do
+run 50 ms
+# Compile of TB_Analysis.vhd was successful.
+# Compile of Analysis.vhd was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.tb_analysis
+# vsim -voptargs=+acc work.tb_analysis 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_analysis(sim)#1
+# Loading work.analysis(analarch)#1
+do wave.do
+run 50 ms
+# Compile of TB_Analysis.vhd was successful.
+# Compile of Analysis.vhd was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.tb_analysis
+# vsim -voptargs=+acc work.tb_analysis 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_analysis(sim)#1
+# Loading work.analysis(analarch)#1
+do wave.do
+run 50 ms
+# Compile of TB_Analysis.vhd was successful.
+# Compile of Analysis.vhd was successful.
+# 2 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.tb_analysis
+# vsim -voptargs=+acc work.tb_analysis 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_analysis(sim)#1
+# Loading work.analysis(analarch)#1
+do wave.do
+run 50 ms
+
+
+

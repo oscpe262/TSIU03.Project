@@ -1,0 +1,9 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,Vol_Bal:inst1|Balance_Adjustment:inst2|lpm_mult:Mult0|mult_vvs:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,Vol_Bal:inst1|Balance_Adjustment:inst2|lpm_mult:Mult1|mult_vvs:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,Analysis:inst_post_adjustment|lpm_mult:Mult1|mult_h1t:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,Analysis:inst_post_adjustment|lpm_mult:Mult0|mult_h1t:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,Analysis:inst_pre_adjustment|lpm_mult:Mult1|mult_h1t:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,Analysis:inst_pre_adjustment|lpm_mult:Mult0|mult_h1t:auto_generated|mac_out2,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,Vol_Bal:inst1|Balance_Adjustment:inst2|lpm_mult:Mult1|mult_vvs:auto_generated|mac_mult1,
+PORT_SWAPPING,PORT_SWAP_TYPE_DSPMULT,Vol_Bal:inst1|Balance_Adjustment:inst2|lpm_mult:Mult0|mult_vvs:auto_generated|mac_mult1,

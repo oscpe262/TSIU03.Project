@@ -1,0 +1,197 @@
+m255
+K3
+13
+cModel Technology
+dH:\TSIU03\Lab4 - Audio\MSim
+T_opt
+V@;hkSToc;cQT=R;6M9m1T2
+04 10 3 work tb_vol_bal sim 1
+=1-18a905162c6d-5638b712-2f1-1474
+o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+OL;O;10.1b;51
+Ebalance_adjustment
+Z0 w1446469705
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dU:\es\projects\projgroup41\vol_bal\MSim
+Z5 8U:/es/projects/projgroup41/vol_bal/Balance_Adjustment.vhd
+Z6 FU:/es/projects/projgroup41/vol_bal/Balance_Adjustment.vhd
+l0
+L18
+VQ3^o1HP?FnP<DUSzC[m0n0
+Z7 OL;C;10.1b;51
+32
+Z8 !s108 1446557445.281000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vol_bal/Balance_Adjustment.vhd|
+Z10 !s107 U:/es/projects/projgroup41/vol_bal/Balance_Adjustment.vhd|
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1
+!s100 _hjN:C3^nmS7o3R@5hH_D3
+!i10b 1
+Artl
+R1
+R2
+R3
+DEx4 work 18 balance_adjustment 0 22 Q3^o1HP?FnP<DUSzC[m0n0
+l35
+L27
+VgB3H^bfd5b@bThNkZLITh1
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 ?4o>P0kHj_Un]lFFzfz5S3
+!i10b 1
+Ecurrent_vol_bal
+Z13 w1446469559
+R1
+R2
+R3
+R4
+Z14 8U:/es/projects/projgroup41/vol_bal/Current_Vol_Bal.vhd
+Z15 FU:/es/projects/projgroup41/vol_bal/Current_Vol_Bal.vhd
+l0
+L11
+V6H_g1>L=5ohcGI9FbPF[_0
+R7
+32
+Z16 !s108 1446557446.751000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vol_bal/Current_Vol_Bal.vhd|
+Z18 !s107 U:/es/projects/projgroup41/vol_bal/Current_Vol_Bal.vhd|
+R11
+R12
+!s100 TV[P7V3omR=j^f>`>>Egm3
+!i10b 1
+Artl
+R1
+R2
+R3
+DEx4 work 15 current_vol_bal 0 22 6H_g1>L=5ohcGI9FbPF[_0
+l34
+L19
+VWDI8hU4ciGGzQ7<VWgN=f3
+R7
+32
+R16
+R17
+R18
+R11
+R12
+!s100 G?KP0gTL6DnK0^hadKE6m0
+!i10b 1
+Etb_vol_bal
+Z19 w1446557431
+R1
+R2
+R3
+R4
+Z20 8U:/es/projects/projgroup41/vol_bal/MSim/TB_Vol_Bal.vhd
+Z21 FU:/es/projects/projgroup41/vol_bal/MSim/TB_Vol_Bal.vhd
+l0
+L11
+VN]<RMJ;mW81a>leEgiV]41
+R7
+32
+Z22 !s108 1446557449.171000
+Z23 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vol_bal/MSim/TB_Vol_Bal.vhd|
+Z24 !s107 U:/es/projects/projgroup41/vol_bal/MSim/TB_Vol_Bal.vhd|
+R11
+R12
+!s100 WVk]jdhbYT6;Z9zG20?Oz2
+!i10b 1
+Asim
+R1
+R2
+R3
+DEx4 work 10 tb_vol_bal 0 22 N]<RMJ;mW81a>leEgiV]41
+l42
+L14
+VCiajC`I2@eOFE>8OnXZk;3
+R7
+32
+R22
+R23
+R24
+R11
+R12
+!s100 Hm]VNg1Caf82n4E:_;_EO0
+!i10b 1
+Evol_bal
+Z25 w1446556533
+R1
+R2
+R3
+R4
+Z26 8U:/es/projects/projgroup41/vol_bal/Vol_Bal.vhd
+Z27 FU:/es/projects/projgroup41/vol_bal/Vol_Bal.vhd
+l0
+L25
+V6lXE<EFVCJ;:G1Vf=R<h_3
+R7
+32
+Z28 !s108 1446557447.561000
+Z29 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vol_bal/Vol_Bal.vhd|
+Z30 !s107 U:/es/projects/projgroup41/vol_bal/Vol_Bal.vhd|
+R11
+R12
+!s100 [Z20Vmzj=R59J3Tf9FV9C1
+!i10b 1
+Abdf_type
+R1
+R2
+R3
+DEx4 work 7 vol_bal 0 22 6lXE<EFVCJ;:G1Vf=R<h_3
+l89
+L42
+VGGF]nfNOg^ez]5ih5IZA]2
+R7
+32
+R28
+R29
+R30
+R11
+R12
+!s100 5achcS[b@MkI=5KYcI[441
+!i10b 1
+Evolume_adjustment
+Z31 w1445861756
+R1
+R2
+R3
+R4
+Z32 8U:/es/projects/projgroup41/vol_bal/Volume_Adjustment.vhd
+Z33 FU:/es/projects/projgroup41/vol_bal/Volume_Adjustment.vhd
+l0
+L22
+VmAoP`]j9E3zY48O;4:o293
+R7
+32
+Z34 !s108 1446557448.341000
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:/es/projects/projgroup41/vol_bal/Volume_Adjustment.vhd|
+Z36 !s107 U:/es/projects/projgroup41/vol_bal/Volume_Adjustment.vhd|
+R11
+R12
+!s100 zY=93??W3;8IaF:mCnmDb3
+!i10b 1
+Artl
+R1
+R2
+R3
+DEx4 work 17 volume_adjustment 0 22 mAoP`]j9E3zY48O;4:o293
+l40
+L31
+VI87hKg9O^ZcC=OTGS?6lU2
+R7
+32
+R34
+R35
+R36
+R11
+R12
+!s100 nkzP7XOX]heZ;D4j`3Ljg2
+!i10b 1

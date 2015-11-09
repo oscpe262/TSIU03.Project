@@ -1,0 +1,19 @@
+
+State Machine - |Proj|Analysis:inst_post_adjustment|current_s
+Name current_s.s_3 current_s.s_2 current_s.s_idle 
+current_s.s_idle 0 0 0 
+current_s.s_2 0 1 1 
+current_s.s_3 1 0 1 
+
+State Machine - |Proj|Analysis:inst_pre_adjustment|current_s
+Name current_s.s_3 current_s.s_2 current_s.s_idle 
+current_s.s_idle 0 0 0 
+current_s.s_2 0 1 1 
+current_s.s_3 1 0 1 
+
+State Machine - |Proj|Vol_Bal:inst1|Volume_Adjustment:inst1|state
+Name state.state_end state.state_evens state.state_odd state.state_idle 
+state.state_idle 0 0 0 0 
+state.state_odd 0 0 1 1 
+state.state_evens 0 1 0 1 
+state.state_end 1 0 0 1 

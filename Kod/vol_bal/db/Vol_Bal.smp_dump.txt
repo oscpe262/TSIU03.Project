@@ -1,0 +1,7 @@
+
+State Machine - |Vol_Bal|Volume_Adjustment:inst1|state
+Name state.state_end state.state_evens state.state_odd state.state_idle 
+state.state_idle 0 0 0 0 
+state.state_odd 0 0 1 1 
+state.state_evens 0 1 0 1 
+state.state_end 1 0 0 1 

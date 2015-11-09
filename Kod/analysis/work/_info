@@ -1,0 +1,86 @@
+m255
+K3
+13
+cModel Technology
+dH:\Documents\TSIU03\Lab4_Audio\MSim
+T_opt
+V;SJP15OC0Z5i[<:MBd:GP0
+04 11 3 work tb_analysis sim 1
+=1-001999e1c4b6-56323340-273-19f8
+o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+OL;O;10.1b;51
+Eanalysis
+Z0 w1446129643
+Z1 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dU:\es\projects\projgroup41\analysis
+Z5 8U:\es\projects\projgroup41\analysis\Analysis.vhd
+Z6 FU:\es\projects\projgroup41\analysis\Analysis.vhd
+l0
+L13
+Vg2G;82WK0NOQl;JHdPj0>3
+Z7 OL;C;10.1b;51
+32
+Z8 !s108 1446130465.497000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:\es\projects\projgroup41\analysis\Analysis.vhd|
+Z10 !s107 U:\es\projects\projgroup41\analysis\Analysis.vhd|
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1
+!s100 P<i[@1kOC4JMZ_o^ElD9H0
+!i10b 1
+Aanalarch
+R1
+R2
+R3
+DEx4 work 8 analysis 0 22 g2G;82WK0NOQl;JHdPj0>3
+l32
+L22
+V:Q[7hYc=fLTY@8U9C=7P03
+R7
+32
+R8
+R9
+R10
+R11
+R12
+!s100 bWnTj3cG:KfI_W=cRNVHX1
+!i10b 1
+Etb_analysis
+Z13 w1446130202
+R1
+R2
+R3
+R4
+Z14 8U:\es\projects\projgroup41\analysis\TB_Analysis.vhd
+Z15 FU:\es\projects\projgroup41\analysis\TB_Analysis.vhd
+l0
+L7
+VMlTC^0N_=zE8VWDBX]@TC1
+R7
+32
+Z16 !s108 1446130464.377000
+Z17 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|U:\es\projects\projgroup41\analysis\TB_Analysis.vhd|
+Z18 !s107 U:\es\projects\projgroup41\analysis\TB_Analysis.vhd|
+R11
+R12
+!s100 O1==ad1Y2K:H0?N0[SJjY2
+!i10b 1
+Asim
+R1
+R2
+R3
+DEx4 work 11 tb_analysis 0 22 MlTC^0N_=zE8VWDBX]@TC1
+l55
+L11
+VfKo?oMZg`VEe:G[cga=;]1
+R7
+32
+R16
+R17
+R18
+R11
+R12
+!s100 c:S;`=JaJz=Gg;ho]zAYF0
+!i10b 1

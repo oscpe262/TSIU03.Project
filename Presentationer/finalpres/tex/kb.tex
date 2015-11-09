@@ -1,6 +1,11 @@
 \begin{frame}
   \frametitle{Keyboard Decoding}
   \framesubtitle{Scan Code Detection}
+  \includegraphics[scale=.6]{bkb.jpg}
+\end{frame}
+\begin{frame}
+  \frametitle{Keyboard Decoding}
+  \framesubtitle{Scan Code Detection}
   \begin{itemize}
   \item<1->\begin{tikzpicture}[y=.7 cm, x=.7 cm]
     \draw(0,0) rectangle (11,1);
@@ -22,7 +27,7 @@
     \draw (0,.5) node[anchor=west]{St};
   \end{tikzpicture}
   
-  \item<2-2>\begin{tikzpicture}[x=.7 cm, y=.7 cm]
+  \item<2->\begin{tikzpicture}[x=.7 cm, y=.7 cm]
     \draw(0,-2) rectangle (11,-1);
     \foreach \x in {3.333,7,10.666}
     \draw[fill=green] (\x,-2) rectangle (\x+.334,-1);
@@ -59,6 +64,95 @@
     \draw (3.8,-2.5) -- (7.1,-2.5);
     \draw (5.8,-2.5) node[anchor=north]{F0};
   
+  \end{tikzpicture}
+
+  \item<4->\begin{tikzpicture}[x=.7 cm, y=.7 cm]
+    \draw(0,-2) rectangle (3.666,-1);
+
+    \foreach \x in {3.333}
+    \draw[fill=green] (\x,-2) rectangle (\x+.334,-1);
+    \foreach \x in {.333}
+    \draw[fill=blue] (\x,-2) rectangle (\x+.334,-1);
+    \foreach \x in {0}
+    \draw[fill=red] (\x,-2) rectangle (\x+.334,-1);
+    \foreach \x in {0,.333,.667,...,3.666}
+    \draw (\x, -2 ) -- ( \x, -1 );
+
+    \draw (0,-2.5) -- (3.5,-2.5);
+    \draw (1.8,-2.5) node[anchor=north]{75};
+  
+  \end{tikzpicture}
+  \end{itemize}
+  
+\end{frame}
+
+\begin{frame}
+  \frametitle{Keyboard Decoding}
+  \framesubtitle{Scan Code Detection}
+  \begin{itemize}
+    
+  \item<1->\begin{tikzpicture}[x=.7 cm, y=.7 cm]
+    \draw(0,-2) rectangle (7.333,-1);
+
+    \foreach \x in {3.333,7}
+    \draw[fill=green] (\x,-2) rectangle (\x+.334,-1);
+    \foreach \x in {.333,4}
+    \draw[fill=blue] (\x,-2) rectangle (\x+.334,-1);
+    \foreach \x in {0,3.666}
+    \draw[fill=red] (\x,-2) rectangle (\x+.334,-1);
+    \foreach \x in {0,.333,.667,...,7.333}
+    \draw (\x, -2 ) -- ( \x, -1 );
+
+    \draw (0,-2.5) -- (3.5,-2.5);
+    \draw (1.8,-2.5) node[anchor=north]{75};
+    \draw (3.8,-2.5) -- (7.1,-2.5);
+    \draw (5.8,-2.5) node[anchor=north]{F0};
+
+    \draw(9,-2) rectangle (10,-1);
+    \draw(9.5,-1.5)  node{0};
+    \draw (9.5,-2.5)  node[anchor=north]{BREAKSET};
+  
+  \end{tikzpicture}
+
+  \item<2->\begin{tikzpicture}[x=.7 cm, y=.7 cm]
+    \draw(0,-2) rectangle (3.666,-1);
+
+    \foreach \x in {3.333}
+    \draw[fill=green] (\x,-2) rectangle (\x+.334,-1);
+    \foreach \x in {.333}
+    \draw[fill=blue] (\x,-2) rectangle (\x+.334,-1);
+    \foreach \x in {0}
+    \draw[fill=red] (\x,-2) rectangle (\x+.334,-1);
+    \foreach \x in {0,.333,.667,...,3.666}
+    \draw (\x, -2 ) -- ( \x, -1 );
+
+    \draw (0,-2.5) -- (3.5,-2.5);
+    \draw (1.8,-2.5) node[anchor=north]{75};
+
+    \draw(9,-2) rectangle (10,-1);
+    \draw(9.5,-1.5)  node{1};
+    \draw (9.5,-2.5)  node[anchor=north]{BREAKSET};
+
+  \end{tikzpicture}
+  \item<3->\begin{tikzpicture}[x=.7 cm, y=.7 cm]
+    \draw(0,-2) rectangle (3.666,-1);
+
+    \foreach \x in {3.333}
+    \draw[fill=green] (\x,-2) rectangle (\x+.334,-1);
+    \foreach \x in {.333}
+    \draw[fill=blue] (\x,-2) rectangle (\x+.334,-1);
+    \foreach \x in {0}
+    \draw[fill=red] (\x,-2) rectangle (\x+.334,-1);
+    \foreach \x in {0,.333,.667,...,3.666}
+    \draw (\x, -2 ) -- ( \x, -1 );
+
+    \draw (0,-2.5) -- (3.5,-2.5);
+    \draw (1.8,-2.5) node[anchor=north]{NN};
+
+    \draw(9,-2) rectangle (10,-1);
+    \draw(9.5,-1.5)  node{0};
+    \draw (9.5,-2.5)  node[anchor=north]{BREAKSET};
+
   \end{tikzpicture}
   \end{itemize}
   

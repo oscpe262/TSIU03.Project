@@ -1,0 +1,37 @@
+# Compile of Balance_Adjustment.vhd was successful.
+# Compile of Current_Vol_Bal.vhd was successful.
+# Compile of Vol_Bal.vhd was successful.
+# Compile of Volume_Adjustment.vhd was successful.
+# Compile of TB_Vol_Bal.vhd was successful.
+# 5 compiles, 0 failed with no errors. 
+vsim -voptargs=+acc work.tb_vol_bal
+# vsim -voptargs=+acc work.tb_vol_bal 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_vol_bal(sim)#1
+# Loading work.vol_bal(bdf_type)#1
+# Loading work.current_vol_bal(rtl)#1
+# Loading work.volume_adjustment(rtl)#1
+# Loading work.balance_adjustment(rtl)#1
+do wave.do
+# ** Error: (vish-4014) No objects found matching '/tb_vol_bal/DUT/Adj_LADC'.
+# Executing ONERROR command at macro ./wave.do line 13
+# ** Error: (vish-4014) No objects found matching '/tb_vol_bal/DUT/Adj_RADC'.
+# Executing ONERROR command at macro ./wave.do line 14
+# ** Error: (vish-4014) No objects found matching '/tb_vol_bal/DUT/volume_done'.
+# Executing ONERROR command at macro ./wave.do line 16
+# ** Error: (vish-4014) No objects found matching '/tb_vol_bal/DUT/i_mute'.
+# Executing ONERROR command at macro ./wave.do line 26
+# ** Error: (vish-4014) No objects found matching '/tb_vol_bal/DUT/i_volume_lvl'.
+# Executing ONERROR command at macro ./wave.do line 27
+# ** Error: (vish-4014) No objects found matching '/tb_vol_bal/DUT/i_balance_lvl'.
+# Executing ONERROR command at macro ./wave.do line 29
+run -all
+add wave  \
+sim:/tb_vol_bal/DUT/b2v_inst/i_volume_lvl \
+sim:/tb_vol_bal/DUT/b2v_inst/i_balance_lvl
+restart
+run -all
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf U:/es/projects/projgroup41/vol_bal/MSim/wave.do

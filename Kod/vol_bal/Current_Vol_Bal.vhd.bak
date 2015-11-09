@@ -1,0 +1,24 @@
+-- Author: 			Matteus Laurent
+-- Last update: 	20/10 2015
+-- Description:	Current_Vol_Bal submodule in the Grupp41 system.
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Current_Vol_Bal is
+	port(clk, rstn			: in	std_logic;
+			kb_input			: in 	std_logic_vector(4 downto 0);
+			mute				: out	std_logic;
+			volume_level	: out unsigned(3 downto 0);
+			balance_level	: out signed(3 downto 0));
+end entity;
+
+architecture rtl of Current_Vol_Bal is
+	signal i_volume_lvl	: unsigned(3 downto 0)
+	signal i_balance_lvl	: signed(3 downto 0)
+	signal i_mute			: std_logic
+begin
+
+
+end architecture;

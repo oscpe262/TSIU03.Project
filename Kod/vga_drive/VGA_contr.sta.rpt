@@ -1,0 +1,1603 @@
+TimeQuest Timing Analyzer report for VGA_contr
+Wed Sep 23 20:18:35 2015
+Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clock_gen:inst3|clki'
+ 12. Slow Model Setup: 'fpga_clk'
+ 13. Slow Model Hold: 'fpga_clk'
+ 14. Slow Model Hold: 'clock_gen:inst3|clki'
+ 15. Slow Model Minimum Pulse Width: 'fpga_clk'
+ 16. Slow Model Minimum Pulse Width: 'clock_gen:inst3|clki'
+ 17. Setup Times
+ 18. Hold Times
+ 19. Clock to Output Times
+ 20. Minimum Clock to Output Times
+ 21. Fast Model Setup Summary
+ 22. Fast Model Hold Summary
+ 23. Fast Model Recovery Summary
+ 24. Fast Model Removal Summary
+ 25. Fast Model Minimum Pulse Width Summary
+ 26. Fast Model Setup: 'clock_gen:inst3|clki'
+ 27. Fast Model Setup: 'fpga_clk'
+ 28. Fast Model Hold: 'fpga_clk'
+ 29. Fast Model Hold: 'clock_gen:inst3|clki'
+ 30. Fast Model Minimum Pulse Width: 'fpga_clk'
+ 31. Fast Model Minimum Pulse Width: 'clock_gen:inst3|clki'
+ 32. Setup Times
+ 33. Hold Times
+ 34. Clock to Output Times
+ 35. Minimum Clock to Output Times
+ 36. Multicorner Timing Analysis Summary
+ 37. Setup Times
+ 38. Hold Times
+ 39. Clock to Output Times
+ 40. Minimum Clock to Output Times
+ 41. Setup Transfers
+ 42. Hold Transfers
+ 43. Report TCCS
+ 44. Report RSKM
+ 45. Unconstrained Paths
+ 46. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                        ;
++--------------------+---------------------------------------------------------------------+
+; Quartus II Version ; Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version ;
+; Revision Name      ; VGA_contr                                                           ;
+; Device Family      ; Cyclone II                                                          ;
+; Device Name        ; EP2C35F672C6                                                        ;
+; Timing Models      ; Final                                                               ;
+; Delay Model        ; Combined                                                            ;
+; Rise/Fall Delays   ; Unavailable                                                         ;
++--------------------+---------------------------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ; < 0.1%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                     ;
++----------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------+
+; Clock Name           ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                  ;
++----------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------+
+; clock_gen:inst3|clki ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock_gen:inst3|clki } ;
+; fpga_clk             ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { fpga_clk }             ;
++----------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------+
+
+
++------------------------------------------------------------+
+; Slow Model Fmax Summary                                    ;
++------------+-----------------+----------------------+------+
+; Fmax       ; Restricted Fmax ; Clock Name           ; Note ;
++------------+-----------------+----------------------+------+
+; 326.26 MHz ; 326.26 MHz      ; clock_gen:inst3|clki ;      ;
++------------+-----------------+----------------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------------+
+; Slow Model Setup Summary                      ;
++----------------------+--------+---------------+
+; Clock                ; Slack  ; End Point TNS ;
++----------------------+--------+---------------+
+; clock_gen:inst3|clki ; -2.065 ; -72.223       ;
+; fpga_clk             ; 1.996  ; 0.000         ;
++----------------------+--------+---------------+
+
+
++-----------------------------------------------+
+; Slow Model Hold Summary                       ;
++----------------------+--------+---------------+
+; Clock                ; Slack  ; End Point TNS ;
++----------------------+--------+---------------+
+; fpga_clk             ; -1.726 ; -1.726        ;
+; clock_gen:inst3|clki ; 0.391  ; 0.000         ;
++----------------------+--------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-----------------------------------------------+
+; Slow Model Minimum Pulse Width Summary        ;
++----------------------+--------+---------------+
+; Clock                ; Slack  ; End Point TNS ;
++----------------------+--------+---------------+
+; fpga_clk             ; -1.380 ; -2.380        ;
+; clock_gen:inst3|clki ; -0.500 ; -62.000       ;
++----------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock_gen:inst3|clki'                                                                                                                  ;
++--------+-----------------------------+-----------------------------+----------------------+----------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock         ; Latch Clock          ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+----------------------+----------------------+--------------+------------+------------+
+; -2.065 ; linecounter:inst|vcnti[1]   ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 3.101      ;
+; -1.969 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.002     ; 3.003      ;
+; -1.924 ; linecounter:inst|vcnti[3]   ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.003     ; 2.957      ;
+; -1.921 ; linecounter:inst|vcnti[1]   ; linecounter:inst|vcnti[7]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.959      ;
+; -1.899 ; linecounter:inst|vcnti[1]   ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.935      ;
+; -1.897 ; pixelcounter:inst6|hcnti[0] ; pixel_reg:inst1|pixrg[6]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.004     ; 2.929      ;
+; -1.897 ; pixelcounter:inst6|hcnti[0] ; pixel_reg:inst1|pixrg[0]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.004     ; 2.929      ;
+; -1.894 ; pixelcounter:inst6|hcnti[0] ; pixel_reg:inst1|pixrg[1]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.004     ; 2.926      ;
+; -1.893 ; pixelcounter:inst6|hcnti[0] ; pixel_reg:inst1|pixrg[4]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.004     ; 2.925      ;
+; -1.892 ; pixelcounter:inst6|hcnti[0] ; pixel_reg:inst1|pixrg[7]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.004     ; 2.924      ;
+; -1.879 ; pixelcounter:inst6|hcnti[0] ; pixel_reg:inst1|pixrg[3]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.006     ; 2.909      ;
+; -1.877 ; pixelcounter:inst6|hcnti[0] ; pixel_reg:inst1|pixrg[2]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.006     ; 2.907      ;
+; -1.876 ; pixelcounter:inst6|hcnti[0] ; pixel_reg:inst1|pixrg[5]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.006     ; 2.906      ;
+; -1.833 ; pixelcounter:inst6|hcnti[1] ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.004      ; 2.873      ;
+; -1.825 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[7]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.861      ;
+; -1.822 ; linecounter:inst|vcnti[2]   ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.002     ; 2.856      ;
+; -1.821 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[8]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.859      ;
+; -1.821 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[7]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.859      ;
+; -1.817 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[2]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.855      ;
+; -1.816 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[6]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.854      ;
+; -1.808 ; linecounter:inst|vcnti[1]   ; linecounter:inst|vcnti[8]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.846      ;
+; -1.805 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.841      ;
+; -1.803 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[1]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.839      ;
+; -1.803 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.839      ;
+; -1.803 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.002     ; 2.837      ;
+; -1.802 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[5]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.838      ;
+; -1.786 ; pixelcounter:inst6|hcnti[1] ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.824      ;
+; -1.780 ; linecounter:inst|vcnti[3]   ; linecounter:inst|vcnti[7]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.001     ; 2.815      ;
+; -1.774 ; linecounter:inst|vcnti[1]   ; linecounter:inst|vcnti[3]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.003      ; 2.813      ;
+; -1.758 ; linecounter:inst|vcnti[3]   ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.003     ; 2.791      ;
+; -1.752 ; linecounter:inst|vcnti[1]   ; linecounter:inst|vcnti[5]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.788      ;
+; -1.734 ; pixelcounter:inst6|hcnti[2] ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.004      ; 2.774      ;
+; -1.733 ; pixelcounter:inst6|hcnti[1] ; linecounter:inst|vcnti[3]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.005      ; 2.774      ;
+; -1.732 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[8]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.768      ;
+; -1.728 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[2]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.764      ;
+; -1.727 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[6]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.763      ;
+; -1.721 ; linecounter:inst|vcnti[5]   ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.757      ;
+; -1.714 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[1]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.002     ; 2.748      ;
+; -1.713 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[5]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.002     ; 2.747      ;
+; -1.696 ; linecounter:inst|vcnti[9]   ; linecounter:inst|vcnti[8]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.734      ;
+; -1.696 ; linecounter:inst|vcnti[9]   ; linecounter:inst|vcnti[7]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.734      ;
+; -1.692 ; linecounter:inst|vcnti[9]   ; linecounter:inst|vcnti[2]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.730      ;
+; -1.691 ; linecounter:inst|vcnti[9]   ; linecounter:inst|vcnti[6]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.729      ;
+; -1.687 ; pixelcounter:inst6|hcnti[2] ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.725      ;
+; -1.680 ; linecounter:inst|vcnti[9]   ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.716      ;
+; -1.679 ; pixelcounter:inst6|hcnti[8] ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.004      ; 2.719      ;
+; -1.678 ; linecounter:inst|vcnti[2]   ; linecounter:inst|vcnti[7]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.714      ;
+; -1.678 ; linecounter:inst|vcnti[9]   ; linecounter:inst|vcnti[1]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.714      ;
+; -1.678 ; linecounter:inst|vcnti[9]   ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.714      ;
+; -1.678 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[3]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 2.715      ;
+; -1.678 ; pixelcounter:inst6|hcnti[7] ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.004      ; 2.718      ;
+; -1.677 ; linecounter:inst|vcnti[9]   ; linecounter:inst|vcnti[5]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.713      ;
+; -1.667 ; linecounter:inst|vcnti[3]   ; linecounter:inst|vcnti[8]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.001     ; 2.702      ;
+; -1.664 ; linecounter:inst|vcnti[1]   ; linecounter:inst|vcnti[6]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.702      ;
+; -1.656 ; pixelcounter:inst6|hcnti[1] ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.694      ;
+; -1.656 ; linecounter:inst|vcnti[2]   ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.002     ; 2.690      ;
+; -1.654 ; pixelcounter:inst6|hcnti[1] ; linecounter:inst|vcnti[1]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.692      ;
+; -1.651 ; pixelcounter:inst6|hcnti[1] ; linecounter:inst|vcnti[5]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.689      ;
+; -1.646 ; linecounter:inst|vcnti[5]   ; linecounter:inst|vcnti[8]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.684      ;
+; -1.646 ; linecounter:inst|vcnti[5]   ; linecounter:inst|vcnti[7]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.684      ;
+; -1.642 ; linecounter:inst|vcnti[5]   ; linecounter:inst|vcnti[2]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.680      ;
+; -1.641 ; linecounter:inst|vcnti[5]   ; linecounter:inst|vcnti[6]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.679      ;
+; -1.634 ; pixelcounter:inst6|hcnti[2] ; linecounter:inst|vcnti[3]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.005      ; 2.675      ;
+; -1.632 ; pixelcounter:inst6|hcnti[8] ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.670      ;
+; -1.631 ; pixelcounter:inst6|hcnti[7] ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.669      ;
+; -1.630 ; linecounter:inst|vcnti[5]   ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.666      ;
+; -1.628 ; linecounter:inst|vcnti[5]   ; linecounter:inst|vcnti[1]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.664      ;
+; -1.627 ; linecounter:inst|vcnti[5]   ; linecounter:inst|vcnti[5]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.663      ;
+; -1.619 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[3]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.003      ; 2.658      ;
+; -1.611 ; linecounter:inst|vcnti[3]   ; linecounter:inst|vcnti[5]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.003     ; 2.644      ;
+; -1.593 ; pixelcounter:inst6|hcnti[3] ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.004      ; 2.633      ;
+; -1.592 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.630      ;
+; -1.586 ; pixelcounter:inst6|hcnti[6] ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.004      ; 2.626      ;
+; -1.579 ; pixelcounter:inst6|hcnti[8] ; linecounter:inst|vcnti[3]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.005      ; 2.620      ;
+; -1.578 ; pixelcounter:inst6|hcnti[7] ; linecounter:inst|vcnti[3]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.005      ; 2.619      ;
+; -1.573 ; pixelcounter:inst6|hcnti[4] ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.004      ; 2.613      ;
+; -1.566 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[0] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.602      ;
+; -1.566 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[1] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.602      ;
+; -1.566 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[2] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.602      ;
+; -1.566 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[3] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.602      ;
+; -1.566 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[4] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.602      ;
+; -1.566 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[6] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.602      ;
+; -1.566 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[7] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.602      ;
+; -1.566 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[8] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.602      ;
+; -1.566 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[9] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.602      ;
+; -1.566 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[5] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.602      ;
+; -1.565 ; linecounter:inst|vcnti[2]   ; linecounter:inst|vcnti[8]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 2.601      ;
+; -1.560 ; pixelcounter:inst6|hcnti[1] ; linecounter:inst|vcnti[7]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.004      ; 2.600      ;
+; -1.560 ; pixelcounter:inst6|hcnti[1] ; linecounter:inst|vcnti[8]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.004      ; 2.600      ;
+; -1.557 ; pixelcounter:inst6|hcnti[2] ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.595      ;
+; -1.556 ; pixelcounter:inst6|hcnti[1] ; linecounter:inst|vcnti[2]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.004      ; 2.596      ;
+; -1.555 ; pixelcounter:inst6|hcnti[1] ; linecounter:inst|vcnti[6]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.004      ; 2.595      ;
+; -1.555 ; pixelcounter:inst6|hcnti[2] ; linecounter:inst|vcnti[1]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.593      ;
+; -1.552 ; pixelcounter:inst6|hcnti[2] ; linecounter:inst|vcnti[5]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.590      ;
+; -1.546 ; pixelcounter:inst6|hcnti[3] ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.584      ;
+; -1.539 ; pixelcounter:inst6|hcnti[6] ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 2.577      ;
+; -1.535 ; linecounter:inst|vcnti[3]   ; linecounter:inst|vcnti[2]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.001     ; 2.570      ;
+; -1.534 ; linecounter:inst|vcnti[3]   ; linecounter:inst|vcnti[6]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.001     ; 2.569      ;
+; -1.531 ; linecounter:inst|vcnti[2]   ; linecounter:inst|vcnti[3]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 2.568      ;
+; -1.528 ; pixelcounter:inst6|hcnti[0] ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.004      ; 2.568      ;
++--------+-----------------------------+-----------------------------+----------------------+----------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'fpga_clk'                                                                                                      ;
++-------+----------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; 1.996 ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; fpga_clk    ; 0.500        ; 1.867      ; 0.657      ;
+; 2.496 ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; fpga_clk    ; 1.000        ; 1.867      ; 0.657      ;
++-------+----------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'fpga_clk'                                                                                                        ;
++--------+----------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node            ; To Node              ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; -1.726 ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; fpga_clk    ; 0.000        ; 1.867      ; 0.657      ;
+; -1.226 ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; fpga_clk    ; -0.500       ; 1.867      ; 0.657      ;
++--------+----------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clock_gen:inst3|clki'                                                                                                                  ;
++-------+-----------------------------+-----------------------------+----------------------+----------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock         ; Latch Clock          ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+----------------------+----------------------+--------------+------------+------------+
+; 0.391 ; linecounter:inst|vcnti[1]   ; linecounter:inst|vcnti[1]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; linecounter:inst|vcnti[2]   ; linecounter:inst|vcnti[2]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; linecounter:inst|vcnti[3]   ; linecounter:inst|vcnti[3]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; linecounter:inst|vcnti[5]   ; linecounter:inst|vcnti[5]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; linecounter:inst|vcnti[6]   ; linecounter:inst|vcnti[6]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; linecounter:inst|vcnti[7]   ; linecounter:inst|vcnti[7]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; linecounter:inst|vcnti[8]   ; linecounter:inst|vcnti[8]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; linecounter:inst|vcnti[9]   ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.657      ;
+; 0.552 ; pixelcounter:inst6|hcnti[9] ; pixelcounter:inst6|hcnti[9] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.818      ;
+; 0.818 ; pixelcounter:inst6|hcnti[0] ; pixelcounter:inst6|hcnti[0] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.084      ;
+; 0.824 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[1] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.090      ;
+; 0.834 ; pixelcounter:inst6|hcnti[4] ; pixelcounter:inst6|hcnti[4] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.100      ;
+; 0.835 ; pixelcounter:inst6|hcnti[7] ; pixelcounter:inst6|hcnti[7] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.101      ;
+; 0.841 ; pixelcounter:inst6|hcnti[2] ; pixelcounter:inst6|hcnti[2] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.107      ;
+; 0.844 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[8] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.110      ;
+; 0.866 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[3] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.132      ;
+; 0.868 ; pixelcounter:inst6|hcnti[5] ; pixelcounter:inst6|hcnti[5] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.134      ;
+; 0.869 ; pixelcounter:inst6|hcnti[6] ; pixelcounter:inst6|hcnti[6] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.135      ;
+; 0.918 ; linecounter:inst|vcnti[9]   ; blank_syncr:inst18|blank2i  ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.184      ;
+; 1.021 ; blank_syncr:inst18|blank2i  ; vga_gen:inst19|vga_blank    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 0.787      ;
+; 1.030 ; pixelcounter:inst6|hcnti[4] ; hsyncr:inst12|hsync         ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.002      ; 1.298      ;
+; 1.077 ; pixel_reg:inst1|pixrg[5]    ; vga_gen:inst19|vga_ri[8]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 0.843      ;
+; 1.082 ; pixel_reg:inst1|pixrg[5]    ; vga_gen:inst19|vga_gi[1]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 0.848      ;
+; 1.097 ; pixel_reg:inst1|pixrg[7]    ; vga_gen:inst19|vga_bi[3]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 0.863      ;
+; 1.097 ; pixel_reg:inst1|pixrg[7]    ; vga_gen:inst19|vga_bi[0]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 0.863      ;
+; 1.097 ; pixel_reg:inst1|pixrg[7]    ; vga_gen:inst19|vga_ri[4]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 0.863      ;
+; 1.100 ; pixel_reg:inst1|pixrg[7]    ; vga_gen:inst19|vga_bi[9]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 0.866      ;
+; 1.100 ; pixel_reg:inst1|pixrg[7]    ; vga_gen:inst19|vga_bi[1]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 0.866      ;
+; 1.101 ; pixel_reg:inst1|pixrg[7]    ; vga_gen:inst19|vga_bi[4]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 0.867      ;
+; 1.107 ; pixelcounter:inst6|hcnti[1] ; hsyncr:inst12|hsync         ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.002      ; 1.375      ;
+; 1.181 ; pixel_reg:inst1|pixrg[0]    ; vga_gen:inst19|vga_bi[4]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 0.947      ;
+; 1.183 ; pixel_reg:inst1|pixrg[6]    ; vga_gen:inst19|vga_gi[2]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 0.949      ;
+; 1.183 ; pixel_reg:inst1|pixrg[6]    ; vga_gen:inst19|vga_bi[9]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 0.949      ;
+; 1.185 ; pixel_reg:inst1|pixrg[0]    ; vga_gen:inst19|vga_bi[0]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 0.951      ;
+; 1.191 ; pixel_reg:inst1|pixrg[0]    ; vga_gen:inst19|vga_bi[3]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 0.957      ;
+; 1.201 ; pixelcounter:inst6|hcnti[0] ; pixelcounter:inst6|hcnti[1] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.467      ;
+; 1.203 ; pixel_reg:inst1|pixrg[4]    ; vga_gen:inst19|vga_gi[0]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.001      ; 0.970      ;
+; 1.207 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[2] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.473      ;
+; 1.217 ; pixelcounter:inst6|hcnti[4] ; pixelcounter:inst6|hcnti[5] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.483      ;
+; 1.222 ; pixel_reg:inst1|pixrg[0]    ; vga_gen:inst19|vga_bi[8]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 0.988      ;
+; 1.224 ; pixelcounter:inst6|hcnti[2] ; pixelcounter:inst6|hcnti[3] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.490      ;
+; 1.229 ; pixel_reg:inst1|pixrg[2]    ; vga_gen:inst19|vga_gi[4]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.002      ; 0.997      ;
+; 1.230 ; pixel_reg:inst1|pixrg[3]    ; vga_gen:inst19|vga_gi[8]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.002      ; 0.998      ;
+; 1.230 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[9] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.496      ;
+; 1.231 ; pixel_reg:inst1|pixrg[2]    ; vga_gen:inst19|vga_bi[5]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.002      ; 0.999      ;
+; 1.232 ; pixel_reg:inst1|pixrg[0]    ; vga_gen:inst19|vga_bi[2]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.001      ; 0.999      ;
+; 1.232 ; linecounter:inst|vcnti[3]   ; vsyncr:inst13|vsynci        ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.498      ;
+; 1.234 ; pixel_reg:inst1|pixrg[3]    ; vga_gen:inst19|vga_gi[2]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.002      ; 1.002      ;
+; 1.237 ; pixel_reg:inst1|pixrg[0]    ; vga_gen:inst19|vga_ri[3]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.001      ; 1.004      ;
+; 1.252 ; pixel_reg:inst1|pixrg[6]    ; vga_gen:inst19|vga_ri[9]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; -0.002     ; 1.016      ;
+; 1.252 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[4] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.518      ;
+; 1.252 ; linecounter:inst|vcnti[6]   ; blank_syncr:inst18|blank2i  ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; -0.002     ; 1.516      ;
+; 1.254 ; pixelcounter:inst6|hcnti[5] ; pixelcounter:inst6|hcnti[6] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.520      ;
+; 1.255 ; pixel_reg:inst1|pixrg[6]    ; vga_gen:inst19|vga_ri[2]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; -0.002     ; 1.019      ;
+; 1.255 ; pixel_reg:inst1|pixrg[6]    ; vga_gen:inst19|vga_ri[1]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; -0.002     ; 1.019      ;
+; 1.255 ; pixelcounter:inst6|hcnti[6] ; pixelcounter:inst6|hcnti[7] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.521      ;
+; 1.257 ; pixel_reg:inst1|pixrg[6]    ; vga_gen:inst19|vga_ri[7]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; -0.002     ; 1.021      ;
+; 1.258 ; pixel_reg:inst1|pixrg[6]    ; vga_gen:inst19|vga_ri[5]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; -0.002     ; 1.022      ;
+; 1.262 ; pixel_reg:inst1|pixrg[7]    ; vga_gen:inst19|vga_bi[7]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.001      ; 1.029      ;
+; 1.263 ; pixel_reg:inst1|pixrg[7]    ; vga_gen:inst19|vga_gi[3]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.001      ; 1.030      ;
+; 1.264 ; pixel_reg:inst1|pixrg[7]    ; vga_gen:inst19|vga_gi[9]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.001      ; 1.031      ;
+; 1.272 ; pixelcounter:inst6|hcnti[0] ; pixelcounter:inst6|hcnti[2] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.538      ;
+; 1.278 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[3] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.544      ;
+; 1.282 ; linecounter:inst|vcnti[1]   ; vsyncr:inst13|vsynci        ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.003      ; 1.551      ;
+; 1.288 ; pixelcounter:inst6|hcnti[4] ; pixelcounter:inst6|hcnti[6] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.554      ;
+; 1.290 ; pixel_reg:inst1|pixrg[1]    ; vga_gen:inst19|vga_bi[7]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.001      ; 1.057      ;
+; 1.295 ; pixelcounter:inst6|hcnti[2] ; pixelcounter:inst6|hcnti[4] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.561      ;
+; 1.303 ; pixel_reg:inst1|pixrg[4]    ; vga_gen:inst19|vga_bi[0]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 1.069      ;
+; 1.310 ; pixelcounter:inst6|hcnti[7] ; pixelcounter:inst6|hcnti[8] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.576      ;
+; 1.315 ; hsyncr:inst12|hsync         ; hsyncr:inst12|hsync         ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.581      ;
+; 1.323 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[5] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.589      ;
+; 1.325 ; pixelcounter:inst6|hcnti[5] ; pixelcounter:inst6|hcnti[7] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.591      ;
+; 1.327 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[0] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.593      ;
+; 1.327 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[1] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.593      ;
+; 1.327 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[2] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.593      ;
+; 1.327 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[3] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.593      ;
+; 1.327 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[4] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.593      ;
+; 1.327 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[6] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.593      ;
+; 1.327 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[7] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.593      ;
+; 1.327 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[5] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.593      ;
+; 1.331 ; pixel_reg:inst1|pixrg[5]    ; vga_gen:inst19|vga_gi[8]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.002      ; 1.099      ;
+; 1.332 ; pixel_reg:inst1|pixrg[5]    ; vga_gen:inst19|vga_ri[4]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.002      ; 1.100      ;
+; 1.332 ; pixel_reg:inst1|pixrg[5]    ; vga_gen:inst19|vga_bi[8]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.002      ; 1.100      ;
+; 1.333 ; pixelcounter:inst6|hcnti[2] ; hsyncr:inst12|hsync         ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.002      ; 1.601      ;
+; 1.334 ; pixel_reg:inst1|pixrg[5]    ; vga_gen:inst19|vga_bi[1]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.002      ; 1.102      ;
+; 1.343 ; pixel_reg:inst1|pixrg[1]    ; vga_gen:inst19|vga_bi[9]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 1.109      ;
+; 1.343 ; pixel_reg:inst1|pixrg[1]    ; vga_gen:inst19|vga_bi[1]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 1.109      ;
+; 1.343 ; pixelcounter:inst6|hcnti[0] ; pixelcounter:inst6|hcnti[3] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 1.609      ;
+; 1.344 ; pixel_reg:inst1|pixrg[4]    ; vga_gen:inst19|vga_gi[6]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; -0.002     ; 1.108      ;
+; 1.344 ; pixel_reg:inst1|pixrg[2]    ; vga_gen:inst19|vga_gi[5]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 1.110      ;
+; 1.344 ; pixel_reg:inst1|pixrg[1]    ; vga_gen:inst19|vga_bi[3]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 1.110      ;
+; 1.344 ; pixel_reg:inst1|pixrg[1]    ; vga_gen:inst19|vga_bi[4]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 1.110      ;
+; 1.344 ; pixel_reg:inst1|pixrg[1]    ; vga_gen:inst19|vga_gi[4]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 1.110      ;
+; 1.344 ; pixel_reg:inst1|pixrg[1]    ; vga_gen:inst19|vga_bi[5]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 1.110      ;
+; 1.345 ; pixel_reg:inst1|pixrg[4]    ; vga_gen:inst19|vga_gi[7]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; -0.002     ; 1.109      ;
+; 1.346 ; pixel_reg:inst1|pixrg[1]    ; vga_gen:inst19|vga_ri[4]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 1.112      ;
+; 1.347 ; pixel_reg:inst1|pixrg[4]    ; vga_gen:inst19|vga_ri[0]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; -0.002     ; 1.111      ;
+; 1.349 ; pixel_reg:inst1|pixrg[2]    ; vga_gen:inst19|vga_gi[1]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 1.115      ;
++-------+-----------------------------+-----------------------------+----------------------+----------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'fpga_clk'                                                               ;
++--------+--------------+----------------+------------------+----------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+----------+------------+----------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; fpga_clk ; Rise       ; fpga_clk             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fpga_clk ; Rise       ; clock_gen:inst3|clki ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fpga_clk ; Rise       ; clock_gen:inst3|clki ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fpga_clk ; Rise       ; fpga_clk|combout     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fpga_clk ; Rise       ; fpga_clk|combout     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fpga_clk ; Rise       ; inst3|clki|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fpga_clk ; Rise       ; inst3|clki|clk       ;
++--------+--------------+----------------+------------------+----------+------------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock_gen:inst3|clki'                                                                      ;
++--------+--------------+----------------+------------------+----------------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+----------------------+------------+-----------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; blank_syncr:inst18|blank2i  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; blank_syncr:inst18|blank2i  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; hsyncr:inst12|hsync         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; hsyncr:inst12|hsync         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[4]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[4]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[5]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[5]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[6]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[6]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[7]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[7]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[8]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[8]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[9]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[9]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[9] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[9] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[8]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[8]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[9]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[9]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_blank    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_blank    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[8]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[8]    ;
++--------+--------------+----------------+------------------+----------------------+------------+-----------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Setup Times                                                                               ;
++----------------+----------------------+-------+-------+------------+----------------------+
+; Data Port      ; Clock Port           ; Rise  ; Fall  ; Clock Edge ; Clock Reference      ;
++----------------+----------------------+-------+-------+------------+----------------------+
+; KEY0           ; clock_gen:inst3|clki ; 6.513 ; 6.513 ; Rise       ; clock_gen:inst3|clki ;
+; sram_data[*]   ; clock_gen:inst3|clki ; 5.511 ; 5.511 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[0]  ; clock_gen:inst3|clki ; 5.277 ; 5.277 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[1]  ; clock_gen:inst3|clki ; 5.316 ; 5.316 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[2]  ; clock_gen:inst3|clki ; 5.374 ; 5.374 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[3]  ; clock_gen:inst3|clki ; 5.268 ; 5.268 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[4]  ; clock_gen:inst3|clki ; 5.511 ; 5.511 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[5]  ; clock_gen:inst3|clki ; 5.276 ; 5.276 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[6]  ; clock_gen:inst3|clki ; 5.397 ; 5.397 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[7]  ; clock_gen:inst3|clki ; 5.197 ; 5.197 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[8]  ; clock_gen:inst3|clki ; 5.183 ; 5.183 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[9]  ; clock_gen:inst3|clki ; 5.215 ; 5.215 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[10] ; clock_gen:inst3|clki ; 5.251 ; 5.251 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[11] ; clock_gen:inst3|clki ; 5.435 ; 5.435 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[12] ; clock_gen:inst3|clki ; 5.440 ; 5.440 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[13] ; clock_gen:inst3|clki ; 5.228 ; 5.228 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[14] ; clock_gen:inst3|clki ; 4.819 ; 4.819 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[15] ; clock_gen:inst3|clki ; 5.048 ; 5.048 ; Fall       ; clock_gen:inst3|clki ;
++----------------+----------------------+-------+-------+------------+----------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Hold Times                                                                                  ;
++----------------+----------------------+--------+--------+------------+----------------------+
+; Data Port      ; Clock Port           ; Rise   ; Fall   ; Clock Edge ; Clock Reference      ;
++----------------+----------------------+--------+--------+------------+----------------------+
+; KEY0           ; clock_gen:inst3|clki ; -6.283 ; -6.283 ; Rise       ; clock_gen:inst3|clki ;
+; sram_data[*]   ; clock_gen:inst3|clki ; -4.589 ; -4.589 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[0]  ; clock_gen:inst3|clki ; -5.047 ; -5.047 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[1]  ; clock_gen:inst3|clki ; -5.086 ; -5.086 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[2]  ; clock_gen:inst3|clki ; -5.144 ; -5.144 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[3]  ; clock_gen:inst3|clki ; -5.038 ; -5.038 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[4]  ; clock_gen:inst3|clki ; -5.281 ; -5.281 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[5]  ; clock_gen:inst3|clki ; -5.046 ; -5.046 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[6]  ; clock_gen:inst3|clki ; -5.167 ; -5.167 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[7]  ; clock_gen:inst3|clki ; -4.967 ; -4.967 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[8]  ; clock_gen:inst3|clki ; -4.953 ; -4.953 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[9]  ; clock_gen:inst3|clki ; -4.985 ; -4.985 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[10] ; clock_gen:inst3|clki ; -5.021 ; -5.021 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[11] ; clock_gen:inst3|clki ; -5.205 ; -5.205 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[12] ; clock_gen:inst3|clki ; -5.210 ; -5.210 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[13] ; clock_gen:inst3|clki ; -4.998 ; -4.998 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[14] ; clock_gen:inst3|clki ; -4.589 ; -4.589 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[15] ; clock_gen:inst3|clki ; -4.818 ; -4.818 ; Fall       ; clock_gen:inst3|clki ;
++----------------+----------------------+--------+--------+------------+----------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                     ;
++----------------+----------------------+-------+-------+------------+----------------------+
+; Data Port      ; Clock Port           ; Rise  ; Fall  ; Clock Edge ; Clock Reference      ;
++----------------+----------------------+-------+-------+------------+----------------------+
+; vga_b[*]       ; clock_gen:inst3|clki ; 6.567 ; 6.567 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[0]      ; clock_gen:inst3|clki ; 6.319 ; 6.319 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[1]      ; clock_gen:inst3|clki ; 6.318 ; 6.318 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[2]      ; clock_gen:inst3|clki ; 6.316 ; 6.316 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[3]      ; clock_gen:inst3|clki ; 6.330 ; 6.330 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[4]      ; clock_gen:inst3|clki ; 6.382 ; 6.382 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[5]      ; clock_gen:inst3|clki ; 6.374 ; 6.374 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[6]      ; clock_gen:inst3|clki ; 6.566 ; 6.566 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[7]      ; clock_gen:inst3|clki ; 6.393 ; 6.393 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[8]      ; clock_gen:inst3|clki ; 6.567 ; 6.567 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[9]      ; clock_gen:inst3|clki ; 6.560 ; 6.560 ; Rise       ; clock_gen:inst3|clki ;
+; vga_blank      ; clock_gen:inst3|clki ; 9.350 ; 9.350 ; Rise       ; clock_gen:inst3|clki ;
+; vga_clk        ; clock_gen:inst3|clki ;       ; 5.182 ; Rise       ; clock_gen:inst3|clki ;
+; vga_g[*]       ; clock_gen:inst3|clki ; 6.099 ; 6.099 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[0]      ; clock_gen:inst3|clki ; 5.878 ; 5.878 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[1]      ; clock_gen:inst3|clki ; 5.877 ; 5.877 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[2]      ; clock_gen:inst3|clki ; 5.870 ; 5.870 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[3]      ; clock_gen:inst3|clki ; 5.868 ; 5.868 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[4]      ; clock_gen:inst3|clki ; 6.096 ; 6.096 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[5]      ; clock_gen:inst3|clki ; 6.099 ; 6.099 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[6]      ; clock_gen:inst3|clki ; 6.053 ; 6.053 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[7]      ; clock_gen:inst3|clki ; 6.074 ; 6.074 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[8]      ; clock_gen:inst3|clki ; 6.084 ; 6.084 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[9]      ; clock_gen:inst3|clki ; 6.082 ; 6.082 ; Rise       ; clock_gen:inst3|clki ;
+; vga_r[*]       ; clock_gen:inst3|clki ; 6.136 ; 6.136 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[0]      ; clock_gen:inst3|clki ; 6.103 ; 6.103 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[1]      ; clock_gen:inst3|clki ; 6.130 ; 6.130 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[2]      ; clock_gen:inst3|clki ; 6.127 ; 6.127 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[3]      ; clock_gen:inst3|clki ; 6.087 ; 6.087 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[4]      ; clock_gen:inst3|clki ; 6.136 ; 6.136 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[5]      ; clock_gen:inst3|clki ; 6.099 ; 6.099 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[6]      ; clock_gen:inst3|clki ; 5.857 ; 5.857 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[7]      ; clock_gen:inst3|clki ; 5.866 ; 5.866 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[8]      ; clock_gen:inst3|clki ; 5.846 ; 5.846 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[9]      ; clock_gen:inst3|clki ; 5.847 ; 5.847 ; Rise       ; clock_gen:inst3|clki ;
+; hsync          ; clock_gen:inst3|clki ; 9.080 ; 9.080 ; Fall       ; clock_gen:inst3|clki ;
+; sram_addr[*]   ; clock_gen:inst3|clki ; 9.694 ; 9.694 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[0]  ; clock_gen:inst3|clki ; 6.120 ; 6.120 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[1]  ; clock_gen:inst3|clki ; 5.921 ; 5.921 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[2]  ; clock_gen:inst3|clki ; 5.900 ; 5.900 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[3]  ; clock_gen:inst3|clki ; 5.896 ; 5.896 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[4]  ; clock_gen:inst3|clki ; 5.896 ; 5.896 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[5]  ; clock_gen:inst3|clki ; 5.898 ; 5.898 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[6]  ; clock_gen:inst3|clki ; 7.256 ; 7.256 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[7]  ; clock_gen:inst3|clki ; 7.637 ; 7.637 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[8]  ; clock_gen:inst3|clki ; 8.151 ; 8.151 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[9]  ; clock_gen:inst3|clki ; 8.335 ; 8.335 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[10] ; clock_gen:inst3|clki ; 8.660 ; 8.660 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[11] ; clock_gen:inst3|clki ; 8.744 ; 8.744 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[12] ; clock_gen:inst3|clki ; 8.857 ; 8.857 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[13] ; clock_gen:inst3|clki ; 9.048 ; 9.048 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[14] ; clock_gen:inst3|clki ; 9.282 ; 9.282 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[15] ; clock_gen:inst3|clki ; 9.352 ; 9.352 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[16] ; clock_gen:inst3|clki ; 9.455 ; 9.455 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[17] ; clock_gen:inst3|clki ; 9.694 ; 9.694 ; Fall       ; clock_gen:inst3|clki ;
+; vga_clk        ; clock_gen:inst3|clki ; 5.182 ;       ; Fall       ; clock_gen:inst3|clki ;
+; vsync          ; clock_gen:inst3|clki ; 9.114 ; 9.114 ; Fall       ; clock_gen:inst3|clki ;
++----------------+----------------------+-------+-------+------------+----------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                             ;
++----------------+----------------------+-------+-------+------------+----------------------+
+; Data Port      ; Clock Port           ; Rise  ; Fall  ; Clock Edge ; Clock Reference      ;
++----------------+----------------------+-------+-------+------------+----------------------+
+; vga_b[*]       ; clock_gen:inst3|clki ; 6.316 ; 6.316 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[0]      ; clock_gen:inst3|clki ; 6.319 ; 6.319 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[1]      ; clock_gen:inst3|clki ; 6.318 ; 6.318 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[2]      ; clock_gen:inst3|clki ; 6.316 ; 6.316 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[3]      ; clock_gen:inst3|clki ; 6.330 ; 6.330 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[4]      ; clock_gen:inst3|clki ; 6.382 ; 6.382 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[5]      ; clock_gen:inst3|clki ; 6.374 ; 6.374 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[6]      ; clock_gen:inst3|clki ; 6.566 ; 6.566 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[7]      ; clock_gen:inst3|clki ; 6.393 ; 6.393 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[8]      ; clock_gen:inst3|clki ; 6.567 ; 6.567 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[9]      ; clock_gen:inst3|clki ; 6.560 ; 6.560 ; Rise       ; clock_gen:inst3|clki ;
+; vga_blank      ; clock_gen:inst3|clki ; 9.350 ; 9.350 ; Rise       ; clock_gen:inst3|clki ;
+; vga_clk        ; clock_gen:inst3|clki ;       ; 5.182 ; Rise       ; clock_gen:inst3|clki ;
+; vga_g[*]       ; clock_gen:inst3|clki ; 5.868 ; 5.868 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[0]      ; clock_gen:inst3|clki ; 5.878 ; 5.878 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[1]      ; clock_gen:inst3|clki ; 5.877 ; 5.877 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[2]      ; clock_gen:inst3|clki ; 5.870 ; 5.870 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[3]      ; clock_gen:inst3|clki ; 5.868 ; 5.868 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[4]      ; clock_gen:inst3|clki ; 6.096 ; 6.096 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[5]      ; clock_gen:inst3|clki ; 6.099 ; 6.099 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[6]      ; clock_gen:inst3|clki ; 6.053 ; 6.053 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[7]      ; clock_gen:inst3|clki ; 6.074 ; 6.074 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[8]      ; clock_gen:inst3|clki ; 6.084 ; 6.084 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[9]      ; clock_gen:inst3|clki ; 6.082 ; 6.082 ; Rise       ; clock_gen:inst3|clki ;
+; vga_r[*]       ; clock_gen:inst3|clki ; 5.846 ; 5.846 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[0]      ; clock_gen:inst3|clki ; 6.103 ; 6.103 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[1]      ; clock_gen:inst3|clki ; 6.130 ; 6.130 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[2]      ; clock_gen:inst3|clki ; 6.127 ; 6.127 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[3]      ; clock_gen:inst3|clki ; 6.087 ; 6.087 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[4]      ; clock_gen:inst3|clki ; 6.136 ; 6.136 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[5]      ; clock_gen:inst3|clki ; 6.099 ; 6.099 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[6]      ; clock_gen:inst3|clki ; 5.857 ; 5.857 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[7]      ; clock_gen:inst3|clki ; 5.866 ; 5.866 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[8]      ; clock_gen:inst3|clki ; 5.846 ; 5.846 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[9]      ; clock_gen:inst3|clki ; 5.847 ; 5.847 ; Rise       ; clock_gen:inst3|clki ;
+; hsync          ; clock_gen:inst3|clki ; 9.080 ; 9.080 ; Fall       ; clock_gen:inst3|clki ;
+; sram_addr[*]   ; clock_gen:inst3|clki ; 5.896 ; 5.896 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[0]  ; clock_gen:inst3|clki ; 6.120 ; 6.120 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[1]  ; clock_gen:inst3|clki ; 5.921 ; 5.921 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[2]  ; clock_gen:inst3|clki ; 5.900 ; 5.900 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[3]  ; clock_gen:inst3|clki ; 5.896 ; 5.896 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[4]  ; clock_gen:inst3|clki ; 5.896 ; 5.896 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[5]  ; clock_gen:inst3|clki ; 5.898 ; 5.898 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[6]  ; clock_gen:inst3|clki ; 7.233 ; 7.233 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[7]  ; clock_gen:inst3|clki ; 7.208 ; 7.208 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[8]  ; clock_gen:inst3|clki ; 7.185 ; 7.185 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[9]  ; clock_gen:inst3|clki ; 7.366 ; 7.366 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[10] ; clock_gen:inst3|clki ; 7.424 ; 7.424 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[11] ; clock_gen:inst3|clki ; 7.478 ; 7.478 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[12] ; clock_gen:inst3|clki ; 7.573 ; 7.573 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[13] ; clock_gen:inst3|clki ; 7.673 ; 7.673 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[14] ; clock_gen:inst3|clki ; 7.996 ; 7.996 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[15] ; clock_gen:inst3|clki ; 8.022 ; 8.022 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[16] ; clock_gen:inst3|clki ; 8.056 ; 8.056 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[17] ; clock_gen:inst3|clki ; 7.812 ; 7.812 ; Fall       ; clock_gen:inst3|clki ;
+; vga_clk        ; clock_gen:inst3|clki ; 5.182 ;       ; Fall       ; clock_gen:inst3|clki ;
+; vsync          ; clock_gen:inst3|clki ; 9.114 ; 9.114 ; Fall       ; clock_gen:inst3|clki ;
++----------------+----------------------+-------+-------+------------+----------------------+
+
+
++-----------------------------------------------+
+; Fast Model Setup Summary                      ;
++----------------------+--------+---------------+
+; Clock                ; Slack  ; End Point TNS ;
++----------------------+--------+---------------+
+; clock_gen:inst3|clki ; -0.521 ; -10.371       ;
+; fpga_clk             ; 1.353  ; 0.000         ;
++----------------------+--------+---------------+
+
+
++-----------------------------------------------+
+; Fast Model Hold Summary                       ;
++----------------------+--------+---------------+
+; Clock                ; Slack  ; End Point TNS ;
++----------------------+--------+---------------+
+; fpga_clk             ; -0.973 ; -0.973        ;
+; clock_gen:inst3|clki ; 0.215  ; 0.000         ;
++----------------------+--------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++-----------------------------------------------+
+; Fast Model Minimum Pulse Width Summary        ;
++----------------------+--------+---------------+
+; Clock                ; Slack  ; End Point TNS ;
++----------------------+--------+---------------+
+; fpga_clk             ; -1.380 ; -2.380        ;
+; clock_gen:inst3|clki ; -0.500 ; -62.000       ;
++----------------------+--------+---------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock_gen:inst3|clki'                                                                                                                  ;
++--------+-----------------------------+-----------------------------+----------------------+----------------------+--------------+------------+------------+
+; Slack  ; From Node                   ; To Node                     ; Launch Clock         ; Latch Clock          ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------+-----------------------------+----------------------+----------------------+--------------+------------+------------+
+; -0.521 ; pixelcounter:inst6|hcnti[0] ; pixel_reg:inst1|pixrg[0]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.005     ; 1.548      ;
+; -0.520 ; pixelcounter:inst6|hcnti[0] ; pixel_reg:inst1|pixrg[6]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.005     ; 1.547      ;
+; -0.518 ; pixelcounter:inst6|hcnti[0] ; pixel_reg:inst1|pixrg[7]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.005     ; 1.545      ;
+; -0.518 ; pixelcounter:inst6|hcnti[0] ; pixel_reg:inst1|pixrg[1]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.005     ; 1.545      ;
+; -0.518 ; pixelcounter:inst6|hcnti[0] ; pixel_reg:inst1|pixrg[4]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.005     ; 1.545      ;
+; -0.510 ; pixelcounter:inst6|hcnti[0] ; pixel_reg:inst1|pixrg[3]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.006     ; 1.536      ;
+; -0.510 ; pixelcounter:inst6|hcnti[0] ; pixel_reg:inst1|pixrg[2]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.006     ; 1.536      ;
+; -0.509 ; pixelcounter:inst6|hcnti[0] ; pixel_reg:inst1|pixrg[5]    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.006     ; 1.535      ;
+; -0.387 ; linecounter:inst|vcnti[1]   ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.419      ;
+; -0.344 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.001     ; 1.375      ;
+; -0.318 ; linecounter:inst|vcnti[3]   ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.002     ; 1.348      ;
+; -0.310 ; linecounter:inst|vcnti[1]   ; linecounter:inst|vcnti[7]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 1.343      ;
+; -0.296 ; linecounter:inst|vcnti[1]   ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.328      ;
+; -0.285 ; pixelcounter:inst6|hcnti[1] ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.003      ; 1.320      ;
+; -0.284 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[8]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 1.317      ;
+; -0.283 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[7]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 1.316      ;
+; -0.281 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[2]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 1.314      ;
+; -0.281 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[6]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 1.314      ;
+; -0.271 ; linecounter:inst|vcnti[2]   ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.001     ; 1.302      ;
+; -0.267 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[7]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.299      ;
+; -0.266 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[8]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.298      ;
+; -0.263 ; linecounter:inst|vcnti[1]   ; linecounter:inst|vcnti[8]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 1.296      ;
+; -0.263 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[2]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.295      ;
+; -0.263 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[6]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.295      ;
+; -0.260 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.292      ;
+; -0.259 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[1]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.291      ;
+; -0.259 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.291      ;
+; -0.256 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[5]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.288      ;
+; -0.255 ; pixelcounter:inst6|hcnti[1] ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 1.289      ;
+; -0.253 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.001     ; 1.284      ;
+; -0.250 ; linecounter:inst|vcnti[9]   ; linecounter:inst|vcnti[8]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 1.283      ;
+; -0.249 ; linecounter:inst|vcnti[9]   ; linecounter:inst|vcnti[7]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 1.282      ;
+; -0.247 ; pixelcounter:inst6|hcnti[2] ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.003      ; 1.282      ;
+; -0.247 ; linecounter:inst|vcnti[9]   ; linecounter:inst|vcnti[2]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 1.280      ;
+; -0.247 ; linecounter:inst|vcnti[9]   ; linecounter:inst|vcnti[6]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 1.280      ;
+; -0.241 ; linecounter:inst|vcnti[3]   ; linecounter:inst|vcnti[7]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.001     ; 1.272      ;
+; -0.241 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[1]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.001     ; 1.272      ;
+; -0.238 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[5]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.001     ; 1.269      ;
+; -0.235 ; linecounter:inst|vcnti[1]   ; linecounter:inst|vcnti[5]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.267      ;
+; -0.228 ; pixelcounter:inst6|hcnti[1] ; linecounter:inst|vcnti[3]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.004      ; 1.264      ;
+; -0.227 ; linecounter:inst|vcnti[3]   ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.002     ; 1.257      ;
+; -0.226 ; linecounter:inst|vcnti[5]   ; linecounter:inst|vcnti[8]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 1.259      ;
+; -0.226 ; linecounter:inst|vcnti[9]   ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.258      ;
+; -0.225 ; linecounter:inst|vcnti[5]   ; linecounter:inst|vcnti[7]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 1.258      ;
+; -0.225 ; linecounter:inst|vcnti[9]   ; linecounter:inst|vcnti[1]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.257      ;
+; -0.225 ; linecounter:inst|vcnti[9]   ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.257      ;
+; -0.223 ; linecounter:inst|vcnti[5]   ; linecounter:inst|vcnti[2]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 1.256      ;
+; -0.223 ; linecounter:inst|vcnti[5]   ; linecounter:inst|vcnti[6]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 1.256      ;
+; -0.222 ; linecounter:inst|vcnti[9]   ; linecounter:inst|vcnti[5]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.254      ;
+; -0.217 ; pixelcounter:inst6|hcnti[2] ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 1.251      ;
+; -0.217 ; linecounter:inst|vcnti[1]   ; linecounter:inst|vcnti[3]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 1.251      ;
+; -0.215 ; pixelcounter:inst6|hcnti[7] ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.003      ; 1.250      ;
+; -0.203 ; pixelcounter:inst6|hcnti[8] ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.003      ; 1.238      ;
+; -0.202 ; pixelcounter:inst6|hcnti[6] ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.003      ; 1.237      ;
+; -0.202 ; linecounter:inst|vcnti[5]   ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.234      ;
+; -0.201 ; pixelcounter:inst6|hcnti[1] ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 1.235      ;
+; -0.201 ; linecounter:inst|vcnti[5]   ; linecounter:inst|vcnti[1]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.233      ;
+; -0.201 ; linecounter:inst|vcnti[5]   ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.233      ;
+; -0.199 ; pixelcounter:inst6|hcnti[1] ; linecounter:inst|vcnti[1]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 1.233      ;
+; -0.198 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[0] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.230      ;
+; -0.198 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[1] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.230      ;
+; -0.198 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[2] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.230      ;
+; -0.198 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[3] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.230      ;
+; -0.198 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[4] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.230      ;
+; -0.198 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[6] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.230      ;
+; -0.198 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[7] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.230      ;
+; -0.198 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[8] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.230      ;
+; -0.198 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[9] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.230      ;
+; -0.198 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[5] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.230      ;
+; -0.198 ; linecounter:inst|vcnti[5]   ; linecounter:inst|vcnti[5]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.230      ;
+; -0.195 ; pixelcounter:inst6|hcnti[1] ; linecounter:inst|vcnti[5]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 1.229      ;
+; -0.194 ; linecounter:inst|vcnti[2]   ; linecounter:inst|vcnti[7]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.226      ;
+; -0.194 ; linecounter:inst|vcnti[3]   ; linecounter:inst|vcnti[8]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.001     ; 1.225      ;
+; -0.191 ; linecounter:inst|vcnti[1]   ; linecounter:inst|vcnti[6]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 1.224      ;
+; -0.190 ; pixelcounter:inst6|hcnti[2] ; linecounter:inst|vcnti[3]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.004      ; 1.226      ;
+; -0.185 ; pixelcounter:inst6|hcnti[7] ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 1.219      ;
+; -0.182 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[3]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 1.216      ;
+; -0.182 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[0] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.214      ;
+; -0.182 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[1] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.214      ;
+; -0.182 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[2] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.214      ;
+; -0.182 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[3] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.214      ;
+; -0.182 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[4] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.214      ;
+; -0.182 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[6] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.214      ;
+; -0.182 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[7] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.214      ;
+; -0.182 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[8] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.214      ;
+; -0.182 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[9] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.214      ;
+; -0.182 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[5] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.000      ; 1.214      ;
+; -0.180 ; linecounter:inst|vcnti[2]   ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.001     ; 1.211      ;
+; -0.180 ; linecounter:inst|vcnti[3]   ; linecounter:inst|vcnti[2]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.001     ; 1.211      ;
+; -0.180 ; linecounter:inst|vcnti[3]   ; linecounter:inst|vcnti[6]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.001     ; 1.211      ;
+; -0.180 ; pixelcounter:inst6|hcnti[0] ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.003      ; 1.215      ;
+; -0.174 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[3]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 1.207      ;
+; -0.173 ; pixelcounter:inst6|hcnti[8] ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 1.207      ;
+; -0.172 ; pixelcounter:inst6|hcnti[6] ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 1.206      ;
+; -0.167 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.001      ; 1.200      ;
+; -0.167 ; pixelcounter:inst6|hcnti[3] ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.003      ; 1.202      ;
+; -0.166 ; linecounter:inst|vcnti[3]   ; linecounter:inst|vcnti[5]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; -0.002     ; 1.196      ;
+; -0.163 ; pixelcounter:inst6|hcnti[2] ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.002      ; 1.197      ;
+; -0.162 ; pixelcounter:inst6|hcnti[1] ; linecounter:inst|vcnti[7]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.003      ; 1.197      ;
+; -0.162 ; pixelcounter:inst6|hcnti[1] ; linecounter:inst|vcnti[8]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 1.000        ; 0.003      ; 1.197      ;
++--------+-----------------------------+-----------------------------+----------------------+----------------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'fpga_clk'                                                                                                      ;
++-------+----------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; Slack ; From Node            ; To Node              ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+----------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; 1.353 ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; fpga_clk    ; 0.500        ; 1.047      ; 0.367      ;
+; 1.853 ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; fpga_clk    ; 1.000        ; 1.047      ; 0.367      ;
++-------+----------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'fpga_clk'                                                                                                        ;
++--------+----------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node            ; To Node              ; Launch Clock         ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+----------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+; -0.973 ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; fpga_clk    ; 0.000        ; 1.047      ; 0.367      ;
+; -0.473 ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; fpga_clk    ; -0.500       ; 1.047      ; 0.367      ;
++--------+----------------------+----------------------+----------------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clock_gen:inst3|clki'                                                                                                                  ;
++-------+-----------------------------+-----------------------------+----------------------+----------------------+--------------+------------+------------+
+; Slack ; From Node                   ; To Node                     ; Launch Clock         ; Latch Clock          ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------+-----------------------------+----------------------+----------------------+--------------+------------+------------+
+; 0.215 ; linecounter:inst|vcnti[1]   ; linecounter:inst|vcnti[1]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; linecounter:inst|vcnti[2]   ; linecounter:inst|vcnti[2]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; linecounter:inst|vcnti[3]   ; linecounter:inst|vcnti[3]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; linecounter:inst|vcnti[4]   ; linecounter:inst|vcnti[4]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; linecounter:inst|vcnti[5]   ; linecounter:inst|vcnti[5]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; linecounter:inst|vcnti[6]   ; linecounter:inst|vcnti[6]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; linecounter:inst|vcnti[7]   ; linecounter:inst|vcnti[7]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; linecounter:inst|vcnti[8]   ; linecounter:inst|vcnti[8]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; linecounter:inst|vcnti[9]   ; linecounter:inst|vcnti[9]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; linecounter:inst|vcnti[0]   ; linecounter:inst|vcnti[0]   ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.367      ;
+; 0.255 ; pixelcounter:inst6|hcnti[9] ; pixelcounter:inst6|hcnti[9] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.407      ;
+; 0.365 ; pixelcounter:inst6|hcnti[0] ; pixelcounter:inst6|hcnti[0] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.517      ;
+; 0.369 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[1] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.521      ;
+; 0.375 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[8] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.527      ;
+; 0.378 ; pixelcounter:inst6|hcnti[4] ; pixelcounter:inst6|hcnti[4] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.530      ;
+; 0.378 ; pixelcounter:inst6|hcnti[7] ; pixelcounter:inst6|hcnti[7] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.530      ;
+; 0.380 ; pixelcounter:inst6|hcnti[2] ; pixelcounter:inst6|hcnti[2] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.532      ;
+; 0.387 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[3] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.539      ;
+; 0.388 ; pixelcounter:inst6|hcnti[5] ; pixelcounter:inst6|hcnti[5] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.540      ;
+; 0.389 ; pixelcounter:inst6|hcnti[6] ; pixelcounter:inst6|hcnti[6] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.541      ;
+; 0.405 ; linecounter:inst|vcnti[9]   ; blank_syncr:inst18|blank2i  ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.557      ;
+; 0.457 ; pixelcounter:inst6|hcnti[4] ; hsyncr:inst12|hsync         ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.002      ; 0.611      ;
+; 0.488 ; pixelcounter:inst6|hcnti[1] ; hsyncr:inst12|hsync         ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.002      ; 0.642      ;
+; 0.503 ; pixelcounter:inst6|hcnti[0] ; pixelcounter:inst6|hcnti[1] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.655      ;
+; 0.507 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[2] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.659      ;
+; 0.515 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[9] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.667      ;
+; 0.516 ; pixelcounter:inst6|hcnti[4] ; pixelcounter:inst6|hcnti[5] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.668      ;
+; 0.518 ; pixelcounter:inst6|hcnti[2] ; pixelcounter:inst6|hcnti[3] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.670      ;
+; 0.527 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[4] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.679      ;
+; 0.528 ; pixelcounter:inst6|hcnti[5] ; pixelcounter:inst6|hcnti[6] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.680      ;
+; 0.529 ; pixelcounter:inst6|hcnti[6] ; pixelcounter:inst6|hcnti[7] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.681      ;
+; 0.538 ; pixelcounter:inst6|hcnti[0] ; pixelcounter:inst6|hcnti[2] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.690      ;
+; 0.542 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[3] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.694      ;
+; 0.545 ; linecounter:inst|vcnti[3]   ; vsyncr:inst13|vsynci        ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.697      ;
+; 0.546 ; linecounter:inst|vcnti[6]   ; blank_syncr:inst18|blank2i  ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; -0.001     ; 0.697      ;
+; 0.551 ; pixelcounter:inst6|hcnti[4] ; pixelcounter:inst6|hcnti[6] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.703      ;
+; 0.553 ; pixelcounter:inst6|hcnti[2] ; pixelcounter:inst6|hcnti[4] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.705      ;
+; 0.562 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[5] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.714      ;
+; 0.563 ; pixelcounter:inst6|hcnti[5] ; pixelcounter:inst6|hcnti[7] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.715      ;
+; 0.571 ; pixelcounter:inst6|hcnti[7] ; pixelcounter:inst6|hcnti[8] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.723      ;
+; 0.573 ; pixelcounter:inst6|hcnti[0] ; pixelcounter:inst6|hcnti[3] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.725      ;
+; 0.577 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[4] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.729      ;
+; 0.581 ; hsyncr:inst12|hsync         ; hsyncr:inst12|hsync         ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.733      ;
+; 0.586 ; pixelcounter:inst6|hcnti[4] ; pixelcounter:inst6|hcnti[7] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.738      ;
+; 0.588 ; pixelcounter:inst6|hcnti[2] ; pixelcounter:inst6|hcnti[5] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.740      ;
+; 0.595 ; linecounter:inst|vcnti[1]   ; vsyncr:inst13|vsynci        ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.002      ; 0.749      ;
+; 0.597 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[6] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.749      ;
+; 0.600 ; linecounter:inst|vcnti[4]   ; vsyncr:inst13|vsynci        ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.002      ; 0.754      ;
+; 0.605 ; pixelcounter:inst6|hcnti[2] ; hsyncr:inst12|hsync         ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.002      ; 0.759      ;
+; 0.606 ; pixelcounter:inst6|hcnti[7] ; pixelcounter:inst6|hcnti[9] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.758      ;
+; 0.608 ; pixelcounter:inst6|hcnti[0] ; pixelcounter:inst6|hcnti[4] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.760      ;
+; 0.612 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[5] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.764      ;
+; 0.614 ; linecounter:inst|vcnti[5]   ; blank_syncr:inst18|blank2i  ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.766      ;
+; 0.623 ; pixelcounter:inst6|hcnti[6] ; pixelcounter:inst6|hcnti[8] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.775      ;
+; 0.623 ; pixelcounter:inst6|hcnti[2] ; pixelcounter:inst6|hcnti[6] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.775      ;
+; 0.625 ; pixelcounter:inst6|hcnti[9] ; blank_syncr:inst18|blank2i  ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.002      ; 0.779      ;
+; 0.632 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[7] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.784      ;
+; 0.634 ; pixelcounter:inst6|hcnti[7] ; blank_syncr:inst18|blank2i  ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.002      ; 0.788      ;
+; 0.643 ; pixelcounter:inst6|hcnti[0] ; pixelcounter:inst6|hcnti[5] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.795      ;
+; 0.644 ; pixelcounter:inst6|hcnti[5] ; hsyncr:inst12|hsync         ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.002      ; 0.798      ;
+; 0.645 ; pixelcounter:inst6|hcnti[8] ; blank_syncr:inst18|blank2i  ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.002      ; 0.799      ;
+; 0.647 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[6] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.799      ;
+; 0.657 ; pixelcounter:inst6|hcnti[5] ; pixelcounter:inst6|hcnti[8] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.809      ;
+; 0.658 ; pixelcounter:inst6|hcnti[6] ; pixelcounter:inst6|hcnti[9] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.810      ;
+; 0.658 ; pixelcounter:inst6|hcnti[2] ; pixelcounter:inst6|hcnti[7] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.810      ;
+; 0.671 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[0] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.823      ;
+; 0.671 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[1] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.823      ;
+; 0.671 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[2] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.823      ;
+; 0.671 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[3] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.823      ;
+; 0.671 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[4] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.823      ;
+; 0.671 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[6] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.823      ;
+; 0.671 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[7] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.823      ;
+; 0.671 ; pixelcounter:inst6|hcnti[8] ; pixelcounter:inst6|hcnti[5] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.823      ;
+; 0.677 ; linecounter:inst|vcnti[9]   ; vsyncr:inst13|vsynci        ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.002      ; 0.831      ;
+; 0.678 ; pixelcounter:inst6|hcnti[0] ; pixelcounter:inst6|hcnti[6] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.830      ;
+; 0.680 ; pixelcounter:inst6|hcnti[4] ; pixelcounter:inst6|hcnti[8] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.832      ;
+; 0.681 ; linecounter:inst|vcnti[8]   ; blank_syncr:inst18|blank2i  ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; -0.001     ; 0.832      ;
+; 0.682 ; pixelcounter:inst6|hcnti[1] ; pixelcounter:inst6|hcnti[7] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.834      ;
+; 0.692 ; pixelcounter:inst6|hcnti[5] ; pixelcounter:inst6|hcnti[9] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.844      ;
+; 0.713 ; pixelcounter:inst6|hcnti[0] ; pixelcounter:inst6|hcnti[7] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.865      ;
+; 0.715 ; pixelcounter:inst6|hcnti[4] ; pixelcounter:inst6|hcnti[9] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.867      ;
+; 0.726 ; pixelcounter:inst6|hcnti[3] ; pixelcounter:inst6|hcnti[8] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.878      ;
+; 0.728 ; pixelcounter:inst6|hcnti[9] ; pixelcounter:inst6|hcnti[0] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.880      ;
+; 0.728 ; pixelcounter:inst6|hcnti[9] ; pixelcounter:inst6|hcnti[1] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.880      ;
+; 0.728 ; pixelcounter:inst6|hcnti[9] ; pixelcounter:inst6|hcnti[2] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.880      ;
+; 0.728 ; pixelcounter:inst6|hcnti[9] ; pixelcounter:inst6|hcnti[3] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.880      ;
+; 0.728 ; pixelcounter:inst6|hcnti[9] ; pixelcounter:inst6|hcnti[4] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.880      ;
+; 0.728 ; pixelcounter:inst6|hcnti[9] ; pixelcounter:inst6|hcnti[6] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.880      ;
+; 0.728 ; pixelcounter:inst6|hcnti[9] ; pixelcounter:inst6|hcnti[7] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.880      ;
+; 0.728 ; pixelcounter:inst6|hcnti[9] ; pixelcounter:inst6|hcnti[8] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.880      ;
+; 0.728 ; pixelcounter:inst6|hcnti[9] ; pixelcounter:inst6|hcnti[5] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.880      ;
+; 0.736 ; pixelcounter:inst6|hcnti[6] ; pixelcounter:inst6|hcnti[0] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.888      ;
+; 0.736 ; pixelcounter:inst6|hcnti[6] ; pixelcounter:inst6|hcnti[1] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.888      ;
+; 0.736 ; pixelcounter:inst6|hcnti[6] ; pixelcounter:inst6|hcnti[2] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.888      ;
+; 0.736 ; pixelcounter:inst6|hcnti[6] ; pixelcounter:inst6|hcnti[3] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.888      ;
+; 0.736 ; pixelcounter:inst6|hcnti[6] ; pixelcounter:inst6|hcnti[4] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.888      ;
+; 0.736 ; pixelcounter:inst6|hcnti[6] ; pixelcounter:inst6|hcnti[5] ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.000      ; 0.888      ;
+; 0.739 ; pixelcounter:inst6|hcnti[3] ; hsyncr:inst12|hsync         ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.002      ; 0.893      ;
+; 0.741 ; blank_syncr:inst18|blank2i  ; vga_gen:inst19|vga_blank    ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; -0.500       ; 0.000      ; 0.393      ;
+; 0.750 ; linecounter:inst|vcnti[2]   ; vsyncr:inst13|vsynci        ; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0.000        ; 0.001      ; 0.903      ;
++-------+-----------------------------+-----------------------------+----------------------+----------------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'fpga_clk'                                                               ;
++--------+--------------+----------------+------------------+----------+------------+----------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock    ; Clock Edge ; Target               ;
++--------+--------------+----------------+------------------+----------+------------+----------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; fpga_clk ; Rise       ; fpga_clk             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; fpga_clk ; Rise       ; clock_gen:inst3|clki ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; fpga_clk ; Rise       ; clock_gen:inst3|clki ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fpga_clk ; Rise       ; fpga_clk|combout     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fpga_clk ; Rise       ; fpga_clk|combout     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; fpga_clk ; Rise       ; inst3|clki|clk       ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; fpga_clk ; Rise       ; inst3|clki|clk       ;
++--------+--------------+----------------+------------------+----------+------------+----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock_gen:inst3|clki'                                                                      ;
++--------+--------------+----------------+------------------+----------------------+------------+-----------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock                ; Clock Edge ; Target                      ;
++--------+--------------+----------------+------------------+----------------------+------------+-----------------------------+
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; blank_syncr:inst18|blank2i  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; blank_syncr:inst18|blank2i  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; hsyncr:inst12|hsync         ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; hsyncr:inst12|hsync         ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[0]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[1]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[2]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[3]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[4]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[4]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[5]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[5]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[6]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[6]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[7]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[7]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[8]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[8]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[9]   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; linecounter:inst|vcnti[9]   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixel_reg:inst1|pixrg[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[0] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[0] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[1] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[1] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[2] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[2] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[3] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[3] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[4] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[4] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[5] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[5] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[6] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[6] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[7] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[7] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[8] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[8] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[9] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Fall       ; pixelcounter:inst6|hcnti[9] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[8]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[8]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[9]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_bi[9]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_blank    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_blank    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[0]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[1]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[2]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[3]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[4]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[5]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[6]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[7]    ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[8]    ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock_gen:inst3|clki ; Rise       ; vga_gen:inst19|vga_gi[8]    ;
++--------+--------------+----------------+------------------+----------------------+------------+-----------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Setup Times                                                                               ;
++----------------+----------------------+-------+-------+------------+----------------------+
+; Data Port      ; Clock Port           ; Rise  ; Fall  ; Clock Edge ; Clock Reference      ;
++----------------+----------------------+-------+-------+------------+----------------------+
+; KEY0           ; clock_gen:inst3|clki ; 3.599 ; 3.599 ; Rise       ; clock_gen:inst3|clki ;
+; sram_data[*]   ; clock_gen:inst3|clki ; 2.979 ; 2.979 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[0]  ; clock_gen:inst3|clki ; 2.892 ; 2.892 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[1]  ; clock_gen:inst3|clki ; 2.890 ; 2.890 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[2]  ; clock_gen:inst3|clki ; 2.920 ; 2.920 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[3]  ; clock_gen:inst3|clki ; 2.847 ; 2.847 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[4]  ; clock_gen:inst3|clki ; 2.975 ; 2.975 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[5]  ; clock_gen:inst3|clki ; 2.837 ; 2.837 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[6]  ; clock_gen:inst3|clki ; 2.896 ; 2.896 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[7]  ; clock_gen:inst3|clki ; 2.806 ; 2.806 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[8]  ; clock_gen:inst3|clki ; 2.823 ; 2.823 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[9]  ; clock_gen:inst3|clki ; 2.846 ; 2.846 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[10] ; clock_gen:inst3|clki ; 2.868 ; 2.868 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[11] ; clock_gen:inst3|clki ; 2.978 ; 2.978 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[12] ; clock_gen:inst3|clki ; 2.979 ; 2.979 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[13] ; clock_gen:inst3|clki ; 2.843 ; 2.843 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[14] ; clock_gen:inst3|clki ; 2.654 ; 2.654 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[15] ; clock_gen:inst3|clki ; 2.764 ; 2.764 ; Fall       ; clock_gen:inst3|clki ;
++----------------+----------------------+-------+-------+------------+----------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Hold Times                                                                                  ;
++----------------+----------------------+--------+--------+------------+----------------------+
+; Data Port      ; Clock Port           ; Rise   ; Fall   ; Clock Edge ; Clock Reference      ;
++----------------+----------------------+--------+--------+------------+----------------------+
+; KEY0           ; clock_gen:inst3|clki ; -3.479 ; -3.479 ; Rise       ; clock_gen:inst3|clki ;
+; sram_data[*]   ; clock_gen:inst3|clki ; -2.534 ; -2.534 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[0]  ; clock_gen:inst3|clki ; -2.772 ; -2.772 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[1]  ; clock_gen:inst3|clki ; -2.770 ; -2.770 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[2]  ; clock_gen:inst3|clki ; -2.800 ; -2.800 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[3]  ; clock_gen:inst3|clki ; -2.727 ; -2.727 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[4]  ; clock_gen:inst3|clki ; -2.855 ; -2.855 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[5]  ; clock_gen:inst3|clki ; -2.717 ; -2.717 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[6]  ; clock_gen:inst3|clki ; -2.776 ; -2.776 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[7]  ; clock_gen:inst3|clki ; -2.686 ; -2.686 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[8]  ; clock_gen:inst3|clki ; -2.703 ; -2.703 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[9]  ; clock_gen:inst3|clki ; -2.726 ; -2.726 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[10] ; clock_gen:inst3|clki ; -2.748 ; -2.748 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[11] ; clock_gen:inst3|clki ; -2.858 ; -2.858 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[12] ; clock_gen:inst3|clki ; -2.859 ; -2.859 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[13] ; clock_gen:inst3|clki ; -2.723 ; -2.723 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[14] ; clock_gen:inst3|clki ; -2.534 ; -2.534 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[15] ; clock_gen:inst3|clki ; -2.644 ; -2.644 ; Fall       ; clock_gen:inst3|clki ;
++----------------+----------------------+--------+--------+------------+----------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                     ;
++----------------+----------------------+-------+-------+------------+----------------------+
+; Data Port      ; Clock Port           ; Rise  ; Fall  ; Clock Edge ; Clock Reference      ;
++----------------+----------------------+-------+-------+------------+----------------------+
+; vga_b[*]       ; clock_gen:inst3|clki ; 3.669 ; 3.669 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[0]      ; clock_gen:inst3|clki ; 3.544 ; 3.544 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[1]      ; clock_gen:inst3|clki ; 3.544 ; 3.544 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[2]      ; clock_gen:inst3|clki ; 3.544 ; 3.544 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[3]      ; clock_gen:inst3|clki ; 3.548 ; 3.548 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[4]      ; clock_gen:inst3|clki ; 3.608 ; 3.608 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[5]      ; clock_gen:inst3|clki ; 3.598 ; 3.598 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[6]      ; clock_gen:inst3|clki ; 3.669 ; 3.669 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[7]      ; clock_gen:inst3|clki ; 3.605 ; 3.605 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[8]      ; clock_gen:inst3|clki ; 3.666 ; 3.666 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[9]      ; clock_gen:inst3|clki ; 3.662 ; 3.662 ; Rise       ; clock_gen:inst3|clki ;
+; vga_blank      ; clock_gen:inst3|clki ; 5.024 ; 5.024 ; Rise       ; clock_gen:inst3|clki ;
+; vga_clk        ; clock_gen:inst3|clki ;       ; 2.742 ; Rise       ; clock_gen:inst3|clki ;
+; vga_g[*]       ; clock_gen:inst3|clki ; 3.458 ; 3.458 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[0]      ; clock_gen:inst3|clki ; 3.360 ; 3.360 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[1]      ; clock_gen:inst3|clki ; 3.358 ; 3.358 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[2]      ; clock_gen:inst3|clki ; 3.350 ; 3.350 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[3]      ; clock_gen:inst3|clki ; 3.350 ; 3.350 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[4]      ; clock_gen:inst3|clki ; 3.455 ; 3.455 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[5]      ; clock_gen:inst3|clki ; 3.458 ; 3.458 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[6]      ; clock_gen:inst3|clki ; 3.414 ; 3.414 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[7]      ; clock_gen:inst3|clki ; 3.434 ; 3.434 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[8]      ; clock_gen:inst3|clki ; 3.445 ; 3.445 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[9]      ; clock_gen:inst3|clki ; 3.445 ; 3.445 ; Rise       ; clock_gen:inst3|clki ;
+; vga_r[*]       ; clock_gen:inst3|clki ; 3.477 ; 3.477 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[0]      ; clock_gen:inst3|clki ; 3.460 ; 3.460 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[1]      ; clock_gen:inst3|clki ; 3.469 ; 3.469 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[2]      ; clock_gen:inst3|clki ; 3.467 ; 3.467 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[3]      ; clock_gen:inst3|clki ; 3.448 ; 3.448 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[4]      ; clock_gen:inst3|clki ; 3.477 ; 3.477 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[5]      ; clock_gen:inst3|clki ; 3.457 ; 3.457 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[6]      ; clock_gen:inst3|clki ; 3.338 ; 3.338 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[7]      ; clock_gen:inst3|clki ; 3.347 ; 3.347 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[8]      ; clock_gen:inst3|clki ; 3.328 ; 3.328 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[9]      ; clock_gen:inst3|clki ; 3.328 ; 3.328 ; Rise       ; clock_gen:inst3|clki ;
+; hsync          ; clock_gen:inst3|clki ; 4.894 ; 4.894 ; Fall       ; clock_gen:inst3|clki ;
+; sram_addr[*]   ; clock_gen:inst3|clki ; 5.001 ; 5.001 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[0]  ; clock_gen:inst3|clki ; 3.479 ; 3.479 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[1]  ; clock_gen:inst3|clki ; 3.391 ; 3.391 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[2]  ; clock_gen:inst3|clki ; 3.372 ; 3.372 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[3]  ; clock_gen:inst3|clki ; 3.370 ; 3.370 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[4]  ; clock_gen:inst3|clki ; 3.370 ; 3.370 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[5]  ; clock_gen:inst3|clki ; 3.371 ; 3.371 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[6]  ; clock_gen:inst3|clki ; 3.965 ; 3.965 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[7]  ; clock_gen:inst3|clki ; 4.099 ; 4.099 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[8]  ; clock_gen:inst3|clki ; 4.331 ; 4.331 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[9]  ; clock_gen:inst3|clki ; 4.389 ; 4.389 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[10] ; clock_gen:inst3|clki ; 4.498 ; 4.498 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[11] ; clock_gen:inst3|clki ; 4.546 ; 4.546 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[12] ; clock_gen:inst3|clki ; 4.594 ; 4.594 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[13] ; clock_gen:inst3|clki ; 4.722 ; 4.722 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[14] ; clock_gen:inst3|clki ; 4.796 ; 4.796 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[15] ; clock_gen:inst3|clki ; 4.831 ; 4.831 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[16] ; clock_gen:inst3|clki ; 4.897 ; 4.897 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[17] ; clock_gen:inst3|clki ; 5.001 ; 5.001 ; Fall       ; clock_gen:inst3|clki ;
+; vga_clk        ; clock_gen:inst3|clki ; 2.742 ;       ; Fall       ; clock_gen:inst3|clki ;
+; vsync          ; clock_gen:inst3|clki ; 4.918 ; 4.918 ; Fall       ; clock_gen:inst3|clki ;
++----------------+----------------------+-------+-------+------------+----------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                             ;
++----------------+----------------------+-------+-------+------------+----------------------+
+; Data Port      ; Clock Port           ; Rise  ; Fall  ; Clock Edge ; Clock Reference      ;
++----------------+----------------------+-------+-------+------------+----------------------+
+; vga_b[*]       ; clock_gen:inst3|clki ; 3.544 ; 3.544 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[0]      ; clock_gen:inst3|clki ; 3.544 ; 3.544 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[1]      ; clock_gen:inst3|clki ; 3.544 ; 3.544 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[2]      ; clock_gen:inst3|clki ; 3.544 ; 3.544 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[3]      ; clock_gen:inst3|clki ; 3.548 ; 3.548 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[4]      ; clock_gen:inst3|clki ; 3.608 ; 3.608 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[5]      ; clock_gen:inst3|clki ; 3.598 ; 3.598 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[6]      ; clock_gen:inst3|clki ; 3.669 ; 3.669 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[7]      ; clock_gen:inst3|clki ; 3.605 ; 3.605 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[8]      ; clock_gen:inst3|clki ; 3.666 ; 3.666 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[9]      ; clock_gen:inst3|clki ; 3.662 ; 3.662 ; Rise       ; clock_gen:inst3|clki ;
+; vga_blank      ; clock_gen:inst3|clki ; 5.024 ; 5.024 ; Rise       ; clock_gen:inst3|clki ;
+; vga_clk        ; clock_gen:inst3|clki ;       ; 2.742 ; Rise       ; clock_gen:inst3|clki ;
+; vga_g[*]       ; clock_gen:inst3|clki ; 3.350 ; 3.350 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[0]      ; clock_gen:inst3|clki ; 3.360 ; 3.360 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[1]      ; clock_gen:inst3|clki ; 3.358 ; 3.358 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[2]      ; clock_gen:inst3|clki ; 3.350 ; 3.350 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[3]      ; clock_gen:inst3|clki ; 3.350 ; 3.350 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[4]      ; clock_gen:inst3|clki ; 3.455 ; 3.455 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[5]      ; clock_gen:inst3|clki ; 3.458 ; 3.458 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[6]      ; clock_gen:inst3|clki ; 3.414 ; 3.414 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[7]      ; clock_gen:inst3|clki ; 3.434 ; 3.434 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[8]      ; clock_gen:inst3|clki ; 3.445 ; 3.445 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[9]      ; clock_gen:inst3|clki ; 3.445 ; 3.445 ; Rise       ; clock_gen:inst3|clki ;
+; vga_r[*]       ; clock_gen:inst3|clki ; 3.328 ; 3.328 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[0]      ; clock_gen:inst3|clki ; 3.460 ; 3.460 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[1]      ; clock_gen:inst3|clki ; 3.469 ; 3.469 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[2]      ; clock_gen:inst3|clki ; 3.467 ; 3.467 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[3]      ; clock_gen:inst3|clki ; 3.448 ; 3.448 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[4]      ; clock_gen:inst3|clki ; 3.477 ; 3.477 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[5]      ; clock_gen:inst3|clki ; 3.457 ; 3.457 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[6]      ; clock_gen:inst3|clki ; 3.338 ; 3.338 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[7]      ; clock_gen:inst3|clki ; 3.347 ; 3.347 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[8]      ; clock_gen:inst3|clki ; 3.328 ; 3.328 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[9]      ; clock_gen:inst3|clki ; 3.328 ; 3.328 ; Rise       ; clock_gen:inst3|clki ;
+; hsync          ; clock_gen:inst3|clki ; 4.894 ; 4.894 ; Fall       ; clock_gen:inst3|clki ;
+; sram_addr[*]   ; clock_gen:inst3|clki ; 3.370 ; 3.370 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[0]  ; clock_gen:inst3|clki ; 3.479 ; 3.479 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[1]  ; clock_gen:inst3|clki ; 3.391 ; 3.391 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[2]  ; clock_gen:inst3|clki ; 3.372 ; 3.372 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[3]  ; clock_gen:inst3|clki ; 3.370 ; 3.370 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[4]  ; clock_gen:inst3|clki ; 3.370 ; 3.370 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[5]  ; clock_gen:inst3|clki ; 3.371 ; 3.371 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[6]  ; clock_gen:inst3|clki ; 3.964 ; 3.964 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[7]  ; clock_gen:inst3|clki ; 3.949 ; 3.949 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[8]  ; clock_gen:inst3|clki ; 3.919 ; 3.919 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[9]  ; clock_gen:inst3|clki ; 3.975 ; 3.975 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[10] ; clock_gen:inst3|clki ; 3.998 ; 3.998 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[11] ; clock_gen:inst3|clki ; 4.043 ; 4.043 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[12] ; clock_gen:inst3|clki ; 4.073 ; 4.073 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[13] ; clock_gen:inst3|clki ; 4.143 ; 4.143 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[14] ; clock_gen:inst3|clki ; 4.272 ; 4.272 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[15] ; clock_gen:inst3|clki ; 4.279 ; 4.279 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[16] ; clock_gen:inst3|clki ; 4.295 ; 4.295 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[17] ; clock_gen:inst3|clki ; 4.200 ; 4.200 ; Fall       ; clock_gen:inst3|clki ;
+; vga_clk        ; clock_gen:inst3|clki ; 2.742 ;       ; Fall       ; clock_gen:inst3|clki ;
+; vsync          ; clock_gen:inst3|clki ; 4.918 ; 4.918 ; Fall       ; clock_gen:inst3|clki ;
++----------------+----------------------+-------+-------+------------+----------------------+
+
+
++-------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                 ;
++-----------------------+---------+--------+----------+---------+---------------------+
+; Clock                 ; Setup   ; Hold   ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------+---------+--------+----------+---------+---------------------+
+; Worst-case Slack      ; -2.065  ; -1.726 ; N/A      ; N/A     ; -1.380              ;
+;  clock_gen:inst3|clki ; -2.065  ; 0.215  ; N/A      ; N/A     ; -0.500              ;
+;  fpga_clk             ; 1.353   ; -1.726 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS       ; -72.223 ; -1.726 ; 0.0      ; 0.0     ; -64.38              ;
+;  clock_gen:inst3|clki ; -72.223 ; 0.000  ; N/A      ; N/A     ; -62.000             ;
+;  fpga_clk             ; 0.000   ; -1.726 ; N/A      ; N/A     ; -2.380              ;
++-----------------------+---------+--------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Setup Times                                                                               ;
++----------------+----------------------+-------+-------+------------+----------------------+
+; Data Port      ; Clock Port           ; Rise  ; Fall  ; Clock Edge ; Clock Reference      ;
++----------------+----------------------+-------+-------+------------+----------------------+
+; KEY0           ; clock_gen:inst3|clki ; 6.513 ; 6.513 ; Rise       ; clock_gen:inst3|clki ;
+; sram_data[*]   ; clock_gen:inst3|clki ; 5.511 ; 5.511 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[0]  ; clock_gen:inst3|clki ; 5.277 ; 5.277 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[1]  ; clock_gen:inst3|clki ; 5.316 ; 5.316 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[2]  ; clock_gen:inst3|clki ; 5.374 ; 5.374 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[3]  ; clock_gen:inst3|clki ; 5.268 ; 5.268 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[4]  ; clock_gen:inst3|clki ; 5.511 ; 5.511 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[5]  ; clock_gen:inst3|clki ; 5.276 ; 5.276 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[6]  ; clock_gen:inst3|clki ; 5.397 ; 5.397 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[7]  ; clock_gen:inst3|clki ; 5.197 ; 5.197 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[8]  ; clock_gen:inst3|clki ; 5.183 ; 5.183 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[9]  ; clock_gen:inst3|clki ; 5.215 ; 5.215 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[10] ; clock_gen:inst3|clki ; 5.251 ; 5.251 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[11] ; clock_gen:inst3|clki ; 5.435 ; 5.435 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[12] ; clock_gen:inst3|clki ; 5.440 ; 5.440 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[13] ; clock_gen:inst3|clki ; 5.228 ; 5.228 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[14] ; clock_gen:inst3|clki ; 4.819 ; 4.819 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[15] ; clock_gen:inst3|clki ; 5.048 ; 5.048 ; Fall       ; clock_gen:inst3|clki ;
++----------------+----------------------+-------+-------+------------+----------------------+
+
+
++---------------------------------------------------------------------------------------------+
+; Hold Times                                                                                  ;
++----------------+----------------------+--------+--------+------------+----------------------+
+; Data Port      ; Clock Port           ; Rise   ; Fall   ; Clock Edge ; Clock Reference      ;
++----------------+----------------------+--------+--------+------------+----------------------+
+; KEY0           ; clock_gen:inst3|clki ; -3.479 ; -3.479 ; Rise       ; clock_gen:inst3|clki ;
+; sram_data[*]   ; clock_gen:inst3|clki ; -2.534 ; -2.534 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[0]  ; clock_gen:inst3|clki ; -2.772 ; -2.772 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[1]  ; clock_gen:inst3|clki ; -2.770 ; -2.770 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[2]  ; clock_gen:inst3|clki ; -2.800 ; -2.800 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[3]  ; clock_gen:inst3|clki ; -2.727 ; -2.727 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[4]  ; clock_gen:inst3|clki ; -2.855 ; -2.855 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[5]  ; clock_gen:inst3|clki ; -2.717 ; -2.717 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[6]  ; clock_gen:inst3|clki ; -2.776 ; -2.776 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[7]  ; clock_gen:inst3|clki ; -2.686 ; -2.686 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[8]  ; clock_gen:inst3|clki ; -2.703 ; -2.703 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[9]  ; clock_gen:inst3|clki ; -2.726 ; -2.726 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[10] ; clock_gen:inst3|clki ; -2.748 ; -2.748 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[11] ; clock_gen:inst3|clki ; -2.858 ; -2.858 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[12] ; clock_gen:inst3|clki ; -2.859 ; -2.859 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[13] ; clock_gen:inst3|clki ; -2.723 ; -2.723 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[14] ; clock_gen:inst3|clki ; -2.534 ; -2.534 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_data[15] ; clock_gen:inst3|clki ; -2.644 ; -2.644 ; Fall       ; clock_gen:inst3|clki ;
++----------------+----------------------+--------+--------+------------+----------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Clock to Output Times                                                                     ;
++----------------+----------------------+-------+-------+------------+----------------------+
+; Data Port      ; Clock Port           ; Rise  ; Fall  ; Clock Edge ; Clock Reference      ;
++----------------+----------------------+-------+-------+------------+----------------------+
+; vga_b[*]       ; clock_gen:inst3|clki ; 6.567 ; 6.567 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[0]      ; clock_gen:inst3|clki ; 6.319 ; 6.319 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[1]      ; clock_gen:inst3|clki ; 6.318 ; 6.318 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[2]      ; clock_gen:inst3|clki ; 6.316 ; 6.316 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[3]      ; clock_gen:inst3|clki ; 6.330 ; 6.330 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[4]      ; clock_gen:inst3|clki ; 6.382 ; 6.382 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[5]      ; clock_gen:inst3|clki ; 6.374 ; 6.374 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[6]      ; clock_gen:inst3|clki ; 6.566 ; 6.566 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[7]      ; clock_gen:inst3|clki ; 6.393 ; 6.393 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[8]      ; clock_gen:inst3|clki ; 6.567 ; 6.567 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[9]      ; clock_gen:inst3|clki ; 6.560 ; 6.560 ; Rise       ; clock_gen:inst3|clki ;
+; vga_blank      ; clock_gen:inst3|clki ; 9.350 ; 9.350 ; Rise       ; clock_gen:inst3|clki ;
+; vga_clk        ; clock_gen:inst3|clki ;       ; 5.182 ; Rise       ; clock_gen:inst3|clki ;
+; vga_g[*]       ; clock_gen:inst3|clki ; 6.099 ; 6.099 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[0]      ; clock_gen:inst3|clki ; 5.878 ; 5.878 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[1]      ; clock_gen:inst3|clki ; 5.877 ; 5.877 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[2]      ; clock_gen:inst3|clki ; 5.870 ; 5.870 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[3]      ; clock_gen:inst3|clki ; 5.868 ; 5.868 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[4]      ; clock_gen:inst3|clki ; 6.096 ; 6.096 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[5]      ; clock_gen:inst3|clki ; 6.099 ; 6.099 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[6]      ; clock_gen:inst3|clki ; 6.053 ; 6.053 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[7]      ; clock_gen:inst3|clki ; 6.074 ; 6.074 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[8]      ; clock_gen:inst3|clki ; 6.084 ; 6.084 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[9]      ; clock_gen:inst3|clki ; 6.082 ; 6.082 ; Rise       ; clock_gen:inst3|clki ;
+; vga_r[*]       ; clock_gen:inst3|clki ; 6.136 ; 6.136 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[0]      ; clock_gen:inst3|clki ; 6.103 ; 6.103 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[1]      ; clock_gen:inst3|clki ; 6.130 ; 6.130 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[2]      ; clock_gen:inst3|clki ; 6.127 ; 6.127 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[3]      ; clock_gen:inst3|clki ; 6.087 ; 6.087 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[4]      ; clock_gen:inst3|clki ; 6.136 ; 6.136 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[5]      ; clock_gen:inst3|clki ; 6.099 ; 6.099 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[6]      ; clock_gen:inst3|clki ; 5.857 ; 5.857 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[7]      ; clock_gen:inst3|clki ; 5.866 ; 5.866 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[8]      ; clock_gen:inst3|clki ; 5.846 ; 5.846 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[9]      ; clock_gen:inst3|clki ; 5.847 ; 5.847 ; Rise       ; clock_gen:inst3|clki ;
+; hsync          ; clock_gen:inst3|clki ; 9.080 ; 9.080 ; Fall       ; clock_gen:inst3|clki ;
+; sram_addr[*]   ; clock_gen:inst3|clki ; 9.694 ; 9.694 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[0]  ; clock_gen:inst3|clki ; 6.120 ; 6.120 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[1]  ; clock_gen:inst3|clki ; 5.921 ; 5.921 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[2]  ; clock_gen:inst3|clki ; 5.900 ; 5.900 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[3]  ; clock_gen:inst3|clki ; 5.896 ; 5.896 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[4]  ; clock_gen:inst3|clki ; 5.896 ; 5.896 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[5]  ; clock_gen:inst3|clki ; 5.898 ; 5.898 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[6]  ; clock_gen:inst3|clki ; 7.256 ; 7.256 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[7]  ; clock_gen:inst3|clki ; 7.637 ; 7.637 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[8]  ; clock_gen:inst3|clki ; 8.151 ; 8.151 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[9]  ; clock_gen:inst3|clki ; 8.335 ; 8.335 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[10] ; clock_gen:inst3|clki ; 8.660 ; 8.660 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[11] ; clock_gen:inst3|clki ; 8.744 ; 8.744 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[12] ; clock_gen:inst3|clki ; 8.857 ; 8.857 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[13] ; clock_gen:inst3|clki ; 9.048 ; 9.048 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[14] ; clock_gen:inst3|clki ; 9.282 ; 9.282 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[15] ; clock_gen:inst3|clki ; 9.352 ; 9.352 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[16] ; clock_gen:inst3|clki ; 9.455 ; 9.455 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[17] ; clock_gen:inst3|clki ; 9.694 ; 9.694 ; Fall       ; clock_gen:inst3|clki ;
+; vga_clk        ; clock_gen:inst3|clki ; 5.182 ;       ; Fall       ; clock_gen:inst3|clki ;
+; vsync          ; clock_gen:inst3|clki ; 9.114 ; 9.114 ; Fall       ; clock_gen:inst3|clki ;
++----------------+----------------------+-------+-------+------------+----------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Minimum Clock to Output Times                                                             ;
++----------------+----------------------+-------+-------+------------+----------------------+
+; Data Port      ; Clock Port           ; Rise  ; Fall  ; Clock Edge ; Clock Reference      ;
++----------------+----------------------+-------+-------+------------+----------------------+
+; vga_b[*]       ; clock_gen:inst3|clki ; 3.544 ; 3.544 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[0]      ; clock_gen:inst3|clki ; 3.544 ; 3.544 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[1]      ; clock_gen:inst3|clki ; 3.544 ; 3.544 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[2]      ; clock_gen:inst3|clki ; 3.544 ; 3.544 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[3]      ; clock_gen:inst3|clki ; 3.548 ; 3.548 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[4]      ; clock_gen:inst3|clki ; 3.608 ; 3.608 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[5]      ; clock_gen:inst3|clki ; 3.598 ; 3.598 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[6]      ; clock_gen:inst3|clki ; 3.669 ; 3.669 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[7]      ; clock_gen:inst3|clki ; 3.605 ; 3.605 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[8]      ; clock_gen:inst3|clki ; 3.666 ; 3.666 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_b[9]      ; clock_gen:inst3|clki ; 3.662 ; 3.662 ; Rise       ; clock_gen:inst3|clki ;
+; vga_blank      ; clock_gen:inst3|clki ; 5.024 ; 5.024 ; Rise       ; clock_gen:inst3|clki ;
+; vga_clk        ; clock_gen:inst3|clki ;       ; 2.742 ; Rise       ; clock_gen:inst3|clki ;
+; vga_g[*]       ; clock_gen:inst3|clki ; 3.350 ; 3.350 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[0]      ; clock_gen:inst3|clki ; 3.360 ; 3.360 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[1]      ; clock_gen:inst3|clki ; 3.358 ; 3.358 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[2]      ; clock_gen:inst3|clki ; 3.350 ; 3.350 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[3]      ; clock_gen:inst3|clki ; 3.350 ; 3.350 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[4]      ; clock_gen:inst3|clki ; 3.455 ; 3.455 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[5]      ; clock_gen:inst3|clki ; 3.458 ; 3.458 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[6]      ; clock_gen:inst3|clki ; 3.414 ; 3.414 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[7]      ; clock_gen:inst3|clki ; 3.434 ; 3.434 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[8]      ; clock_gen:inst3|clki ; 3.445 ; 3.445 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_g[9]      ; clock_gen:inst3|clki ; 3.445 ; 3.445 ; Rise       ; clock_gen:inst3|clki ;
+; vga_r[*]       ; clock_gen:inst3|clki ; 3.328 ; 3.328 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[0]      ; clock_gen:inst3|clki ; 3.460 ; 3.460 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[1]      ; clock_gen:inst3|clki ; 3.469 ; 3.469 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[2]      ; clock_gen:inst3|clki ; 3.467 ; 3.467 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[3]      ; clock_gen:inst3|clki ; 3.448 ; 3.448 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[4]      ; clock_gen:inst3|clki ; 3.477 ; 3.477 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[5]      ; clock_gen:inst3|clki ; 3.457 ; 3.457 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[6]      ; clock_gen:inst3|clki ; 3.338 ; 3.338 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[7]      ; clock_gen:inst3|clki ; 3.347 ; 3.347 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[8]      ; clock_gen:inst3|clki ; 3.328 ; 3.328 ; Rise       ; clock_gen:inst3|clki ;
+;  vga_r[9]      ; clock_gen:inst3|clki ; 3.328 ; 3.328 ; Rise       ; clock_gen:inst3|clki ;
+; hsync          ; clock_gen:inst3|clki ; 4.894 ; 4.894 ; Fall       ; clock_gen:inst3|clki ;
+; sram_addr[*]   ; clock_gen:inst3|clki ; 3.370 ; 3.370 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[0]  ; clock_gen:inst3|clki ; 3.479 ; 3.479 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[1]  ; clock_gen:inst3|clki ; 3.391 ; 3.391 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[2]  ; clock_gen:inst3|clki ; 3.372 ; 3.372 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[3]  ; clock_gen:inst3|clki ; 3.370 ; 3.370 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[4]  ; clock_gen:inst3|clki ; 3.370 ; 3.370 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[5]  ; clock_gen:inst3|clki ; 3.371 ; 3.371 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[6]  ; clock_gen:inst3|clki ; 3.964 ; 3.964 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[7]  ; clock_gen:inst3|clki ; 3.949 ; 3.949 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[8]  ; clock_gen:inst3|clki ; 3.919 ; 3.919 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[9]  ; clock_gen:inst3|clki ; 3.975 ; 3.975 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[10] ; clock_gen:inst3|clki ; 3.998 ; 3.998 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[11] ; clock_gen:inst3|clki ; 4.043 ; 4.043 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[12] ; clock_gen:inst3|clki ; 4.073 ; 4.073 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[13] ; clock_gen:inst3|clki ; 4.143 ; 4.143 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[14] ; clock_gen:inst3|clki ; 4.272 ; 4.272 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[15] ; clock_gen:inst3|clki ; 4.279 ; 4.279 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[16] ; clock_gen:inst3|clki ; 4.295 ; 4.295 ; Fall       ; clock_gen:inst3|clki ;
+;  sram_addr[17] ; clock_gen:inst3|clki ; 4.200 ; 4.200 ; Fall       ; clock_gen:inst3|clki ;
+; vga_clk        ; clock_gen:inst3|clki ; 2.742 ;       ; Fall       ; clock_gen:inst3|clki ;
+; vsync          ; clock_gen:inst3|clki ; 4.918 ; 4.918 ; Fall       ; clock_gen:inst3|clki ;
++----------------+----------------------+-------+-------+------------+----------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Setup Transfers                                                                         ;
++----------------------+----------------------+----------+----------+----------+----------+
+; From Clock           ; To Clock             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------+----------------------+----------+----------+----------+----------+
+; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0        ; 85       ; 0        ; 466      ;
+; clock_gen:inst3|clki ; fpga_clk             ; 1        ; 1        ; 0        ; 0        ;
++----------------------+----------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------+
+; Hold Transfers                                                                          ;
++----------------------+----------------------+----------+----------+----------+----------+
+; From Clock           ; To Clock             ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------+----------------------+----------+----------+----------+----------+
+; clock_gen:inst3|clki ; clock_gen:inst3|clki ; 0        ; 85       ; 0        ; 466      ;
+; clock_gen:inst3|clki ; fpga_clk             ; 1        ; 1        ; 0        ; 0        ;
++----------------------+----------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 17    ; 17   ;
+; Unconstrained Input Port Paths  ; 78    ; 78   ;
+; Unconstrained Output Ports      ; 52    ; 52   ;
+; Unconstrained Output Port Paths ; 148   ; 148  ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
+    Info: Processing started: Wed Sep 23 20:18:15 2015
+Info: Command: quartus_sta VGA_contr -c VGA_contr
+Info: qsta_default_script.tcl version: #1
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'VGA_contr.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock_gen:inst3|clki clock_gen:inst3|clki
+    Info (332105): create_clock -period 1.000 -name fpga_clk fpga_clk
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -2.065
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -2.065       -72.223 clock_gen:inst3|clki 
+    Info (332119):     1.996         0.000 fpga_clk 
+Info (332146): Worst-case hold slack is -1.726
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.726        -1.726 fpga_clk 
+    Info (332119):     0.391         0.000 clock_gen:inst3|clki 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -2.380 fpga_clk 
+    Info (332119):    -0.500       -62.000 clock_gen:inst3|clki 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -0.521
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.521       -10.371 clock_gen:inst3|clki 
+    Info (332119):     1.353         0.000 fpga_clk 
+Info (332146): Worst-case hold slack is -0.973
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -0.973        -0.973 fpga_clk 
+    Info (332119):     0.215         0.000 clock_gen:inst3|clki 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380        -2.380 fpga_clk 
+    Info (332119):    -0.500       -62.000 clock_gen:inst3|clki 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 451 megabytes
+    Info: Processing ended: Wed Sep 23 20:18:35 2015
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:02
+
+

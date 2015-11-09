@@ -1,0 +1,58 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity RAM_control is
+  Port ( clk,rstn   : in std_logic;
+         hcnt,vcnt   : in unsigned(9 downto 0);
+         blank       : in std_logic; -- same pipeline stage as hcnt,vcnt.
+         up_lo_byte  : out std_logic; -- '0' <=> read lo byte.
+         -- RAM signals
+         addr                    : out unsigned(17 downto 0);
+         sram_ce, sram_oe,sram_we : out std_logic;
+         sram_lb,sram_ub         : out std_logic);
+end RAM_control;
+
+architecture rtl of RAM_control is
+--signal addr_cnt : unsigned(17 downto 0);
+--signal pixelindex : unsigned(19 downto 0) := "00000000000000000000";
+signal addri : unsigned(18 downto 0);
+begin
+sram_ce <='0'; 
+sram_oe <='0';
+sram_we <='1';
+sram_lb <='0';
+sram_ub <='0'; --ayylmao
+
+
+
+  addri <= resize((vcnt*640+hcnt),19);
+  addr <= resize(shift_right(addri,1),18);
+  up_lo_byte <= hcnt(0); 
+  
+--addr <= addri;
+
+--process(clk,rstn)
+--begin
+--if (rstn='0') then
+--    pixelindex <= "00000000000000000000";
+--    addr_cnt <= (others => '0'); 
+--end if; 
+--if (blank = '1') then 
+--	if (hcnt(0) = '0') then
+--		pixelindex <= pixelindex + 1;  
+--		up_lo_byte <= '0';
+--	else
+--	  addr_cnt <= addr_cnt + 1;
+--  		pixelindex <= pixelindex + 1;  
+--		up_loup_lo_byte clk rstn_byte <= '1';
+--	end if;
+--end if;
+
+--if(pixelindex = 307199)  then 
+--  addr_cnt <= (others => '0'); 
+--end if; 
+--end process;
+--addr <= addr_cnt;
+
+end rtl;

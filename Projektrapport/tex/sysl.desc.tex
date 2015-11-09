@@ -13,7 +13,7 @@ Whereas \texttt{Keyboard} and \texttt{Analysis} already are fairly small and mon
 
 \texttt{Keyboard} handles the PS/2 keyboard user input. The module filters break scan codes (F0$_{16}$, XX$_{16}$) bytewise (11 bit/byte) and compares the XX$_{16}$ byte (\emph{iff} directly preceeded by F0$_{16}$) to the control key values. This approach will allow the system to respond to the regular keys (ARROW keys and END) as well as corresponding numeric keypad keys as initial E0$_{16}$ bytes are discarded. Upon a registered valid key release, a 5-bit control signal (\verb=kb_input=) is sent for a single clock cycle to \texttt{Vol\_Bal}.
 
-\texttt{Analysis} reads the \verb=ADC= signals and lowpass filters these with a saturation time of approximately 100 ms (4096 clock cycles). These signals are converted to a graph height (in pixels) and passed on to \verb=bar_tender=.
+\texttt{Analysis} reads the \verb=ADC= signals, takes the absolute value (by squaring the value) and low-pass filters these values with a saturation time of approximately 100 ms (4096 samples) (See also \emph{\ref{sec:just.anal} Justification Analysis}). The filtered signals are converted to a graph height (0 to 171 pixels) (see \ref{sec:just.anal}) and passed on to \verb=bar_tender=.
 
 \texttt{Snd\_Driver} have the three submodules \verb=Snd_Driver:{Ctrl,Channel_Mod}= if we count the two instances of \texttt{Channel\_Mod}. These are verbatim copies of \emph{Laboration 4}. The only difference is that the outputs are sent to GPIO pins (and from there via an i2c adapter to the class-D amp) as well as back to the WM8731 codec.
 

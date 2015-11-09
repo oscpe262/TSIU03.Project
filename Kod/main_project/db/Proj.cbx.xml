@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="Proj">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Proj|Analysis:inst_post_adjustment|lpm_mult:Mult0" CBX_FILE_NAME="mult_h1t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Proj|VGA_Driver:inst5|bar_tender:inst_bar_tender|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_oah.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Proj|Vol_Bal:inst1|Balance_Adjustment:inst2|lpm_mult:Mult1" CBX_FILE_NAME="mult_vvs.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Proj|Analysis:inst_post_adjustment|lpm_mult:Mult1" CBX_FILE_NAME="mult_h1t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Proj|Analysis:inst_pre_adjustment|lpm_mult:Mult0" CBX_FILE_NAME="mult_h1t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Proj|VGA_Driver:inst5|bar_tender:inst_bar_tender|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_oah.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Proj|VGA_Driver:inst5|bar_tender:inst_bar_tender|lpm_mult:Mult2|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_3ch.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Proj|Vol_Bal:inst1|Balance_Adjustment:inst2|lpm_mult:Mult0" CBX_FILE_NAME="mult_vvs.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Proj|Analysis:inst_pre_adjustment|lpm_mult:Mult1" CBX_FILE_NAME="mult_h1t.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Proj|VGA_Driver:inst5|bar_tender:inst_bar_tender|lpm_mult:Mult1|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]" CBX_FILE_NAME="add_sub_3ch.tdf"/>
+	</PROJECT>
+</LOG_ROOT>

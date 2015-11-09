@@ -1,0 +1,17 @@
+# Current time Thu Oct 29 13:59:36 2015
+# ModelSim Stack Trace
+# Program = vish
+# Id = "10.1b"
+# Version = "2012.04"
+# Date = "Apr 27 2012"
+# Platform = win64
+
+Exception c0000005 has occurred at address 0209221b. Traceback:
+# 0    0x0209221b: 'Itk_UsualCmd + 0x100b'
+# 1    0x0af9adc2: '<unknown (@0xaf9adc2)>'
+# 2    0x0c4acda0: '<unknown (@0xc4acda0)>'
+# 3    0x02a84fb0: '<unknown (@0x2a84fb0)>'
+# 4    0x02a84fb0: '<unknown (@0x2a84fb0)>'
+StackWalk failed 487
+# End of Stack Trace
+

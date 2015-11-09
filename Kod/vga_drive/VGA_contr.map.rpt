@@ -1,0 +1,215 @@
+Analysis & Elaboration report for VGA_contr
+Thu Oct 22 13:27:44 2015
+Quartus II 64-Bit Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Elaboration Summary
+  3. Parallel Compilation
+  4. Analysis & Elaboration Settings
+  5. Analysis & Elaboration Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2012 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; Analysis & Elaboration Summary                                                         ;
++------------------------------------+---------------------------------------------------+
+; Analysis & Elaboration Status      ; Failed - Thu Oct 22 13:27:44 2015                 ;
+; Quartus II 64-Bit Version          ; 12.1 Build 243 01/31/2013 SP 1.33 SJ Full Version ;
+; Revision Name                      ; VGA_contr                                         ;
+; Top-level Entity Name              ; VGA_contr                                         ;
+; Family                             ; Cyclone II                                        ;
+; Total logic elements               ; N/A until Partition Merge                         ;
+;     Total combinational functions  ; N/A until Partition Merge                         ;
+;     Dedicated logic registers      ; N/A until Partition Merge                         ;
+; Total registers                    ; N/A until Partition Merge                         ;
+; Total pins                         ; N/A until Partition Merge                         ;
+; Total virtual pins                 ; N/A until Partition Merge                         ;
+; Total memory bits                  ; N/A until Partition Merge                         ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                         ;
+; Total PLLs                         ; N/A until Partition Merge                         ;
++------------------------------------+---------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     1 processor            ; 100.0%      ;
+;     2-4 processors         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Elaboration Settings                                                                                      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; EP2C35F672C6       ;                    ;
+; Top-level entity name                                                      ; VGA_contr          ; VGA_contr          ;
+; Family name                                                                ; Cyclone II         ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; Off                ; Off                ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++---------------------------------+
+; Analysis & Elaboration Messages ;
++---------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Elaboration
+    Info: Version 12.1 Build 243 01/31/2013 Service Pack 1.33 SJ Full Version
+    Info: Processing started: Thu Oct 22 13:27:31 2015
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off VGA_contr -c VGA_contr --analysis_and_elaboration
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file vga_contr.bdf
+    Info (12023): Found entity 1: VGA_contr
+Info (12021): Found 2 design units, including 1 entities, in source file pixelcounter.vhd
+    Info (12022): Found design unit 1: pixelcounter-rtl
+    Info (12023): Found entity 1: pixelcounter
+Info (12021): Found 2 design units, including 1 entities, in source file hsyncr.vhd
+    Info (12022): Found design unit 1: hsyncr-rtl
+    Info (12023): Found entity 1: hsyncr
+Info (12021): Found 2 design units, including 1 entities, in source file linecounter.vhd
+    Info (12022): Found design unit 1: linecounter-rtl
+    Info (12023): Found entity 1: linecounter
+Info (12021): Found 2 design units, including 1 entities, in source file vsyncr.vhd
+    Info (12022): Found design unit 1: vsyncr-rtl
+    Info (12023): Found entity 1: vsyncr
+Info (12021): Found 2 design units, including 1 entities, in source file ram_control.vhd
+    Info (12022): Found design unit 1: RAM_control-rtl
+    Info (12023): Found entity 1: RAM_control
+Info (12021): Found 2 design units, including 1 entities, in source file blank_video.vhd
+    Info (12022): Found design unit 1: blank_video-rtl
+    Info (12023): Found entity 1: blank_video
+Info (12021): Found 2 design units, including 1 entities, in source file blank_syncr.vhd
+    Info (12022): Found design unit 1: blank_syncr-rtl
+    Info (12023): Found entity 1: blank_syncr
+Info (12021): Found 2 design units, including 1 entities, in source file pixel_reg.vhd
+    Info (12022): Found design unit 1: pixel_reg-rtl
+    Info (12023): Found entity 1: pixel_reg
+Info (12021): Found 2 design units, including 1 entities, in source file vga_gen.vhd
+    Info (12022): Found design unit 1: vga_gen-behave
+    Info (12023): Found entity 1: vga_gen
+Info (12021): Found 2 design units, including 1 entities, in source file clock_gen.vhd
+    Info (12022): Found design unit 1: clock_gen-rtl
+    Info (12023): Found entity 1: clock_gen
+Info (12021): Found 2 design units, including 1 entities, in source file group_no.vhd
+    Info (12022): Found design unit 1: group_no-foo
+    Info (12023): Found entity 1: group_no
+Info (12021): Found 2 design units, including 1 entities, in source file bar_tender.vhd
+    Info (12022): Found design unit 1: bar_tender-rtl
+    Info (12023): Found entity 1: bar_tender
+Info (12021): Found 2 design units, including 1 entities, in source file bar_mixer.vhd
+    Info (12022): Found design unit 1: bar_mixer-rtl
+    Info (12023): Found entity 1: bar_mixer
+Error (10482): VHDL error at bar_tender.vhd(55): object ""22"" is used but not declared File: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd Line: 55
+Error: Quartus II 64-Bit Analysis & Elaboration was unsuccessful. 1 error, 0 warnings
+    Error: Peak virtual memory: 486 megabytes
+    Error: Processing ended: Thu Oct 22 13:27:44 2015
+    Error: Elapsed time: 00:00:13
+    Error: Total CPU time (on all processors): 00:00:02
+
+

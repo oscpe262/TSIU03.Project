@@ -1,0 +1,11 @@
+-- Author: 			Matteus Laurent
+-- Last update: 	20 October 2015
+-- Description:	Volume_Adjustment submodule in the Grupp41 system.
+--						Adjusts incoming {L/R}ADC signals according to registered
+--						system level of volume.
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity Volume_Adjustment

@@ -1,0 +1,324 @@
+U:/es/projects/projgroup41/vga_drive/linecounter.vhd {1 {vcom -work work -2002 -explicit -vopt U:/es/projects/projgroup41/vga_drive/linecounter.vhd
+Model Technology ModelSim SE-64 vcom 10.1b Compiler 2012.04 Apr 26 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity linecounter
+-- Compiling architecture rtl of linecounter
+
+} {} {}} U:/es/projects/projgroup41/vga_drive/bar_mixer.vhd {0 {vcom -work work -2002 -explicit -vopt U:/es/projects/projgroup41/vga_drive/bar_mixer.vhd
+Model Technology ModelSim SE-64 vcom 10.1b Compiler 2012.04 Apr 26 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+Model Technology ModelSim SE-64 vcom 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling entity clock_gen
+** Warning: (vcom-6) -- Waiting for lock by "johle727@TELEKOM3-15, pid = 3120
+". Lockfile is "U:/es/projects/projgroup41/vga_drive/work/_lock".
+
+-- Compiling architecture rtl of clock_gen
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity bar_mixer
+** Error: U:/es/projects/projgroup41/vga_drive/bar_mixer.vhd(11): (vcom-1136) Unknown identifier "unsigned".
+
+** Error: U:/es/projects/projgroup41/vga_drive/bar_mixer.vhd(12): (vcom-1136) Unknown identifier "unsigned".
+
+** Error: U:/es/projects/projgroup41/vga_drive/bar_mixer.vhd(13): (vcom-1136) Unknown identifier "unsigned".
+
+** Error: U:/es/projects/projgroup41/vga_drive/bar_mixer.vhd(16): (vcom-1136) Unknown identifier "unsigned".
+
+** Error: U:/es/projects/projgroup41/vga_drive/bar_mixer.vhd(17): (vcom-1136) Unknown identifier "unsigned".
+
+** Error: U:/es/projects/projgroup41/vga_drive/bar_mixer.vhd(18): (vcom-1136) Unknown identifier "unsigned".
+
+** Error: U:/es/projects/projgroup41/vga_drive/bar_mixer.vhd(20): VHDL Compiler exiting
+
+} {17.0 18.0 19.0 20.0 21.0 22.0 23.0 24.0 25.0 26.0 27.0 28.0 29.0 30.0} {}} U:/es/projects/projgroup41/vga_drive/group_no.vhd {1 {vcom -work work -2002 -explicit -vopt U:/es/projects/projgroup41/vga_drive/group_no.vhd
+Model Technology ModelSim SE-64 vcom 10.1b Compiler 2012.04 Apr 26 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity group_no
+-- Compiling architecture foo of group_no
+
+} {} {}} U:/es/projects/projgroup41/vga_drive/VGA_contr.vhd {1 {vcom -work work -2002 -explicit -vopt U:/es/projects/projgroup41/vga_drive/VGA_contr.vhd
+Model Technology ModelSim SE-64 vcom 10.1b Compiler 2012.04 Apr 26 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity VGA_contr
+-- Compiling architecture bdf_type of VGA_contr
+
+} {} {}} U:/es/projects/projgroup41/vga_drive/clock_gen.vhd {0 {vcom -work work -2002 -explicit -vopt U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd
+Model Technology ModelSim SE-64 vcom 10.1b Compiler 2012.04 Apr 26 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity TB_bar_tender
+-- Compiling architecture sim of TB_bar_tender
+-- Loading entity bar_tender
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(26): (vcom-1141) Identifier "bar_tender" does not identify a component declaration.
+
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(40): Integer literal 5 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(41): Integer literal 10 is not of type ieee.NUMERIC_STD.UNSIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(42): Integer literal 171 is not of type ieee.NUMERIC_STD.UNSIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(43): Integer literal 171 is not of type ieee.NUMERIC_STD.UNSIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(44): Integer literal 171 is not of type ieee.NUMERIC_STD.UNSIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(45): Integer literal 171 is not of type ieee.NUMERIC_STD.UNSIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(46): Integer literal 1 is not of type ieee.std_logic_1164.STD_LOGIC.
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(50): near "(": expecting IDENTIFIER or ALL or OTHERS
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(58): near "vcnt": expecting GENERATE or THEN
+
+} {12.0 13.0 14.0 23.0} {}} U:/es/projects/projgroup41/vga_drive/bar_tender.vhd {1 {vcom -work work -2002 -explicit -vopt U:/es/projects/projgroup41/vga_drive/bar_tender.vhd
+Model Technology ModelSim SE-64 vcom 10.1b Compiler 2012.04 Apr 26 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_SIGNED
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity bar_tender
+-- Compiling architecture rtl of bar_tender
+
+} {} {}} U:/es/projects/projgroup41/vga_drive/blank_syncr.vhd {1 {vcom -work work -2002 -explicit -vopt U:/es/projects/projgroup41/vga_drive/blank_syncr.vhd
+Model Technology ModelSim SE-64 vcom 10.1b Compiler 2012.04 Apr 26 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity blank_syncr
+-- Compiling architecture rtl of blank_syncr
+
+} {} {}} U:/es/projects/projgroup41/vga_drive/vga_gen.vhd {1 {vcom -work work -2002 -explicit -vopt U:/es/projects/projgroup41/vga_drive/vga_gen.vhd
+Model Technology ModelSim SE-64 vcom 10.1b Compiler 2012.04 Apr 26 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity vga_gen
+-- Compiling architecture behave of vga_gen
+
+} {} {}} U:/es/projects/projgroup41/vga_drive/pixel_reg.vhd {1 {vcom -work work -2002 -explicit -vopt U:/es/projects/projgroup41/vga_drive/pixel_reg.vhd
+Model Technology ModelSim SE-64 vcom 10.1b Compiler 2012.04 Apr 26 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity pixel_reg
+-- Compiling architecture rtl of pixel_reg
+
+} {} {}} U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd {0 {vcom -work work -2002 -explicit -vopt U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd
+Model Technology ModelSim SE-64 vcom 10.1b Compiler 2012.04 Apr 26 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity TB_bar_tender
+-- Compiling architecture sim of TB_bar_tender
+-- Loading entity bar_tender
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(26): (vcom-1141) Identifier "bar_tender" does not identify a component declaration.
+
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(40): Integer literal 5 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(41): Integer literal 10 is not of type ieee.NUMERIC_STD.UNSIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(42): Integer literal 171 is not of type ieee.NUMERIC_STD.UNSIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(43): Integer literal 171 is not of type ieee.NUMERIC_STD.UNSIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(44): Integer literal 171 is not of type ieee.NUMERIC_STD.UNSIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(45): Integer literal 171 is not of type ieee.NUMERIC_STD.UNSIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(46): Integer literal 1 is not of type ieee.std_logic_1164.STD_LOGIC.
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(50): near "(": expecting IDENTIFIER or ALL or OTHERS
+** Error: U:/es/projects/projgroup41/vga_drive/MSim/TB_bar_tender.vhd(58): near "vcnt": expecting GENERATE or THEN
+
+} {12.0 13.0 14.0 23.0} {}} U:/es/projects/projgroup41/vga_drive/RAM_control.vhd {1 {vcom -work work -2002 -explicit -vopt U:/es/projects/projgroup41/vga_drive/RAM_control.vhd
+Model Technology ModelSim SE-64 vcom 10.1b Compiler 2012.04 Apr 26 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity RAM_control
+-- Compiling architecture rtl of RAM_control
+
+} {} {}} U:/es/projects/projgroup41/vga_drive/pixelcounter.vhd {1 {vcom -work work -2002 -explicit -vopt U:/es/projects/projgroup41/vga_drive/pixelcounter.vhd
+Model Technology ModelSim SE-64 vcom 10.1b Compiler 2012.04 Apr 26 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity pixelcounter
+-- Compiling architecture rtl of pixelcounter
+
+} {} {}} U:/es/projects/projgroup41/vga_drive/vsyncr.vhd {1 {vcom -work work -2002 -explicit -vopt U:/es/projects/projgroup41/vga_drive/vsyncr.vhd
+Model Technology ModelSim SE-64 vcom 10.1b Compiler 2012.04 Apr 26 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity vsyncr
+-- Compiling architecture rtl of vsyncr
+
+} {} {}} U:/es/projects/projgroup41/vga_drive/blank_video.vhd {1 {vcom -work work -2002 -explicit -vopt U:/es/projects/projgroup41/vga_drive/blank_video.vhd
+Model Technology ModelSim SE-64 vcom 10.1b Compiler 2012.04 Apr 26 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity blank_video
+-- Compiling architecture rtl of blank_video
+
+} {} {}} U:/es/projects/projgroup41/vga_drive/hsyncr.vhd {0 {vcom -work work -2002 -explicit -vopt U:/es/projects/projgroup41/vga_drive/bar_tender.vhd
+Model Technology ModelSim SE-64 vcom 10.1b Compiler 2012.04 Apr 26 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+Model Technology ModelSim SE-64 vcom 10.1b Compiler 2012.04 Apr 26 2012
+-- Compiling entity hsyncr
+** Warning: (vcom-6) -- Waiting for lock by "johle727@TELEKOM3-15, pid = 7108
+". Lockfile is "U:/es/projects/projgroup41/vga_drive/work/_lock".
+
+-- Compiling architecture rtl of hsyncr
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity bar_tender
+-- Compiling architecture rtl of bar_tender
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(35): Integer literal 88 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(36): Integer literal 80 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(39): Integer literal 128 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(40): Integer literal 80 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(43): Integer literal 50 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(47): Integer literal 213 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(48): Integer literal 317 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(51): Integer literal 20 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(52): Integer literal 22 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(53): Integer literal 11 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(54): Integer literal 22 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(57): Integer literal 30 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(58): Integer literal 280 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(59): Integer literal 85 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(60): Integer literal 84 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(67): Integer literal 320 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(68): Integer literal 85 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(69): Integer literal 1000 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(70): Integer literal 4 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(78): (vcom-1360) Array type of "counter" does not have an index constraint.
+
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(130): Integer literal 0 is not of type ieee.NUMERIC_STD.SIGNED.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(141): No feasible entries for infix operator ">".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(141): No feasible entries for infix operator "<".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(141): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(141): Bad expression in right operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(141): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(142): No feasible entries for infix operator ">".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(142): No feasible entries for infix operator "-".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(142): Bad expression in right operand of infix expression "<".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(142): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(142): Bad expression in right operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(142): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(144): No feasible entries for infix operator "-".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(144): Bad expression in left operand of infix expression "-".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(144): Bad expression in right operand of infix expression "<".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(144): No feasible entries for infix operator "-".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(144): Bad expression in right operand of infix expression ">".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(144): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(144): Bad expression in right operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(144): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(152): No feasible entries for infix operator ">".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(152): No feasible entries for infix operator "<".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(152): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(152): Bad expression in right operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(152): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(153): No feasible entries for infix operator ">".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(153): No feasible entries for infix operator "-".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(153): Bad expression in right operand of infix expression "<".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(153): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(153): Bad expression in right operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(153): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(155): No feasible entries for infix operator "+".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(155): Bad expression in left operand of infix expression "-".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(155): Bad expression in right operand of infix expression "<".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(155): No feasible entries for infix operator "-".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(155): Bad expression in right operand of infix expression ">".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(155): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(155): Bad expression in right operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(155): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(162): No feasible entries for infix operator ">".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(162): No feasible entries for infix operator "<".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(162): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(162): Bad expression in right operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(162): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(163): No feasible entries for infix operator ">".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(163): No feasible entries for infix operator "-".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(163): Bad expression in right operand of infix expression "<".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(163): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(163): Bad expression in right operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(163): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(165): No feasible entries for infix operator "-".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(165): Bad expression in left operand of infix expression "-".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(165): Bad expression in right operand of infix expression "<".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(165): No feasible entries for infix operator "-".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(165): Bad expression in right operand of infix expression ">".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(165): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(165): Bad expression in right operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(165): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(173): No feasible entries for infix operator ">".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(173): No feasible entries for infix operator "<".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(173): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(173): Bad expression in right operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(173): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(174): No feasible entries for infix operator ">".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(174): No feasible entries for infix operator "-".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(174): Bad expression in right operand of infix expression "<".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(174): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(174): Bad expression in right operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(174): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(176): No feasible entries for infix operator "-".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(176): Bad expression in left operand of infix expression "-".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(176): Bad expression in right operand of infix expression "<".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(176): No feasible entries for infix operator "-".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(176): Bad expression in right operand of infix expression ">".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(176): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(176): Bad expression in right operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(176): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(186): No feasible entries for infix operator ">".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(186): No feasible entries for infix operator "<".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(186): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(186): Bad expression in right operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(186): No feasible entries for infix operator ">".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(186): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(186): Bad expression in right operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(186): No feasible entries for infix operator "<".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(186): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(186): Bad expression in right operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(186): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(186): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(189): No feasible entries for infix operator ">".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(189): No feasible entries for infix operator "<".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(189): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(189): Bad expression in right operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(189): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(190): No feasible entries for infix operator "*".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(190): Bad expression in right operand of infix expression "-".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(190): Bad expression in right operand of infix expression ">".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(190): No feasible entries for infix operator "<".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(190): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(190): Bad expression in right operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(190): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(194): No feasible entries for infix operator ">".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(194): No feasible entries for infix operator "<".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(194): Bad expression in left operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(194): Bad expression in right operand of infix expression "and".
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(194): Type error resolving infix expression "and" as type std.STANDARD.BOOLEAN.
+** Error: U:/es/projects/projgroup41/vga_drive/bar_tender.vhd(208): VHDL Compiler exiting
+
+} {19.0 39.0 40.0 147.0} {}}

@@ -1,0 +1,98 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\modeltech64_10.1b\examples
+T_opt
+VVE_5jE3dhKO3[B<b35Q=e2
+Z1 04 11 3 work keyboard_tb sim 1
+=2-78acc0bcf3d7-562890b2-3f-16f8
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+Z2 OL;O;10.1b;51
+T_opt1
+VYcBS0]WAo^Y8h5a3M3YA<2
+R1
+=4-18a90520c444-56277710-20f-cc4
+Z3 o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt1
+R2
+Z4 dC:\modeltech64_10.1b\examples
+T_opt2
+VSld5ml^P266FN3N5NJn831
+04 8 3 work keyboard rtl 1
+=1-18a90520c444-56276dc0-176-1540
+R3
+n@_opt2
+R2
+R4
+Ekeyboard
+Z5 w1445420460
+Z6 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z7 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z8 dH:\TSIU03\TSIU03.Project\kbsim
+Z9 8H:/TSIU03/TSIU03.Project/Keyboard/Keyboard.vhd
+Z10 FH:/TSIU03/TSIU03.Project/Keyboard/Keyboard.vhd
+l0
+L4
+VYS2N;5O@gMcGiXF1bSFdH0
+Z11 OL;C;10.1b;51
+32
+Z12 !s108 1445422825.873000
+Z13 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|H:/TSIU03/TSIU03.Project/Keyboard/Keyboard.vhd|
+Z14 !s107 H:/TSIU03/TSIU03.Project/Keyboard/Keyboard.vhd|
+Z15 o-work work -2002 -explicit
+Z16 tExplicit 1
+!s100 G2HRTkZ4;kDFEBl:YnTQa3
+!i10b 1
+Artl
+R6
+R7
+DEx4 work 8 keyboard 0 22 YS2N;5O@gMcGiXF1bSFdH0
+l14
+L9
+VC:QTBSdNk`]8GX;C8zLcB0
+R11
+32
+R12
+R13
+R14
+R15
+R16
+!s100 LZ:H?zRn6kKG`X]2EiBeX3
+!i10b 1
+Ekeyboard_tb
+Z17 w1445499038
+R6
+R7
+Z18 dH:\TSIU03\TSIU03.Project\Keyboard\kbsim
+Z19 8H:/TSIU03/TSIU03.Project/Keyboard/Keyboard_TB.vhd
+Z20 FH:/TSIU03/TSIU03.Project/Keyboard/Keyboard_TB.vhd
+l0
+L5
+VE2Nm5YidH[8zT56;[7LS50
+R11
+32
+Z21 !s108 1445499047.929000
+Z22 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|H:/TSIU03/TSIU03.Project/Keyboard/Keyboard_TB.vhd|
+Z23 !s107 H:/TSIU03/TSIU03.Project/Keyboard/Keyboard_TB.vhd|
+R15
+R16
+!s100 RNWF<Y8OZh1L8R6lGMz4n0
+!i10b 1
+Asim
+R6
+R7
+DEx4 work 11 keyboard_tb 0 22 E2Nm5YidH[8zT56;[7LS50
+l18
+L8
+VQGl41h>fN?d[X@=H>9?hR1
+R11
+32
+R21
+R22
+R23
+R15
+R16
+!s100 b@?`PE?cFIIoUeiSfDen71
+!i10b 1
